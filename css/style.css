@@ -43,6 +43,7 @@ article {
     height: 20%;
     }
 #welcome {
+    background-image: url("../images/public-transport-1920-02r.jpg");
     background-color: crimson;
     color: white;
     padding:15px;
