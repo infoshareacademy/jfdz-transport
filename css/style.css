@@ -14,12 +14,12 @@ nav {
     height:10%;
 }
 
-#page_logo {
+#page_logo img{
     width: 60px;
     height: 60px;
     float: left;
-    background: url;
 }
+
 
 #menu {
     list-style-type: none;
@@ -55,6 +55,7 @@ article {
     height: 20%;
     }
 #welcome {
+    background-image: url("../images/public-transport-1920-02r.jpg");
     background-color: crimson;
     color: white;
     padding:15px;
