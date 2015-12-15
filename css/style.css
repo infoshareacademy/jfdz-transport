@@ -1,0 +1,86 @@
+body {
+    color:crimson;
+    font-family:Calibri, Arial;
+    font-size: 20px;
+    background-color:floralwhite;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+nav {
+    color: crimson;
+    padding:10px;
+    height:10%;
+}
+#menu {
+    list-style-type: none;
+    font-family: Calibri, Arial;
+    font-size: 20px;
+}
+#menu > li {
+    float: left;
+    width: 10%;
+    text-align: center;
+}
+#menu > li:nth-child(4) {
+    width: 15%;
+}
+#menu > li > a {
+    display: block;
+    text-decoration: none;
+    color:#000;
+}
+#menu:after {
+    content:'';
+    display: block;
+    clear: both;
+}
+#menu > li > a:hover {
+    color: red;
+}
+article {
+    height: 20%;
+    }
+#welcome {
+    background-color: crimson;
+    color: white;
+    padding:15px;
+  }
+#funkcje {
+    background-color: floralwhite;
+    padding: 15px;
+}
+table{
+    background-color: floralwhite;
+    color: crimson;
+    width: 100%;
+    }
+td{
+    color: crimson;
+    text-align: center;
+    padding: 15px;
+    font-size:20px;
+    width: 33%;
+}
+img{
+    height: 200px;
+    width: 200px;
+}
+h1 {
+    color: white;
+}
+#form {
+    background-color: crimson;
+    color:white;
+    height:20% ;
+    padding: 15px;
+}
+footer{
+    background-color: dimgray;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    height:10% ;
+}
+
