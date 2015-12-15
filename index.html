@@ -6,27 +6,48 @@
         <meta name="author" content="">
         <meta name="keywords" content="">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style_menu.css">
         <link rel="icon" href="images/favicon.ico">
         <title>Statystyki komunikacji</title>
     </head>
     <body>
         <header>
             <nav>
-<!--kamila--> MENU
+<!--kamila--><img src="images/logo-autobus.png">
+                <ul id="menu">
+                <li><a href="">menu</a></li>
+                <li><a href="#welcome">o nas</a></li>
+                <li><a href="#funkcje">funkcje</a></li>
+                <li><a href="#form">wyślij zapytanie</a></li>
+                <li><a href="#social">polub nas</a></li>
+            </ul>
             </nav>
         </header>
         <main>
 
-            <!--sekcja witamy kamila-->
-            <article>
-                    <h1>Witamy</h1>
+            <article id="welcome">
+                <h1>Witamy</h1>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
             </article>
-            <!--sekcja funkcje  agnieszka-->
-            <article>
-                <h2>Nasze Funkcje</h2>
+            <article id="funkcje">
+                <!--sekcja funkcje agnieszka-->
+
+                <table>
+                    <tr>
+                        <td> <img src="300.png" /></td>
+                        <td> <img src="200.png" /></td>
+                        <td> <img src="300.png" /></td>
+                    </tr>
+                    <tr>
+                        <td>Funkcja 1</td>
+                        <td>Funkcja 2</td>
+                        <td>Funkcja 3</td>
+                    </tr>
+                </table>
             </article>
-            <!--sekcja formularz marcin -->
-            <article>
+
+                        <!--sekcja frmularz marcin - marcin dodalam id form do article, zeby sie ladnie formatowalo-->
+            <article id="form">
                 <h2>Zapytaj nas</h2>
                 <form action="">
                     <input type="text" required placeholder="podaj numer telefonu">
@@ -35,7 +56,7 @@
                 </form>
             </article>
             <!--sekcja sm marcin-->
-            <article>
+            <article id="social">
                 <h2>Polub nas!</h2>
             </article>
         </main>
