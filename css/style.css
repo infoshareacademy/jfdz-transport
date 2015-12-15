@@ -13,18 +13,30 @@ nav {
     padding:10px;
     height:10%;
 }
+
+#page_logo {
+    width: 60px;
+    height: 60px;
+    float: left;
+    background: url;
+}
+
 #menu {
     list-style-type: none;
     font-family: Calibri, Arial;
     font-size: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
+
+
 #menu > li {
     float: left;
     width: 10%;
     text-align: center;
 }
 #menu > li:nth-child(4) {
-    width: 15%;
+    width: 20%;
 }
 #menu > li > a {
     display: block;
@@ -46,6 +58,8 @@ article {
     background-color: crimson;
     color: white;
     padding:15px;
+    /* background-image: url  */
+    border-bottom: 10px solid #b51434;
   }
 #funkcje {
     background-color: floralwhite;
