@@ -10,8 +10,7 @@ body {
 }
 nav {
     color: crimson;
-    padding:10px;
-    height:10%;
+    padding: 10px;
 }
 
 #page_logo img{
@@ -20,28 +19,23 @@ nav {
     float: left;
 }
 
-
 #menu {
     list-style-type: none;
-    font-family: Calibri, Arial;
     font-size: 20px;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
-
 
 #menu > li {
     float: left;
-    width: 10%;
     text-align: center;
 }
-#menu > li:nth-child(4) {
-    width: 20%;
-}
+
 #menu > li > a {
     display: block;
     text-decoration: none;
     color:#000;
+    margin-left: 10px;
 }
 #menu:after {
     content:'';
@@ -54,14 +48,39 @@ nav {
 article {
     height: 20%;
     }
+
 #welcome {
-    background-image: url("../images/public-transport-1920-02r.jpg");
-    background-color: crimson;
+    background-image: url("../images/public-transport-1920-03r.jpg");
     color: white;
     padding:15px;
-    /* background-image: url  */
-    border-bottom: 10px solid #b51434;
+    background-size: cover;
+    border-bottom: 10px solid crimson;
+    height: 450px;
+    align-items:center;
+    display:flex;
   }
+
+#welcome div.slogan {
+    margin-left: 30px;
+    flex-basis: 50%;
+}
+
+#welcome div h1 {
+    font-size: 45px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-weight: 400;
+}
+
+#welcome div.logo {
+    margin-left: 130px;
+}
+
+#welcome img {
+    height: 250px;
+    width: 250px;
+}
+
 #funkcje {
     background-color: floralwhite;
     padding: 15px;
@@ -98,4 +117,3 @@ footer{
     text-align: center;
     height:10% ;
 }
-
