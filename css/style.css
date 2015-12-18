@@ -81,25 +81,65 @@ article {
     width: 250px;
 }
 
-#funkcje {
-    background-color: floralwhite;
-    padding: 15px;
-}
-table{
+#features {
     background-color: floralwhite;
     color: crimson;
     width: 100%;
-    }
-td{
-    color: crimson;
-    text-align: center;
-    padding: 15px;
-    font-size:20px;
-    width: 33%;
+    height: 500px;
+    padding: 10px;
+    letter-spacing: normal;
 }
-img{
-    height: 200px;
-    width: 200px;
+#features div h2 {
+     font-size: 35px;
+     margin-bottom: 5px;
+     margin-top: 0;
+     font-weight: 400;
+ }
+#features div h3 {
+    font-size: 35px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-weight: 500;
+    text-decoration: none;
+}
+#features div a{
+    text-decoration: none;
+    color: crimson;
+}
+
+.feature1{
+    text-align: center;
+    padding: 5px;
+    font-size:20px;
+    float: left;
+    width: 30%;
+    }
+.feature2{
+    text-align: center;
+    padding: 5px;
+    font-size:20px;
+    float: left;
+    width: 30%;
+}
+.feature3{
+    text-align: center;
+    padding: 5px;
+    font-size:20px;
+    float: left;
+    width: 30%;
+}
+
+#features img{
+    height: 250px;
+    width: 250px;
+    margin: 5px;
+    border: 6px solid crimson;
+    text-align: center;
+    border-radius: 130px;
+    -moz-border-radius: 130px;
+    -webkit-border-radius: 130px;
+    display: -moz-box;
+    display: -webkit-box;
 }
 h1 {
     color: white;
