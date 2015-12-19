@@ -7,6 +7,12 @@ body {
     margin-right: auto;
     padding: 10px;
 }
+
+.section {
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
 nav {
     color: crimson;
     padding: 10px;
@@ -63,7 +69,7 @@ article {
   }
 
 div.slogan {
-    margin-left: 30px;
+    margin-left: 10px;
     flex-basis: 50%;
 }
 
@@ -72,10 +78,6 @@ div.slogan {
     margin-bottom: 5px;
     margin-top: 0;
     font-weight: 400;
-}
-
-.welcome div.logo {
-    margin-left: 130px;
 }
 
 .welcome img {
