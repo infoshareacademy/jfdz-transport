@@ -1,5 +1,5 @@
 body {
-    color:crimson;
+    color:#d8040a;
     font-family: Arial;
     font-size: 20px;
     background-color:floralwhite;
@@ -8,7 +8,7 @@ body {
     padding: 10px;
 }
 nav {
-    color: crimson;
+    color: #d8040a;
     padding: 10px;
 }
 
@@ -44,7 +44,7 @@ nav {
 }
 
 .menu > li > a:hover {
-    color: red;
+    color: #d8040a;
 }
 
 article {
@@ -56,7 +56,7 @@ article {
     color: white;
     padding:15px;
     background-size: cover;
-    border-bottom: 10px solid crimson;
+    border-bottom: 10px solid #d8040a;
     height: 450px;
     align-items:center;
     display:flex;
@@ -85,7 +85,7 @@ div.slogan {
 
 #features {
     background-color: floralwhite;
-    color: crimson;
+    color: #d8040a;
     height: 500px;
     padding: 10px;
     letter-spacing: normal;
@@ -93,7 +93,7 @@ div.slogan {
     margin-left: auto;
     margin-right: auto;
 }
-#features div h2 {
+h2 {
      font-size: 35px;
      margin-bottom: 5px;
      margin-top: 0;
@@ -102,9 +102,8 @@ div.slogan {
 
 #features div a{
     text-decoration: none;
-    color: crimson;
+    color: #d8040a;
 }
-
 
 .feature {
     text-align: center;
@@ -123,11 +122,6 @@ h3 {
 }
 
 
-
-
-
-
-
 .feature a {
     display: block;
 }
@@ -136,8 +130,8 @@ h3 {
     height: 250px;
     width: 250px;
     margin: 5px auto;
-    border: 6px solid crimson;
-    background-color: green;
+    border: 6px solid #d8040a;
+    background-color:#d8040a;
     border-radius: 50%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -163,7 +157,7 @@ h1 {
     color: white;
 }
 .formularz {
-    background-color: crimson;
+    background-color: #d8040a;
     background-image: url('../images/public-transport-1920-02r.jpg');
     color:white;
     padding: 50px;
@@ -182,7 +176,7 @@ h1 {
     padding: 10px;
     border-radius: 5px;
     font-size: 1em;
-    color: crimson;
+    color:#d8040a;
     margin: 10px;
     background-color: floralwhite;
 }
