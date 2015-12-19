@@ -54,7 +54,7 @@ nav {
 }
 
 article {
-    height: 20%;
+    /*height: 20%;*/
     }
 
 .welcome {
@@ -63,13 +63,14 @@ article {
     padding:15px;
     background-size: cover;
     border-bottom: 10px solid #d8040a;
-    height: 450px;
+    height: 700px;
     align-items:center;
     display:flex;
+    background-color: crimson;
   }
 
 div.slogan {
-    margin-left: 10px;
+    margin-left: 20px;
     flex-basis: 50%;
 }
 
@@ -83,6 +84,7 @@ div.slogan {
 .welcome img {
     height: 250px;
     width: 250px;
+    margin-right: 40px;
 }
 
 #features {
