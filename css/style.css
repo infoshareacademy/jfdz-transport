@@ -93,13 +93,13 @@ article {
      font-size: 35px;
      margin-bottom: 5px;
      margin-top: 0;
-     font-weight: 400;
+     font-weight:bold;
  }
 #features div h3 {
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 5px;
     margin-top: 0;
-    font-weight: 500;
+    font-weight:bold;
     text-decoration: none;
 }
 #features div a{
@@ -112,21 +112,21 @@ article {
     padding: 5px;
     font-size:20px;
     float: left;
-    width: 30%;
+    width: 32%;
     }
 .feature2{
     text-align: center;
     padding: 5px;
     font-size:20px;
     float: left;
-    width: 30%;
+    width: 32%;
 }
 .feature3{
     text-align: center;
     padding: 5px;
     font-size:20px;
     float: left;
-    width: 30%;
+    width: 32%;
 }
 
 #features img{
