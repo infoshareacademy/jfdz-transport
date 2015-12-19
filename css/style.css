@@ -200,6 +200,9 @@ footer{
     margin: auto;
     text-align: center;
     padding: 20px;
+    background-color: #d8040a;
+    color: floralwhite;
+    border-top: 2px solid floralwhite;
 }
 
 
@@ -217,33 +220,42 @@ footer{
     /*background-color: #c83237;*/
 /*}*/
 
-/*.fb*/
-/*{*/
-    /*margin: 10px;*/
-    /*width: 105px;*/
-    /*height: 142px;*/
-    /*background-color: #4668b3;*/
-    /*float: left;*/
-/*}*/
+.social-media .fb {
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    background-color: #4668b3;
+    text-align: center;
+}
 
-/*.fb:hover*/
-/*{*/
-    /*background-color: #3557a2;*/
-/*}*/
+.socia-media-icons {
+    margin: auto;
+    text-align: center;
+}
 
-/*.gplus*/
-/*{*/
-    /*margin: 10px;*/
-    /*width: 105px;*/
-    /*height: 142px;*/
-    /*background-color: #d95333;*/
-    /*float: left;*/
-/*}*/
+.social-media .fb:hover
+{
+    background-color: #3557a2;
+}
 
-/*.gplus:hover*/
-/*{*/
-    /*background-color: #c84222;*/
-/*}*/
+.social-media .gplus
+{
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    background-color: #d95333;
+}
+
+.social-media.gplus:hover
+{
+    background-color: #c84222;
+}
+
+.right {float: right;}
+.left {float: left;}
+.clear {clear:both;}
 
 /*.tw*/
 /*{*/
