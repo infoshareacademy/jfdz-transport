@@ -70,12 +70,17 @@
             </article>
 
                 <!--sekcja frmularz marcin - marcin dodalam id form do article, zeby sie ladnie formatowalo-->
-            <article id="form">
-                <h2>Zapytaj nas</h2>
+            <article id="form" class="formularz">
+                <h2>Zapytaj nas o nasz produkt</h2>
                 <form action="">
-                    <input type="text" required placeholder="podaj numer telefonu">
-                    <input type="text" required placeholder="podaj email">
-                    <button type="submit">Wyślij</button>
+                    <div>
+                        <input type="text" name="telefon" required placeholder="podaj numer telefonu"><br>
+                        <input type="text" name="email" required placeholder="podaj email">
+                    </div>
+                    <div class="zgoda">
+                        <input type="checkbox">Wyrażam zgodę na działania marketingowe
+                    </div>
+                    <button type="submit">Wyślij Zapytanie</button>
                 </form>
             </article>
             <!--sekcja sm marcin-->
