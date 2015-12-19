@@ -29,13 +29,14 @@ nav {
 #menu > li {
     float: left;
     text-align: center;
+    margin-left: 10px;
 }
 
 #menu > li > a {
     display: block;
     text-decoration: none;
     color:#000;
-    margin-left: 10px;
+
 }
 #menu:after {
     content:'';
