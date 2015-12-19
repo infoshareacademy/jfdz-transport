@@ -13,44 +13,47 @@ nav {
     padding: 10px;
 }
 
-#page_logo img{
+.logo img{
     width: 60px;
     height: 60px;
     float: left;
 }
 
-#menu {
+.menu {
     list-style-type: none;
     font-size: 20px;
     margin-bottom: 0;
     margin-top: 0;
 }
 
-#menu > li {
+.menu > li {
     float: left;
     text-align: center;
     margin-left: 10px;
+    /*min-width: 100px;*/
 }
 
-#menu > li > a {
+.menu > li > a {
     display: block;
     text-decoration: none;
     color:#000;
 
 }
-#menu:after {
+.menu:after {
     content:'';
     display: block;
     clear: both;
 }
-#menu > li > a:hover {
+
+.menu > li > a:hover {
     color: red;
 }
+
 article {
     height: 20%;
     }
 
-#welcome {
+.welcome {
     background-image: url("../images/public-transport-1920-03r.jpg");
     color: white;
     padding:15px;
@@ -61,23 +64,23 @@ article {
     display:flex;
   }
 
-#welcome div.slogan {
+div.slogan {
     margin-left: 30px;
     flex-basis: 50%;
 }
 
-#welcome div h1 {
+.welcome div h1 {
     font-size: 45px;
     margin-bottom: 5px;
     margin-top: 0;
     font-weight: 400;
 }
 
-#welcome div.logo {
+.welcome div.logo {
     margin-left: 130px;
 }
 
-#welcome img {
+.welcome img {
     height: 250px;
     width: 250px;
 }
