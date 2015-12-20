@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext);
+
 /*style głowne*/
 body {
     color: #B30800;
@@ -15,7 +17,12 @@ body {
     font-weight: 400;
 }
 
+h1 {
+    font-family: 'Poiret One', cursive;
+    font-size: 10em; }
+
 h2 {
+    font-family: 'Poiret One', cursive;
     font-size: 35px;
     margin-bottom: 5px;
     margin-top: 0;
@@ -23,6 +30,7 @@ h2 {
 }
 
 h3 {
+    font-family: 'Poiret One', cursive;
     font-size: 30px;
     margin-bottom: 5px;
     margin-top: 0;
@@ -273,3 +281,4 @@ footer{
 .right {float: right;}
 .left {float: left;}
 .clear {clear:both;}
+
