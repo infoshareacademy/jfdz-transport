@@ -8,6 +8,8 @@ body {
     padding: 10px;
 }
 
+/*style menu*/
+
 .section {
     width: 1000px;
     margin-right: auto;
@@ -41,8 +43,8 @@ nav {
     display: block;
     text-decoration: none;
     color:#000;
-
 }
+
 .menu:after {
     content:'';
     display: block;
@@ -52,6 +54,9 @@ nav {
 .menu > li > a:hover {
     color: #B30800;
 }
+
+/*style welcome*/
+
 
 article {
     /*height: 20%;*/
@@ -86,6 +91,8 @@ div.slogan {
     width: 250px;
     margin-right: 40px;
 }
+
+
 
 #features {
     background-color: floralwhite;
@@ -200,74 +207,23 @@ footer{
     border-top: 2px solid floralwhite;
 }
 
-
-/*yt*/
-/*{*/
-    /*margin: 10px;*/
-    /*width: 105px;*/
-    /*height: 142px;*/
-    /*background-color: #d94348;*/
-    /*float: left;*/
-/*}*/
-
-/*.yt:hover*/
-/*{*/
-    /*background-color: #c83237;*/
-/*}*/
-
-.social-media .fb {
-    margin: 10px;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    background-color: #4668b3;
-    text-align: center;
-    display: inline-block;
-}
-
-.socia-media-icons {
+.social-media .sm-ico {
     margin: auto;
     text-align: center;
-}
-
-.social-media .fb:hover
-{
-    background-color: #3557a2;
-}
-
-.social-media .gplus
-{
     margin: 10px;
     width: 40px;
     height: 40px;
     padding: 10px;
-    background-color: #d95333;
+    text-align: center;
     display: inline-block;
 }
 
-.social-media .gplus:hover
-{
-    background-color: #c84222;
-}
-
-.right {float: right;}
-.left {float: left;}
-.clear {clear:both;}
-
-.social-media .tw
-{
-    margin: 10px;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    background-color: #3095d3;
-    display: inline-block;
-}
-
-.tw:hover
-{
-    background-color: #2084c2;
-}
+.social-media .fb { background-color: #4668b3; }
+.social-media .fb:hover { background-color: #3557a2; }
+.social-media .gplus { background-color: #d95333; }
+.social-media .gplus:hover { background-color: #c84222; }
+.social-media .tw { background-color: #3095d3; }
+.social-media .tw:hover { background-color: #2084c2; }
 
 /*a.tilelink*/
 /*{*/
@@ -292,3 +248,7 @@ footer{
     /*width: 105px;*/
     /*height: 142px;*/
 /*}*/
+
+.right {float: right;}
+.left {float: left;}
+.clear {clear:both;}
