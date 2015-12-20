@@ -1,3 +1,4 @@
+/*style głowne*/
 body {
     color:#B30800;
     font-family:Calibri, Arial;
@@ -8,6 +9,27 @@ body {
     padding: 10px;
 }
 
+.welcome div h1 {
+    font-size: 45px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 35px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-weight:bold;
+}
+
+h3 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-weight:bold;
+    text-decoration: none;
+}
 /*style menu*/
 
 .section {
@@ -79,12 +101,7 @@ div.slogan {
     flex-basis: 50%;
 }
 
-.welcome div h1 {
-    font-size: 45px;
-    margin-bottom: 5px;
-    margin-top: 0;
-    font-weight: 400;
-}
+
 
 .welcome img {
     height: 250px;
@@ -93,7 +110,7 @@ div.slogan {
 }
 
 
-
+/*style features*/
 #features {
     background-color: floralwhite;
     color: #B30800;
@@ -104,12 +121,7 @@ div.slogan {
     margin-left: auto;
     margin-right: auto;
 }
-h2 {
-     font-size: 35px;
-     margin-bottom: 5px;
-     margin-top: 0;
-     font-weight:bold;
- }
+
 
 #features div a{
     text-decoration: none;
@@ -124,13 +136,7 @@ h2 {
     width: 32%;
 }
 
-h3 {
-    font-size: 30px;
-    margin-bottom: 5px;
-    margin-top: 0;
-    font-weight:bold;
-    text-decoration: none;
-}
+
 
 
 .feature a {
