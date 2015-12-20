@@ -1,14 +1,27 @@
 body {
-    color:#B30800;
-    font-family:Calibri, Arial;
+    color: #B30800;
+    font-family: Calibri, Arial;
     font-size: 20px;
-    background-color:floralwhite;
+    background-color: floralwhite;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
 }
 
 /*style menu*/
+
+.head {
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #aaaaaa;
+    background-color: white;
+    margin-top: 0px;
+    z-index: 1000;
+    top:0;
+}
+
+.clear {
+    clear: both;
+}
 
 .section {
     width: 1000px;
