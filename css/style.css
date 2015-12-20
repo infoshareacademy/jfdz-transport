@@ -39,7 +39,7 @@ h3 {
 }
 /*style menu*/
 
-.head {
+.naglowek-strony {
     position: fixed;
     width: 100%;
     border-bottom: 1px solid #aaaaaa;
@@ -47,10 +47,7 @@ h3 {
     margin-top: 0px;
     z-index: 1000;
     top:0;
-}
-
-.clear {
-    clear: both;
+    height: 120px;
 }
 
 .section {
@@ -59,36 +56,41 @@ h3 {
     margin-left: auto;
 }
 nav {
-    color: #B30800;
     padding: 10px;
 }
 
-.logo img{
-    width: 60px;
-    height: 60px;
+.logo-strony{
+    width: 100px;
+    height:100px;
     float: left;
+    background-image: url('../images/logo-autobus.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
-.menu {
+.menu-glowne {
     list-style-type: none;
     font-size: 20px;
-    margin-bottom: 0;
-    margin-top: 0;
+
 }
 
-.menu > li {
+.menu-glowne > li {
     float: left;
     text-align: center;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
+    margin-top: 34px;
 }
 
-.menu > li > a {
-    display: block;
+.menu-glowne > li > a {
+    display: inline-block;
     text-decoration: none;
     color:#000;
 }
 
-.menu:after {
+.menu-glowne:after {
     content:'';
     display: block;
     clear: both;
