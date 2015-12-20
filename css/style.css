@@ -1,5 +1,5 @@
 body {
-    color:crimson;
+    color:#B30800;
     font-family:Calibri, Arial;
     font-size: 20px;
     background-color:floralwhite;
@@ -16,7 +16,7 @@ body {
     margin-left: auto;
 }
 nav {
-    color: #d8040a;
+    color: #B30800;
     padding: 10px;
 }
 
@@ -52,7 +52,7 @@ nav {
 }
 
 .menu > li > a:hover {
-    color: #d8040a;
+    color: #B30800;
 }
 
 /*style welcome*/
@@ -67,11 +67,11 @@ article {
     color: white;
     padding:15px;
     background-size: cover;
-    border-bottom: 10px solid #d8040a;
+    border-bottom: 10px solid #B30800;
     height: 700px;
     align-items:center;
     display:flex;
-    background-color: crimson;
+    background-color: #B30800;
   }
 
 div.slogan {
@@ -96,7 +96,7 @@ div.slogan {
 
 #features {
     background-color: floralwhite;
-    color: #d8040a;
+    color: #B30800;
     height: 500px;
     padding: 10px;
     letter-spacing: normal;
@@ -113,7 +113,7 @@ h2 {
 
 #features div a{
     text-decoration: none;
-    color: #d8040a;
+    color: #B30800;
 }
 
 .feature {
@@ -141,8 +141,8 @@ h3 {
     height: 250px;
     width: 250px;
     margin: 5px auto;
-    border: 6px solid #d8040a;
-    background-color:#d8040a;
+    border: 6px solid #B30800;
+    background-color:#B30800;
     border-radius: 50%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -157,18 +157,11 @@ h3 {
 
 
 
-
-
-
-
-
-
-
 h1 {
     color: white;
 }
 .formularz {
-    background-color: #d8040a;
+    background-color: #B30800;
     background-image: url('../images/public-transport-1920-02r.jpg');
     color:white;
     padding: 50px;
@@ -187,7 +180,7 @@ h1 {
     padding: 10px;
     border-radius: 5px;
     font-size: 1em;
-    color:#d8040a;
+    color:#B30800;
     margin: 10px;
     background-color: floralwhite;
 }
@@ -209,7 +202,7 @@ footer{
     margin: auto;
     text-align: center;
     padding: 20px;
-    background-color: #d8040a;
+    background-color: #B30800;
     color: floralwhite;
     border-top: 2px solid floralwhite;
 }
