@@ -61,6 +61,20 @@
     padding-bottom: 15px;
     padding-top: 15px;
 }
+
+.tresc-strony .funkcjonalnosci .funkcja-obrazek {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border: dashed 2px #00ff00;
+    background-color: #ff61bc;
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    border-radius: 5px 10px 20px 30px;
+}
 .tresc-strony .funkcjonalnosci .funkcja img{
     border: dashed 2px #0f0;
 }
@@ -79,9 +93,10 @@
     width: 49%;
     height: 300px;
     background-color: #ff0e0b;
-    margin: 5px;
+    margin: 1x;
     text-align: center;
-    text-align-all:center;
+    border: dotted;
+    border-color: #132d8e;
 }
 
 .stopka-strony{

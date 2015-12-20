@@ -14,6 +14,9 @@ body {
     margin-top: 0;
     font-weight: 400;
 }
+h1 {
+    color: white;
+}
 
 h2 {
     font-size: 35px;
@@ -124,7 +127,7 @@ div.slogan {
 
 
 /*style features*/
-#features {
+.features {
     background-color: floralwhite;
     color: #B30800;
     height: 500px;
@@ -135,25 +138,13 @@ div.slogan {
     margin-right: auto;
 }
 
-
-#features div a{
-    text-decoration: none;
-    color: #B30800;
-}
-
-.feature {
+.features .feature {
     text-align: center;
     padding: 5px;
+    padding-top: 35px;
     font-size:20px;
     float: left;
     width: 32%;
-}
-
-
-
-
-.feature a {
-    display: block;
 }
 
 .feature .feature-image {
@@ -174,11 +165,17 @@ div.slogan {
 
 .feature p {}
 
-
-
-h1 {
-    color: white;
+.features  .feature a{
+    text-decoration: none;
+    color: #B30800;
 }
+
+.feature a {
+    display: block;
+}
+
+/*styl formularz*/
+
 .formularz {
     background-color: #B30800;
     background-image: url('../images/public-transport-1920-02r.jpg');
