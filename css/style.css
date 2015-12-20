@@ -226,9 +226,10 @@ footer{
     margin: 10px;
     width: 40px;
     height: 40px;
-    padding: 20px;
+    padding: 10px;
     background-color: #4668b3;
     text-align: center;
+    display: inline-block;
 }
 
 .socia-media-icons {
@@ -246,11 +247,12 @@ footer{
     margin: 10px;
     width: 40px;
     height: 40px;
-    padding: 20px;
+    padding: 10px;
     background-color: #d95333;
+    display: inline-block;
 }
 
-.social-media.gplus:hover
+.social-media .gplus:hover
 {
     background-color: #c84222;
 }
@@ -259,19 +261,20 @@ footer{
 .left {float: left;}
 .clear {clear:both;}
 
-/*.tw*/
-/*{*/
-    /*margin: 10px;*/
-    /*width: 105px;*/
-    /*height: 142px;*/
-    /*background-color: #3095d3;*/
-    /*float: left;*/
-/*}*/
+.social-media .tw
+{
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: #3095d3;
+    display: inline-block;
+}
 
-/*.tw:hover*/
-/*{*/
-    /*background-color: #2084c2;*/
-/*}*/
+.tw:hover
+{
+    background-color: #2084c2;
+}
 
 /*a.tilelink*/
 /*{*/
