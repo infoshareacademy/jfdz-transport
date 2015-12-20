@@ -1,14 +1,49 @@
+/*style głowne*/
 body {
-    color:#B30800;
-    font-family:Calibri, Arial;
+    color: #B30800;
+    font-family: Calibri, Arial;
     font-size: 20px;
-    background-color:floralwhite;
+    background-color: floralwhite;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
 }
 
+.welcome div h1 {
+    font-size: 45px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 35px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-weight:bold;
+}
+
+h3 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-weight:bold;
+    text-decoration: none;
+}
 /*style menu*/
+
+.head {
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #aaaaaa;
+    background-color: white;
+    margin-top: 0px;
+    z-index: 1000;
+    top:0;
+}
+
+.clear {
+    clear: both;
+}
 
 .section {
     width: 1000px;
@@ -79,12 +114,7 @@ div.slogan {
     flex-basis: 50%;
 }
 
-.welcome div h1 {
-    font-size: 45px;
-    margin-bottom: 5px;
-    margin-top: 0;
-    font-weight: 400;
-}
+
 
 .welcome img {
     height: 250px;
@@ -93,7 +123,7 @@ div.slogan {
 }
 
 
-
+/*style features*/
 #features {
     background-color: floralwhite;
     color: #B30800;
@@ -104,12 +134,7 @@ div.slogan {
     margin-left: auto;
     margin-right: auto;
 }
-h2 {
-     font-size: 35px;
-     margin-bottom: 5px;
-     margin-top: 0;
-     font-weight:bold;
- }
+
 
 #features div a{
     text-decoration: none;
@@ -124,13 +149,7 @@ h2 {
     width: 32%;
 }
 
-h3 {
-    font-size: 30px;
-    margin-bottom: 5px;
-    margin-top: 0;
-    font-weight:bold;
-    text-decoration: none;
-}
+
 
 
 .feature a {
@@ -173,6 +192,7 @@ h1 {
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
 
 }
 
@@ -183,6 +203,7 @@ h1 {
     color:#B30800;
     margin: 10px;
     background-color: floralwhite;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
 }
 
 .formularz .zgoda {
@@ -190,7 +211,7 @@ h1 {
 }
 
 footer{
-    background-color: dimgray;
+    background-color: #222222;
     color: white;
     padding: 15px;
     text-align: center;
@@ -208,14 +229,14 @@ footer{
 }
 
 .social-media .sm-ico {
-    margin: auto;
     text-align: center;
     margin: 10px;
     width: 40px;
     height: 40px;
     padding: 10px;
-    text-align: center;
     display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
 }
 
 .social-media .fb { background-color: #4668b3; }
