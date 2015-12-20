@@ -8,6 +8,8 @@ body {
     padding: 10px;
 }
 
+/*style menu*/
+
 .section {
     width: 1000px;
     margin-right: auto;
@@ -41,8 +43,8 @@ nav {
     display: block;
     text-decoration: none;
     color:#000;
-
 }
+
 .menu:after {
     content:'';
     display: block;
@@ -52,6 +54,9 @@ nav {
 .menu > li > a:hover {
     color: #d8040a;
 }
+
+/*style welcome*/
+
 
 article {
     /*height: 20%;*/
@@ -86,6 +91,8 @@ div.slogan {
     width: 250px;
     margin-right: 40px;
 }
+
+
 
 #features {
     background-color: floralwhite;
