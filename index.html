@@ -76,8 +76,9 @@
 
                 <!--sekcja frmularz marcin - marcin dodalam id form do article, zeby sie ladnie formatowalo-->
             <article id="form" class="formularz">
+
                 <h2>Zapytaj nas o nasz produkt</h2>
-                <form action="">
+                <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST">
                     <div>
                         <input type="text" name="telefon" required placeholder="podaj numer telefonu"><br>
                         <input type="text" name="email" required placeholder="podaj email">
@@ -85,7 +86,8 @@
                     <div class="zgoda">
                         <input type="checkbox">Wyrażam zgodę na działania marketingowe
                     </div>
-                    <button type="submit">Wyślij Zapytanie</button>
+                    <input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com">
+                    <button type="submit" value="Send">Wyślij Zapytanie</button>
                 </form>
             </article>
             <!--sekcja sm marcin-->
