@@ -16,18 +16,18 @@ h1 {
 
 h2 {
     font-family: 'Poiret One', cursive;
-    font-size: 35px;
-    margin-bottom: 5px;
-    margin-top: 0;
-    font-weight:bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight:900;
 }
 
 h3 {
     font-family: 'Poiret One', cursive;
     font-size: 30px;
-    margin-bottom: 5px;
-    margin-top: 0;
-    font-weight:bold;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-weight:600;
     text-decoration: none;
 }
 /*style menu*/
@@ -145,7 +145,7 @@ nav {
 }
 
 /*style features*/
-#features {
+.features123 {
     background-color: floralwhite;
     color: #B30800;
     height: 500px;
@@ -156,12 +156,6 @@ nav {
     margin-right: auto;
 }
 
-
-#features div a{
-    text-decoration: none;
-    color: #B30800;
-}
-
 .feature {
     text-align: center;
     padding: 5px;
@@ -170,10 +164,9 @@ nav {
     width: 32%;
 }
 
-
-
-
-.feature a {
+.feature a{
+    text-decoration: none;
+    color: #B30800;
     display: block;
 }
 
@@ -181,7 +174,7 @@ nav {
     height: 250px;
     width: 250px;
     margin: 5px auto;
-    border: 6px solid #B30800;
+    border: 5px solid #B30800;
     background-color:#B30800;
     border-radius: 50%;
     background-size: contain;
@@ -193,9 +186,10 @@ nav {
 .feature-image-2 {background-image: url('../images/feature-hand-600.jpg');}
 .feature-image-3 {background-image: url('../images/feature-woman-600.jpg');}
 
-.feature p {}
-
-
+.feature p {
+    padding-left:10px;
+    padding-right:10px;
+}
 
 h1 {
     color: white;
