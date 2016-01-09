@@ -145,11 +145,11 @@ nav {
 }
 
 /*style features*/
-article .features123 {
+.features123 {
     background-color: floralwhite;
     color: #B30800;
     padding: 10px;
-    height: 500px;
+    height: 450px;
     display: block;
     letter-spacing: normal;
     text-align: center;
