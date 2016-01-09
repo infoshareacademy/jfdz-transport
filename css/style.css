@@ -16,7 +16,7 @@ h1 {
 
 h2 {
     font-family: 'Poiret One', cursive;
-    font-size: 40px;
+    font-size: 35px;
     font-weight:900;
     margin-bottom: 10px;
 }
@@ -145,11 +145,12 @@ nav {
 }
 
 /*style features*/
-.features123 {
+article .features123 {
     background-color: floralwhite;
     color: #B30800;
-    height: 500px;
     padding: 10px;
+    /*height: 500px;*/
+    display: block;
     letter-spacing: normal;
     text-align: center;
     margin-left: auto;
