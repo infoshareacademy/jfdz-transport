@@ -141,7 +141,8 @@ nav {
 .slogan p {
     font-size: 25px;
     font-family: 'Poiret One', cursive;
-    font-weight: 600;
+    font-weight: 550;
+    text-align: center;
 }
 
 /*style features*/
