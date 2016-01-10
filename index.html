@@ -76,13 +76,14 @@
                 <h2>Zapytaj nas o nasz produkt</h2>
                 <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST">
                     <div>
-                        <input type="text" name="telefon" required placeholder="podaj numer telefonu"><br>
-                        <input type="text" name="email" required placeholder="podaj email">
+                        <input type="text" name="telefon" required pattern="^[0-9]*" placeholder="podaj numer telefonu"><br>
+                        <input type="text" name="email" required pattern="^\S+@\S+\.\S+$" placeholder="podaj email">
                     </div>
                     <div class="zgoda">
                         <input type="checkbox">Wyrażam zgodę na działania marketingowe
                     </div>
-                    <input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com">
+                    <!--<input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com">-->
+                    <input type="hidden" name="receiver" value="z@z.com">
                     <button type="submit" value="Send">Wyślij Zapytanie</button>
                 </form>
             </article>
