@@ -158,6 +158,8 @@ nav {
     margin-right: auto;
     margin-bottom: 10px;
     margin-top: 10px;
+
+
 }
 
 .feature {
@@ -288,6 +290,12 @@ footer{
     /*width: 105px;*/
     /*height: 142px;*/
 /*}*/
+
+/* ikonki*/
+.fa.fa-bus{
+    color:
+}
+
 
 .right {float: right;}
 .left {float: left;}
