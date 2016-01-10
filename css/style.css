@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext);
+@import url("https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext");
 
 /*style głowne*/
 body {
@@ -88,7 +88,6 @@ nav {
 .menu-glowne > li > a {
     /*display: inline-block;*/
     text-decoration: none;
-    color: #000;
     color: #A20700;
     font-size: 26px;
 
@@ -134,7 +133,6 @@ nav {
     margin-top: 0;
     font-size: 45px;
     margin-bottom: 20px;
-    font-weight: 400;
     font-weight: 600;
 }
 
@@ -193,6 +191,13 @@ nav {
     padding-left:10px;
     padding-right:10px;
 }
+
+/*<i class="fa fa-table"></i>*/
+/*<i class="fa fa-map-marker"></i>*/
+/*<i class="fa fa-map"></i>*/
+/*<i class="fa fa-clock-o"></i>*/
+/*<i class="fa fa-ticket"></i>*/
+/*<i class="fa fa-mobile"></i>*/
 
 h1 {
     color: white;
