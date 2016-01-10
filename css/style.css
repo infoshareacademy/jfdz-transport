@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext");
+/*@import url("https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext");*/
 
 /*style głowne*/
 body {
@@ -46,14 +46,14 @@ h3 {
     margin-top: 0;
     z-index: 1000;
     top:0;
-    height: 100px;
+    height: 80px;
 }
 
 
 .naglowek-strony .logo-strony{
     /*position: absolute;*/
-    width: 80px;
-    height:80px;
+    width: 60px;
+    height:60px;
     float: left;
     background-image: url('../images/logo-autobus.png');
     background-repeat: no-repeat;
@@ -76,7 +76,7 @@ nav {
 
 .menu-glowne > li {
     display: inline-block;
-    margin-top: 25px;
+    margin-top: 15px;
     margin-left: 50px;
     /*float: left;*/
     /*!*text-align: center;*!*/
@@ -108,7 +108,7 @@ nav {
 .welcome {
     background-image: url("../images/public-transport-1920-03r.jpg");
     color: white;
-    margin-top: 100px;;
+    margin-top: 80px;;
     background-size: cover;
     border-bottom: 10px solid #B30800;
     height: 700px;
@@ -274,31 +274,7 @@ footer{
 .social-media .tw { background-color: #3095d3; }
 .social-media .tw:hover { background-color: #2084c2; }
 
-/*a.tilelink*/
-/*{*/
-    /*color: #ffffff;*/
-    /*text-decoration: none;*/
-    /*display: block;*/
-    /*width: 230px;*/
-    /*height: 142px;*/
-/*}*/
-
-/*a.tilelinkhtml5*/
-/*{*/
-    /*color: #ffffff;*/
-    /*text-decoration: none;*/
-/*}*/
-
-/*a.sociallink*/
-/*{*/
-    /*color: #ffffff;*/
-    /*text-decoration: none;*/
-    /*display: block;*/
-    /*width: 105px;*/
-    /*height: 142px;*/
-/*}*/
-
-.right {float: right;}
+.right{float: right;}
 .left {float: left;}
-.clear {clear:both;}
+.clear{clear:both;}
 

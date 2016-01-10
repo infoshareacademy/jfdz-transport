@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="pl" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="pl">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <meta name="keywords" content="">
+        <meta name="description" content="Statystyki Komunikacj GDAŃSK">
+        <meta name="author" content="CELOFYZ DEV">
+        <meta name="keywords" content="komunikacja, gdańsk, ztm, autobusy">
         <link rel="stylesheet" href="aga_pliki/resetcss.css">
         <link rel="stylesheet" href="css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-        <title>Statystyki komunikacji</title>
+        <title>Statystyki komunikacji ZTM Gdańsk</title>
     </head>
     <body>
 
@@ -38,8 +39,8 @@
                     </div>
                     <div class="slogan">
                         <h1>Autobusem po Gdańsku</h1>
-                        <p> <span style="font-family:'SansSerif'"> Dbaj o środowisko! Jedź autobusem!</span>
-                        <br>Mniejsza emisja zanieczyszczeń,do tego większe oszczędności oraz krótszy czas dojazdu bez nerwowego stania w korkach - to tylko niektóre zalety korzystania z komunikacji miejskiej.</br></p>
+                        <p>Dbaj o środowisko! Jedź autobusem!
+                            <br>Mniejsza emisja zanieczyszczeń,do tego większe oszczędności oraz krótszy czas dojazdu bez nerwowego stania w korkach - to tylko niektóre zalety korzystania z komunikacji miejskiej.</p>
                     </div>
                 </div>
             </article>
@@ -57,7 +58,7 @@
                 <div class= "feature">
                     <a href="" target="_blank">
                         <div class="feature-image feature-image-2"></div>
-                        <h3><b>Wirtualny przystanek </b></h3>
+                        <h3>Wirtualny przystanek </h3>
                     </a>
                     <p>Bez wychodzenia z domu sprawdzisz ile masz czasu do odjazdu wybranego autobusu.</p>
                 </div>
@@ -77,13 +78,14 @@
                 <h2>Zapytaj nas o nasz produkt</h2>
                 <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST">
                     <div>
-                        <input type="text" name="telefon" required placeholder="podaj numer telefonu"><br>
-                        <input type="text" name="email" required placeholder="podaj email">
+                        <input type="text" name="telefon" required pattern="^[0-9]*" placeholder="podaj numer telefonu"><br>
+                        <input type="text" name="email" required pattern="^\S+@\S+\.\S+$" placeholder="podaj email">
                     </div>
                     <div class="zgoda">
                         <input type="checkbox">Wyrażam zgodę na działania marketingowe
                     </div>
-                    <input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com">
+                    <!--<input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com">-->
+                    <input type="hidden" name="receiver" value="z@z.com">
                     <button type="submit" value="Send">Wyślij Zapytanie</button>
                 </form>
             </article>
@@ -106,7 +108,7 @@
             &copy; inforshare academy 2016 / design celofyz <!-- agnieszka -->
         </footer>
 
-<!-- Skrypty JS n -->
+<!-- Skrypty JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/script.js"></script>
 
