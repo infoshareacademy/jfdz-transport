@@ -46,14 +46,14 @@ h3 {
     margin-top: 0;
     z-index: 1000;
     top:0;
-    height: 100px;
+    height: 80px;
 }
 
 
 .naglowek-strony .logo-strony{
     /*position: absolute;*/
-    width: 80px;
-    height:80px;
+    width: 60px;
+    height:60px;
     float: left;
     background-image: url('../images/logo-autobus.png');
     background-repeat: no-repeat;
@@ -76,7 +76,7 @@ nav {
 
 .menu-glowne > li {
     display: inline-block;
-    margin-top: 25px;
+    margin-top: 15px;
     margin-left: 50px;
     /*float: left;*/
     /*!*text-align: center;*!*/
