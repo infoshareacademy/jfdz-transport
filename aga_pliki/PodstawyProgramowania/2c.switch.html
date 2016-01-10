@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>2c</title>
+</head>
+<body>
+
+<p id="message-box"></p>
+
+<script src="js/2.helper.js"></script>
+
+<script>
+
+
+	/* Napisz kod, który przywita użytkownika na stronie w jego języku
+	 *  Obsługujemy polski, niemiecki i angielski.
+	 *  Jeżeli język jest inny niż powyższe przywitaj go po angielsku
+	 *
+	 *  Użyj instrukcji 'switch'
+	 *
+	 *  -- WAŻNE --
+	 *  -- Masz do dyspozycji funkcję showMsg(komunikat), która wypisuje komunikat na ekranie --
+	 *  -----------
+	 * */
+
+
+
+	var lang='ge';
+	switch (lang) {
+		case 'pl':
+			showMsg('Dzień Dobry');
+			break;
+		case 'ge':
+			showMsg('Guten Tag');
+			break;
+		default:
+			showMsg('Good Morning');
+	}
+
+//var mojaZmienna=7;
+//
+//		switch (mojaZmienna) {
+//			case 1:
+//				console.log('warotsc jest 1');
+//				break;
+//			case 2:
+//				console.log('wartosc jest 2');
+//				break;
+//			case 3:
+//				console.log('wartosc jest 3');
+//				break;
+//			default:
+//				console.log('pozostale wartosci');
+//		}
+
+
+</script>
+
+
+
+</body>
+</html>
