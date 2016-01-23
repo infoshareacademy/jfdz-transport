@@ -45,6 +45,7 @@ h3 {
     border-bottom: 2px solid #B30800;
     background-color: white;
     margin-top: 0;
+    box-shadow: 0 1px 2px 0 rgba(179,8,0,0.3);
 }
 
 .naglowek-strony .logo-strony{
@@ -294,3 +295,14 @@ h3 {
 .left {float: left;}
 .clear{clear:both;}
 
+.scrollup{
+    width:40px;
+    height:40px;
+    opacity:0.3;
+    position:fixed;
+    bottom:50px;
+    right:100px;
+    display:none;
+    text-indent:-9999px;
+    background: url('') no-repeat;
+}
