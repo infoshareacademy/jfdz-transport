@@ -46,6 +46,7 @@ elementy strony*/
     position: absolute;
     right: 50px;
     top: 50px;
+
 }
 
 .naglowek-strony .menu-glowne li {
@@ -57,7 +58,7 @@ elementy strony*/
 
 
 .tresc-strony {
-    padding: 50px 0px;
+    padding: 50px 0;
 
 }
 
