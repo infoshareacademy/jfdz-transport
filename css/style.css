@@ -134,6 +134,7 @@ h3 {
 .feature {
     width: 32%;
     font-size:20px;
+    font-weight: 600;
     padding-bottom: 15px;
 
 }
