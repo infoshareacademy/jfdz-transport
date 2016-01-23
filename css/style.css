@@ -205,6 +205,23 @@ h3 {
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
 }
 
+.formularz button:disabled {
+    color: #cecece;
+}
+
+.formularz .mousemove {
+    padding: 10px;
+    margin: 10px auto;
+    height: 50px;
+    width: 400px;
+    border: 1px solid #fff;
+    font-size: .8em;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+    line-height: 1.5em;
+}
+
 .formularz .zgoda {
     font-size: .8em;
 }
