@@ -9,12 +9,13 @@ body {
     margin-right: auto;
 }
 
-h1 {
-    font-size: 10em;
-}
+/*h1 {*/
+    /*font-size: 45px;*/
+    /*font-weight: 600;*/
+/*}*/
 
 h2 {
-    font-size: 35px;
+    font-size: 40px;
     font-weight:900;
     margin-bottom: 25px;
 }
@@ -25,8 +26,8 @@ h3 {
     text-decoration: none;
     margin-bottom: 15px;
     margin-top: 15px;
-
 }
+
 /*style menu*/
 
 .section {
@@ -44,7 +45,6 @@ h3 {
     border-bottom: 2px solid #B30800;
     background-color: white;
     margin-top: 0;
-
 }
 
 .naglowek-strony .logo-strony{
@@ -91,7 +91,7 @@ h3 {
     background-size: cover;
     border-bottom: 10px solid #B30800;
     background-color: #B30800;
-    margin-top: 80px;;
+    margin-top: 80px;
 }
 
 .welcome img {
@@ -120,7 +120,7 @@ h3 {
 
 /*style features*/
 .features-container {
-    background-color: floralwhite;
+    background-color: white;
     color: #B30800;
     letter-spacing: normal;
     text-align: center;
@@ -133,7 +133,9 @@ h3 {
 .feature {
     width: 32%;
     font-size:20px;
+    font-weight: 600;
     padding-bottom: 15px;
+
 }
 
 .feature a{
@@ -155,6 +157,11 @@ h3 {
     background-position: center center;
 }
 
+.feature .feature-image:hover {
+    opacity: .5;
+    transition: 5s easy;
+}
+
 .feature-image-1 {background-image: url('../images/feature-chair-600.jpg');}
 .feature-image-2 {background-image: url('../images/feature-hand-600.jpg');}
 .feature-image-3 {background-image: url('../images/feature-woman-600.jpg');}
@@ -171,7 +178,6 @@ h3 {
 /*<i class="fa fa-ticket"></i>*/
 /*<i class="fa fa-mobile"></i>*/
 
-
 .formularz {
     background-color: #B30800;
     background-image: url('../images/public-transport-1920-02r.jpg');
@@ -186,7 +192,6 @@ h3 {
     margin: 5px;
     border-radius: 5px;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
-
 }
 
 .formularz button {
@@ -195,21 +200,12 @@ h3 {
     font-size: 1em;
     color:#B30800;
     margin: 10px;
-    background-color: floralwhite;
+    background-color: white;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
 }
 
 .formularz .zgoda {
     font-size: .8em;
-}
-
-footer{
-    background-color: #222222;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-size: 0.8em;
-    height:10% ;
 }
 
 .social-media {
@@ -242,6 +238,13 @@ footer{
 .social-media .tw { background-color: #3095d3; }
 .social-media .tw:hover { background-color: #2084c2; }
 
+.footer {
+    background-color: #222222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.8em;
+}
 .right{float: right;}
 .left {float: left;}
 .clear{clear:both;}
