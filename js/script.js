@@ -11,12 +11,12 @@ $(document).ready( function() {
 
 
         if (z == 0) {
-            $('#pole').html('Formularz odblokowany');
+            $('#pole').html('<h4>Formularz odblokowany</h4>');
             $('#przycisk').removeAttr('disabled');
 
         } else {
             $('#pole').html(z -= 1);
-            $('#przycisk').removeClass('button:hover');
+            $('.mmwidth').width(z+'%');
         }
     });
 
