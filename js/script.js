@@ -32,9 +32,29 @@ $(document).ready(function() {
 
 });
 
+$(document).ready(function(){
+    $(window).scroll(function() {
+        if(($(this).scrollTop()> 50)){
+            $('header').addClass('naglowek-strony');
+        } else {
+            $('header').removeClass('naglowek-strony');
+        }
+    })
 
+});
 
-
+//$(document).ready(function(){
+//       if($(this).scrollTop() > 50) {
+//           $('header').addClass('naglowek-strony');
+//           $('header').removeClass('naglowek-strony-bez-tla');
+//       }else{
+//           $('header').addClass('naglowek-strony-bez-tla');
+//           $('header').removeClass('naglowek-strony');
+//
+//       }
+//    })
+//
+//});
 
 
 
