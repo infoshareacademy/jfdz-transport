@@ -1,35 +1,33 @@
-@import url(https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext);
+/*@import url("https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext");*/
 
 /*style głowne*/
 body {
     color: #B30800;
     font-family: 'Poiret One', cursive;
     font-size: 20px;
-    background-color: floralwhite;
     margin-left: auto;
     margin-right: auto;
 }
 
-h1 {
-    font-family: 'Poiret One', cursive;
-    font-size: 10em; }
+/*h1 {*/
+    /*font-size: 45px;*/
+    /*font-weight: 600;*/
+/*}*/
 
 h2 {
-    font-family: 'Poiret One', cursive;
-    font-size: 35px;
+    font-size: 40px;
     font-weight:900;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
-
 
 h3 {
-    font-family: 'Poiret One', cursive;
     font-size: 30px;
-    margin-bottom: 15px;
-    margin-top: 15px;
     font-weight:600;
     text-decoration: none;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
+
 /*style menu*/
 
 .section {
@@ -40,21 +38,18 @@ h3 {
 
 .naglowek-strony {
     position: fixed;
+    z-index: 1000;
+    top:0;
     width: 100%;
+    height: 80px;
     border-bottom: 2px solid #B30800;
     background-color: white;
     margin-top: 0;
-    z-index: 1000;
-    top:0;
-    height: 100px;
 }
 
-
 .naglowek-strony .logo-strony{
-    /*position: absolute;*/
-    width: 80px;
-    height:80px;
-    float: left;
+    width: 60px;
+    height:60px;
     background-image: url('../images/logo-autobus.png');
     background-repeat: no-repeat;
     background-position: center center;
@@ -63,42 +58,23 @@ h3 {
     margin-top: 10px;
 }
 
-nav {
-    padding: 10px;
-}
-
 .menu-glowne {
     /*list-style-type: none;*/
     font-size: 20px;
     text-align: right;
-
 }
 
 .menu-glowne > li {
     display: inline-block;
     margin-top: 25px;
     margin-left: 50px;
-    /*float: left;*/
-    /*!*text-align: center;*!*/
-    /*!*margin-top: 34px;*!*/
-    /*padding: 0;*/
-
 }
 
 .menu-glowne > li > a {
-    /*display: inline-block;*/
-    text-decoration: none;
-    color: #000;
     color: #A20700;
     font-size: 26px;
-
+    text-decoration: none;
 }
-
-/*.menu-glowne:after {*/
-    /*content:'';*/
-    /*display: block;*/
-    /*clear: both;*/
-/*}*/
 
 .menu-glowne > li > a:hover {
     color: #f02541;
@@ -107,16 +83,17 @@ nav {
 /*style welcome*/
 
 .welcome {
-    background-image: url("../images/public-transport-1920-03r.jpg");
-    color: white;
-    margin-top: 100px;;
-    background-size: cover;
-    border-bottom: 10px solid #B30800;
     height: 700px;
     align-items:center;
     display:flex;
+    color: white;
+    background-image: url("../images/public-transport-1920-03r.jpg");
+    background-size: cover;
+    border-bottom: 10px solid #B30800;
     background-color: #B30800;
+    margin-top: 80px;
 }
+
 
 .welcome img {
     height: 250px;
@@ -132,48 +109,41 @@ nav {
 
 .slogan h1 {
     margin-top: 0;
-    font-size: 68px;
-    margin-bottom: 20px;
+    font-size: 45px;
     font-weight: 600;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 .slogan p {
     font-size: 25px;
-    font-family: 'Poiret One', cursive,;
-    font-weight: 550;
-    text-align: center;
+    font-weight: 600;
 }
 
 /*style features*/
-.features123 {
-    background-color: floralwhite;
+.features-container {
+    background-color: white;
     color: #B30800;
-    padding: 10px;
-    height: 450px;
-    display: block;
     letter-spacing: normal;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
-    margin-top: 10px;
-
-
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 .feature {
-    text-align: center;
-    padding: 5px;
-    font-size:20px;
-    float: left;
     width: 32%;
+    font-size:20px;
+    font-weight: 600;
+    padding-bottom: 15px;
+
 }
 
 .feature a{
+    display: block;
     text-decoration: none;
     color: #B30800;
-    display: block;
+
 }
 
 .feature .feature-image {
@@ -188,6 +158,11 @@ nav {
     background-position: center center;
 }
 
+.feature .feature-image:hover {
+    opacity: .5;
+    transition: 5s easy;
+}
+
 .feature-image-1 {background-image: url('../images/feature-chair-600.jpg');}
 .feature-image-2 {background-image: url('../images/feature-hand-600.jpg');}
 .feature-image-3 {background-image: url('../images/feature-woman-600.jpg');}
@@ -196,10 +171,39 @@ nav {
     padding-left:10px;
     padding-right:10px;
 }
+.small-icons-container {
+    margin-top:20px ;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    }
 
-h1 {
-    color: white;
+.small-icons  {
+    display: inline-block;
+    margin: 20px;
+    margin-right: 10px;
+    text-align: center;
+    padding: 10px;
+    font-size: 50px;
+    height: 60px;
+    width: 60px;
+    background-color:#B30800 ;
+    border-radius: 50%;
+    color:white;
 }
+.small-icons:hover {
+    margin: 10px;
+    margin-right: 5px;
+    padding: 10px;
+    font-size: 60px;
+    height: 70px;
+    width: 70px;
+    transition: 1s;
+    transform:rotate(360deg);
+}
+
+
 .formularz {
     background-color: #B30800;
     background-image: url('../images/public-transport-1920-02r.jpg');
@@ -214,7 +218,6 @@ h1 {
     margin: 5px;
     border-radius: 5px;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
-
 }
 
 .formularz button {
@@ -223,21 +226,12 @@ h1 {
     font-size: 1em;
     color:#B30800;
     margin: 10px;
-    background-color: floralwhite;
+    background-color: white;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
 }
 
 .formularz .zgoda {
     font-size: .8em;
-}
-
-footer{
-    background-color: #222222;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-size: 0.8em;
-    height:10% ;
 }
 
 .social-media {
@@ -260,6 +254,9 @@ footer{
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
 }
 
+.social-media .sm-ico a {color: #fff;}
+.social-media .sm-ico a:hover {color: #fff;}
+
 .social-media .fb { background-color: #4668b3; }
 .social-media .fb:hover { background-color: #3557a2; }
 .social-media .gplus { background-color: #d95333; }
@@ -267,37 +264,14 @@ footer{
 .social-media .tw { background-color: #3095d3; }
 .social-media .tw:hover { background-color: #2084c2; }
 
-/*a.tilelink*/
-/*{*/
-    /*color: #ffffff;*/
-    /*text-decoration: none;*/
-    /*display: block;*/
-    /*width: 230px;*/
-    /*height: 142px;*/
-/*}*/
-
-/*a.tilelinkhtml5*/
-/*{*/
-    /*color: #ffffff;*/
-    /*text-decoration: none;*/
-/*}*/
-
-/*a.sociallink*/
-/*{*/
-    /*color: #ffffff;*/
-    /*text-decoration: none;*/
-    /*display: block;*/
-    /*width: 105px;*/
-    /*height: 142px;*/
-/*}*/
-
-/* ikonki*/
-.fa.fa-bus{
-    color:
+.footer {
+    background-color: #222222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.8em;
 }
-
-
-.right {float: right;}
+.right{float: right;}
 .left {float: left;}
-.clear {clear:both;}
+.clear{clear:both;}
 
