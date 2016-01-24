@@ -194,6 +194,8 @@ h3 {
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
 }
 
+.formularz input:invalid + .formularz label::after { content: 'Podaj właściwe'; }
+
 .formularz button {
     padding: 10px;
     border-radius: 5px;
