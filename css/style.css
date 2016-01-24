@@ -28,6 +28,11 @@ h3 {
     margin-top: 15px;
 }
 
+h4 {
+    font-size: 20px;
+    font-weight:600;
+}
+
 /*style menu*/
 
 .section {
@@ -174,28 +179,23 @@ h3 {
     padding-left:10px;
     padding-right:10px;
 }
-
 .small-icons-container {
-    margin-top:40px ;
-    margin-bottom: 45px;
-    padding:45px;
+    margin-top:20px ;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-}
-
-.small-icons-size{
-    width: 125px;
-    height: 125px;
-    display:inline-block;
-    margin:25px;
-    overflow: hidden;
-}
+    }
 
 .small-icons  {
     display: inline-block;
-    /*margin-right: 25px;*/
+    margin: 20px;
+    margin-right: 10px;
     text-align: center;
+    padding: 10px;
+    font-size: 60px;
+    height: 70px;
+    width: 70px;
     font-size: 50px;
     height: 125px;
     width: 125px;
@@ -206,8 +206,12 @@ h3 {
     }
 
 .small-icons:hover {
-    /*margin-right: 15px;*/
+    margin: 10px;
+    margin-right: 5px;
+    padding: 10px;
     font-size: 60px;
+    height: 70px;
+    width: 70px;
     transition: 1s;
     transform:rotate(360deg);
 }
@@ -261,6 +265,27 @@ h3 {
     text-align: center;
     display: block;
     line-height: 1.5em;
+    position: relative;
+    z-index: 2;
+}
+
+.formularz .mousemove p,
+.formularz .mousemove span {
+    position: relative;
+    z-index: 1;
+}
+
+.mmwidth {
+
+    position: relative;
+    height: 50px;
+    background-color: red;
+    background: linear-gradient(to right, rgba(255,0,0,0.2), rgba(255,0,0,.9));
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    top: -50px;
+    z-index: 0;
+    opacity: 0.5;
 }
 
 .formularz .zgoda {
