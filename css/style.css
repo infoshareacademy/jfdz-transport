@@ -28,6 +28,11 @@ h3 {
     margin-top: 15px;
 }
 
+h4 {
+    font-size: 20px;
+    font-weight:600;
+}
+
 /*style menu*/
 
 .section {
@@ -255,6 +260,19 @@ h3 {
     text-align: center;
     display: block;
     line-height: 1.5em;
+    position: relative;
+    z-index: 2;
+}
+
+.mmwidth {
+
+    position: relative;
+    height: 50px;
+    background-color: red;
+    border-radius: 5px;
+    top: -50px;
+    z-index: 0;
+    opacity: 0.5;
 }
 
 .formularz .zgoda {
