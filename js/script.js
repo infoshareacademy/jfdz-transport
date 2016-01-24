@@ -13,46 +13,75 @@ function moveMouse() {
     }
 }
 
-(function() {
-
-    function createButton() {
-
-        var button = document.createElement("button");
-
-        button.classList.add("backToTop", "hidden");
-        //button.textContent = "Powrót do góry";
-        document.body.appendChild(button);
-
-        return button;
-
-    }
-
-    var button = createButton();
-
-    function animateScroll() {
-
-        if(document.body.scrollTop > 0) {
-            window.scrollBy(0, -5);
-            setTimeout(animateScroll, 3);
-        }
-    }
-
-    button.addEventListener("click", function(e){
-
-        e.stopPropagation();
-
-        animateScroll();
-
-    }, false);
-
-    window.addEventListener("scroll", function(e){
-
-        if(document.body.scrollTop >= 400) {
-            button.classList.remove("hidden");
-        }else {
-            button.classList.add("hidden");
+$(document).ready(function() {
+    $(window).scroll(function(){
+        if($(this).scrollTop() > 200) {
+         $('.scrollup').fadeIn();
+        }else{
+            $('.scrollup').fadeOut();
         }
 
-    }, false);
+    })
 
-})();
+    $('.scrollup').click(function(){
+        $('html,body').animate({
+            scrollTop: 0
+        }, 600)
+
+    })
+
+});
+
+
+
+
+
+
+
+
+
+
+
+//(function() {
+//
+//    function createButton() {
+//
+//        var button = document.createElement("button");
+//
+//        button.classList.add("backToTop", "hidden");
+//        //button.textContent = "Powrót do góry";
+//        document.body.appendChild(button);
+//
+//        return button;
+//
+//    }
+//
+//    var button = createButton();
+//
+//    function animateScroll() {
+//
+//        if(document.body.scrollTop > 0) {
+//            window.scrollBy(0, -5);
+//            setTimeout(animateScroll, 3);
+//        }
+//    }
+//
+//    button.addEventListener("click", function(e){
+//
+//        e.stopPropagation();
+//
+//        animateScroll();
+//
+//    }, false);
+//
+//    window.addEventListener("scroll", function(e){
+//
+//        if(document.body.scrollTop >= 400) {
+//            button.classList.remove("hidden");
+//        }else {
+//            button.classList.add("hidden");
+//        }
+//
+//    }, false);
+//
+//})();
