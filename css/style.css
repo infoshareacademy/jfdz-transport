@@ -265,6 +265,12 @@ h4 {
     z-index: 2;
 }
 
+.formularz .mousemove p,
+.formularz .mousemove span {
+    position: relative;
+    z-index: 1;
+}
+
 .mmwidth {
 
     position: relative;
@@ -273,7 +279,7 @@ h4 {
     border-radius: 5px;
     top: -50px;
     z-index: 0;
-    opacity: 0.5;
+    /*opacity: 0.7;*/
 }
 
 .formularz .zgoda {
