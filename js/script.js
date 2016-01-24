@@ -2,13 +2,22 @@
  * Created by agnieszkacieslawska on 06.12.15.
  */
 
-var z = 100;
-function moveMouse() {
+$(document).ready( function() {
 
-    if (z == 0) {
-        document.getElementById("pole").innerHTML = 'Formularz odblokowany';
-        document.getElementById("przycisk").removeAttribute("disabled");
-    } else {
-        document.getElementById("pole").innerHTML = z -= 1;
-    }
-}
+    var z = 100;
+
+    $('#moveM').mousemove( function() {
+        console.log('DZIALA');
+
+
+        if (z == 0) {
+            $('#pole').html('Formularz odblokowany');
+            $('#przycisk').removeAttr('disabled');
+
+        } else {
+            $('#pole').html(z -= 1);
+            $('#przycisk').removeClass('button:hover');
+        }
+    });
+
+});
