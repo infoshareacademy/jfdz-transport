@@ -100,6 +100,16 @@ h4 {
     border-bottom: 10px solid #B30800;
     background-color: #B30800;
     margin-top: 80px;
+    animation-name: slides;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slides{
+25% {background-image: url("../images/public-transport-1920-03r.jpg")}
+50% {background-image: url("../images/public-transport-1920-01r.jpg")}
+75% {background-image: url("../images/public-transport-1920-02r.jpg")}
+0% {background-image: url("../images/public-transport-1920-04r.jpg")}
 }
 
 
