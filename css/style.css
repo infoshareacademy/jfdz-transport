@@ -1,5 +1,6 @@
 /*@import url("https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext");*/
 
+/*style głowne*/
 body {
     color: #B30800;
     font-family: 'Poiret One', cursive;
@@ -10,13 +11,13 @@ body {
 
 h2 {
     font-size: 40px;
-    font-weight: 900;
+    font-weight:900;
     margin-bottom: 25px;
 }
 
 h3 {
     font-size: 30px;
-    font-weight: 600;
+    font-weight:600;
     text-decoration: none;
     margin-bottom: 15px;
     margin-top: 15px;
@@ -24,24 +25,36 @@ h3 {
 
 h4 {
     font-size: 20px;
-    font-weight: 600;
+    font-weight:600;
+}
+
+.right{float: right;}
+.left {float: left;}
+.clear{clear:both;}
+
+/*style menu*/
+
+.section {
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .naglowek-strony {
     position: fixed;
     z-index: 1000;
-    top: 0;
+    top:0;
     width: 100%;
     height: 80px;
     border-bottom: 2px solid #B30800;
     background-color: white;
     margin-top: 0;
-    box-shadow: 0 1px 2px 0 rgba(179, 8, 0, 0.3);
+    box-shadow: 0 1px 2px 0 rgba(179,8,0,0.3);
 }
 
-.naglowek-strony .logo-strony {
+.naglowek-strony .logo-strony{
     width: 60px;
-    height: 60px;
+    height:60px;
     background-image: url('../images/logo-autobus.png');
     background-repeat: no-repeat;
     background-position: center center;
@@ -73,16 +86,12 @@ h4 {
     color: #f02541;
 }
 
-.section {
-    width: 1000px;
-    margin-right: auto;
-    margin-left: auto;
-}
+/*style welcome*/
 
 .welcome {
     height: 700px;
-    align-items: center;
-    display: flex;
+    align-items:center;
+    display:flex;
     color: white;
     background-image: url("../images/public-transport-1920-03r.jpg");
     background-size: cover;
@@ -94,11 +103,11 @@ h4 {
     animation-iteration-count: infinite;
 }
 
-@keyframes slides {
-    25% { background-image: url("../images/public-transport-1920-03r.jpg")}
-    50% { background-image: url("../images/public-transport-1920-01r.jpg")}
-    75% { background-image: url("../images/public-transport-1920-02r.jpg")}
-    0%  {background-image: url("../images/public-transport-1920-04r.jpg")}
+@keyframes slides{
+    25% {background-image: url("../images/public-transport-1920-03r.jpg")}
+    50% {background-image: url("../images/public-transport-1920-01r.jpg")}
+    75% {background-image: url("../images/public-transport-1920-02r.jpg")}
+    0% {background-image: url("../images/public-transport-1920-04r.jpg")}
 }
 
 .welcome img {
@@ -125,6 +134,7 @@ h4 {
     font-weight: 600;
 }
 
+/*style features*/
 .features-container {
     background-color: white;
     color: #B30800;
@@ -136,13 +146,13 @@ h4 {
 
 .feature {
     width: 32%;
-    font-size: 20px;
+    font-size:20px;
     font-weight: 600;
     padding-bottom: 15px;
 
 }
 
-.feature a {
+.feature a{
     display: block;
     text-decoration: none;
     color: #B30800;
@@ -154,7 +164,7 @@ h4 {
     width: 250px;
     margin: 5px auto;
     border: 5px solid #B30800;
-    background-color: #B30800;
+    background-color:#B30800;
     border-radius: 50%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -166,32 +176,23 @@ h4 {
     transition: 5s easy;
 }
 
-.feature-image-1 {
-    background-image: url('../images/feature-chair-600.jpg');
-}
-
-.feature-image-2 {
-    background-image: url('../images/feature-hand-600.jpg');
-}
-
-.feature-image-3 {
-    background-image: url('../images/feature-woman-600.jpg');
-}
+.feature-image-1 {background-image: url('../images/feature-chair-600.jpg');}
+.feature-image-2 {background-image: url('../images/feature-hand-600.jpg');}
+.feature-image-3 {background-image: url('../images/feature-woman-600.jpg');}
 
 .feature p {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left:10px;
+    padding-right:10px;
 }
-
 .small-icons-container {
-    margin-top: 20px;
+    margin-top:20px ;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-}
+    }
 
-.small-icons {
+.small-icons  {
     display: inline-block;
     margin: 20px;
     margin-right: 10px;
@@ -200,20 +201,21 @@ h4 {
     font-size: 60px;
     height: 70px;
     width: 70px;
-    background-color: #B30800;
+    background-color:#B30800 ;
     border-radius: 50%;
-    color: white;
-}
+    color:white;
+    }
 
 .small-icons:hover {
     transition: 1s;
-    transform: rotate(360deg);
+    transform:rotate(360deg);
 }
+
 
 .formularz {
     background-color: #B30800;
     background-image: url('../images/public-transport-1920-02r.jpg');
-    color: white;
+    color:white;
     padding: 100px 50px;
     text-align: center;
 }
@@ -223,23 +225,23 @@ h4 {
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
 }
 
 .formularz button {
     padding: 10px;
     border-radius: 5px;
     font-size: 1em;
-    color: #B30800;
+    color:#B30800;
     margin: 10px;
     background-color: white;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
 }
 
 .formularz button:hover {
     background-color: #B30800;
-    color: #fff;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    color:#fff;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
     transition: 1s;
 }
 
@@ -273,8 +275,8 @@ h4 {
     position: relative;
     height: 50px;
     background-color: red;
-    background: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(255, 0, 0, .9));
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, rgba(255,0,0,0.2), rgba(255,0,0,.9));
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     top: -50px;
     z-index: 0;
@@ -302,40 +304,18 @@ h4 {
     padding: 10px;
     display: inline-block;
     border-radius: 5px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
 }
 
-.social-media .sm-ico a {
-    color: #fff;
-}
+.social-media .sm-ico a {color: #fff;}
+.social-media .sm-ico a:hover {color: #fff;}
 
-.social-media .sm-ico a:hover {
-    color: #fff;
-}
-
-.social-media .fb {
-    background-color: #4668b3;
-}
-
-.social-media .fb:hover {
-    background-color: #3557a2;
-}
-
-.social-media .gplus {
-    background-color: #d95333;
-}
-
-.social-media .gplus:hover {
-    background-color: #c84222;
-}
-
-.social-media .tw {
-    background-color: #3095d3;
-}
-
-.social-media .tw:hover {
-    background-color: #2084c2;
-}
+.social-media .fb { background-color: #4668b3; }
+.social-media .fb:hover { background-color: #3557a2; }
+.social-media .gplus { background-color: #d95333; }
+.social-media .gplus:hover { background-color: #c84222; }
+.social-media .tw { background-color: #3095d3; }
+.social-media .tw:hover { background-color: #2084c2; }
 
 .footer {
     background-color: #222222;
@@ -345,9 +325,4 @@ h4 {
     font-size: 0.8em;
 }
 
-.right {float: right;}
-
-.left {float: left;}
-
-.clear {clear: both;}
 
