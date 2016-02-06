@@ -47,6 +47,7 @@ h3 {
     margin-top: 0;
     /*box-shadow: 0 1px 2px 0 rgba(179,8,0,0.3);*/
     color: #ffffff;
+    transition: 1s;
 
 }
 
@@ -66,6 +67,18 @@ h3 {
 }
 
 .naglowek-strony-bez-tla .logo-strony{
+    width: 80px;
+    height:80px;
+    background-image: url('../images/logo-autobus.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: 1s;
+}
+
+.naglowek-strony .logo-strony{
     width: 60px;
     height:60px;
     background-image: url('../images/logo-autobus.png');
@@ -74,8 +87,12 @@ h3 {
     background-size: contain;
     margin-left: 10px;
     margin-top: 10px;
-
+    transition: 1s;
 }
+
+
+
+
 
 .menu-glowne {
     /*list-style-type: none;*/
