@@ -142,10 +142,8 @@ h4 {
     color: #B30800;
     letter-spacing: normal;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px;
-    margin-top: 25px;
+    margin: 25px auto;
+    padding: 75px 0;
 }
 
 .feature {
@@ -220,7 +218,7 @@ h4 {
     background-color: #B30800;
     background-image: url('../images/public-transport-1920-02r.jpg');
     color:white;
-    padding: 50px;
+    padding: 100px 50px;
     text-align: center;
 }
 
