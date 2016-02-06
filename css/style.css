@@ -28,6 +28,11 @@ h3 {
     margin-top: 15px;
 }
 
+h4 {
+    font-size: 20px;
+    font-weight:600;
+}
+
 /*style menu*/
 
 .section {
@@ -188,21 +193,15 @@ h3 {
     margin-right: 10px;
     text-align: center;
     padding: 10px;
-    font-size: 50px;
-    height: 60px;
-    width: 60px;
+    font-size: 60px;
+    height: 70px;
+    width: 70px;
     background-color:#B30800 ;
     border-radius: 50%;
     color:white;
     }
 
 .small-icons:hover {
-    margin: 10px;
-    margin-right: 5px;
-    padding: 10px;
-    font-size: 60px;
-    height: 70px;
-    width: 70px;
     transition: 1s;
     transform:rotate(360deg);
 }
@@ -256,6 +255,27 @@ h3 {
     text-align: center;
     display: block;
     line-height: 1.5em;
+    position: relative;
+    z-index: 2;
+}
+
+.formularz .mousemove p,
+.formularz .mousemove span {
+    position: relative;
+    z-index: 1;
+}
+
+.mmwidth {
+
+    position: relative;
+    height: 50px;
+    background-color: red;
+    background: linear-gradient(to right, rgba(255,0,0,0.2), rgba(255,0,0,.9));
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    top: -50px;
+    z-index: 0;
+    opacity: 0.5;
 }
 
 .formularz .zgoda {
