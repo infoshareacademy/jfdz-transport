@@ -176,14 +176,12 @@ h4 {
     font-size:20px;
     font-weight: 600;
     padding-bottom: 15px;
-
 }
 
 .feature a{
     display: block;
     text-decoration: none;
     color: #B30800;
-
 }
 
 .feature .feature-image {
@@ -244,7 +242,6 @@ h4 {
     transform:rotate(360deg);
 }
 
-
 .formularz {
     background-color: #B30800;
     background-image: url('../images/public-transport-1920-02r.jpg');
@@ -304,7 +301,6 @@ h4 {
 }
 
 .mmwidth {
-
     position: relative;
     height: 50px;
     background-color: red;
@@ -342,7 +338,6 @@ h4 {
 
 .social-media .sm-ico a {color: #fff;}
 .social-media .sm-ico a:hover {color: #fff;}
-
 .social-media .fb { background-color: #4668b3; }
 .social-media .fb:hover { background-color: #3557a2; }
 .social-media .gplus { background-color: #d95333; }
