@@ -3,8 +3,11 @@
 /*@import url("https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext");*/
 
 /*style głowne*/
+
+$kolor: #B30800;
+
 body {
-  color: #B30800;
+  color: $kolor;
   font-family: 'Poiret One', cursive;
   font-size: 20px;
   margin-left: auto;
@@ -43,27 +46,31 @@ h4 {
 }
 
 .naglowek-strony {
+
   position: fixed;
   z-index: 1000;
   top:0;
   width: 100%;
   height: 80px;
-  border-bottom: 2px solid #B30800;
+  border-bottom: 2px solid $kolor;
   background-color: white;
   margin-top: 0;
   box-shadow: 0 1px 2px 0 rgba(179,8,0,0.3);
+
+  .logo-strony{
+    width: 60px;
+    height:60px;
+    background-image: url('../images/logo-autobus.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
 }
 
-.naglowek-strony .logo-strony{
-  width: 60px;
-  height:60px;
-  background-image: url('../images/logo-autobus.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  margin-left: 10px;
-  margin-top: 10px;
-}
+
 
 .menu-glowne {
   font-size: 20px;
@@ -97,8 +104,8 @@ h4 {
   color: white;
   background-image: url("../images/public-transport-1920-03r.jpg");
   background-size: cover;
-  border-bottom: 10px solid #B30800;
-  background-color: #B30800;
+  border-bottom: 10px solid $kolor;
+  background-color: $kolor;
   margin-top: 80px;
   animation-name: slides;
   animation-duration: 10s;
@@ -139,7 +146,7 @@ h4 {
 /*style features*/
 .features-container {
   background-color: white;
-  color: #B30800;
+  color: $kolor;
   letter-spacing: normal;
   text-align: center;
   margin: 25px auto;
@@ -156,15 +163,15 @@ h4 {
 .feature a{
   display: block;
   text-decoration: none;
-  color: #B30800;
+  color: $kolor;
 }
 
 .feature .feature-image {
   height: 250px;
   width: 250px;
   margin: 5px auto;
-  border: 5px solid #B30800;
-  background-color:#B30800;
+  border: 5px solid $kolor;
+  background-color:$kolor;
   border-radius: 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -201,7 +208,7 @@ h4 {
   font-size: 60px;
   height: 70px;
   width: 70px;
-  background-color:#B30800 ;
+  background-color:$kolor ;
   border-radius: 50%;
   color:white;
 }
@@ -212,61 +219,66 @@ h4 {
 }
 
 .formularz {
-  background-color: #B30800;
+  background-color: $kolor;
   background-image: url('../images/public-transport-1920-02r.jpg');
   color:white;
   padding: 100px 50px;
   text-align: center;
-}
 
-.formularz input {
-  font-size: 1.2em;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 5px;
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
-}
+  input {
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
+  }
 
-.formularz button {
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 1em;
-  color:#B30800;
-  margin: 10px;
-  background-color: white;
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
-}
+  button {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    color:$kolor;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
+  }
 
-.formularz button:hover {
-  background-color: #B30800;
-  color:#fff;
-  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
-  transition: 1s;
-}
+  button:hover {
+    background-color: $kolor;
+    color:#fff;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+    transition: 1s;
+  }
 
-.formularz button:disabled {
-  color: #cecece;
-}
+  button:disabled {
+    color: #cecece;
+  }
 
-.formularz .mousemove {
-  padding: 10px;
-  margin: 10px auto;
-  height: 50px;
-  width: 400px;
-  border: 1px solid #fff;
-  font-size: .8em;
-  border-radius: 5px;
-  text-align: center;
-  display: block;
-  line-height: 1.5em;
-  position: relative;
-  z-index: 2;
-}
+  .zgoda {
+    font-size: .8em;
+  }
 
-.formularz .mousemove p,
-.formularz .mousemove span {
-  position: relative;
-  z-index: 1;
+  .mousemove {
+    padding: 10px;
+    margin: 10px auto;
+    height: 50px;
+    width: 400px;
+    border: 1px solid #fff;
+    font-size: .8em;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+    line-height: 1.5em;
+    position: relative;
+    z-index: 2;
+
+    p, span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+
 }
 
 .mmwidth {
@@ -281,15 +293,11 @@ h4 {
   opacity: 0.5;
 }
 
-.formularz .zgoda {
-  font-size: .8em;
-}
-
 .social-media {
   margin: auto;
   text-align: center;
   padding: 20px;
-  background-color: #B30800;
+  background-color: $kolor;
   color: floralwhite;
   border-top: 2px solid floralwhite;
 }
