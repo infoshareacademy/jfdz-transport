@@ -1,7 +1,3 @@
-@charset "UTF-8";
-/*style w scss */
-/*@import url("https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext");*/
-/*style głowne*/
 body {
   color: #b30800;
   font-family: 'Poiret One', sans-serif;
@@ -49,15 +45,16 @@ h4 {
   background-color: white;
   margin-top: 0;
   box-shadow: 0 1px 2px 0 rgba(179, 8, 0, 0.3); }
-  .naglowek-strony .logo-strony {
-    width: 60px;
-    height: 60px;
-    background-image: url("../images/logo-autobus.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    margin-left: 10px;
-    margin-top: 10px; }
+
+.logo-strony {
+  width: 60px;
+  height: 60px;
+  background-image: url("../images/logo-autobus.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-left: 10px;
+  margin-top: 10px; }
 
 .menu-glowne {
   font-size: 20px;
@@ -78,7 +75,6 @@ h4 {
 .menu-glowne > li > a:hover {
   color: #f02541; }
 
-/*style welcome*/
 .welcome {
   height: 700px;
   align-items: center;
@@ -126,7 +122,6 @@ h4 {
   font-size: 25px;
   font-weight: 600; }
 
-/*style features*/
 .features-container {
   background-color: white;
   color: #b30800;
@@ -240,66 +235,54 @@ h4 {
     line-height: 1.5em;
     position: relative;
     z-index: 2; }
-    .formularz .mousemove p, .formularz .mousemove span {
-      position: relative;
-      z-index: 1; }
-
-.mmwidth {
-  position: relative;
-  height: 50px;
-  background-color: red;
-  background: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.9));
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  top: -50px;
-  z-index: 0;
-  opacity: 0.5; }
-
-.social-media {
-  margin: auto;
-  text-align: center;
-  padding: 20px;
-  background-color: #b30800;
-  color: floralwhite;
-  border-top: 2px solid floralwhite; }
-
-.social-media .sm-ico {
-  text-align: center;
-  margin: 10px;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  display: inline-block;
-  border-radius: 5px;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
-
-.social-media .sm-ico a {
-  color: #fff; }
-
-.social-media .sm-ico a:hover {
-  color: #fff; }
-
-.social-media .fb {
-  background-color: #4668b3; }
-
-.social-media .fb:hover {
-  background-color: #3557a2; }
-
-.social-media .gplus {
-  background-color: #d95333; }
-
-.social-media .gplus:hover {
-  background-color: #c84222; }
-
-.social-media .tw {
-  background-color: #3095d3; }
-
-.social-media .tw:hover {
-  background-color: #2084c2; }
-
-.footer {
-  background-color: #222222;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  font-size: 0.8em; }
+  .formularz p, .formularz span {
+    position: relative;
+    z-index: 1; }
+  .formularz .mmwidth {
+    position: relative;
+    height: 50px;
+    background-color: red;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.9));
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    top: -50px;
+    z-index: 0;
+    opacity: 0.5; }
+  .formularz .social-media {
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #b30800;
+    color: floralwhite;
+    border-top: 2px solid floralwhite; }
+  .formularz .social-media .sm-ico {
+    text-align: center;
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
+  .formularz .social-media .sm-ico a {
+    color: #fff; }
+  .formularz .social-media .sm-ico a:hover {
+    color: #fff; }
+  .formularz .social-media .fb {
+    background-color: #4668b3; }
+  .formularz .social-media .fb:hover {
+    background-color: #3557a2; }
+  .formularz .social-media .gplus {
+    background-color: #d95333; }
+  .formularz .social-media .gplus:hover {
+    background-color: #c84222; }
+  .formularz .social-media .tw {
+    background-color: #3095d3; }
+  .formularz .social-media .tw:hover {
+    background-color: #2084c2; }
+  .formularz .footer {
+    background-color: #222222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.8em; }
