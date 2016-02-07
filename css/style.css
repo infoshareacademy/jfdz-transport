@@ -9,6 +9,11 @@ body {
     margin-right: auto;
 }
 
+/*h1 {*/
+    /*font-size: 45px;*/
+    /*font-weight: 600;*/
+/*}*/
+
 h2 {
     font-size: 40px;
     font-weight:900;
@@ -34,7 +39,6 @@ h4 {
 
 /*style menu*/
 
-
 .section {
     width: 1000px;
     margin-right: auto;
@@ -51,6 +55,20 @@ h4 {
     background-color: white;
     margin-top: 0;
     box-shadow: 0 1px 2px 0 rgba(179,8,0,0.3);
+    transition: 1s;
+
+}
+
+.naglowek-strony-bez-tla .logo-strony{
+    width: 80px;
+    height:80px;
+    background-image: url('../images/logo-autobus.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: 1s;
 }
 
 .naglowek-strony .logo-strony{
@@ -87,7 +105,14 @@ h4 {
     color: #f02541;
 }
 
-/*style welcome slider*/
+.naglowek-strony .menu-glowne > li > a {
+    color: #A20700;
+    font-size: 26px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/*style welcome*/
 
 .welcome {
     height: 700px;
@@ -98,6 +123,7 @@ h4 {
     background-size: cover;
     border-bottom: 10px solid #B30800;
     background-color: #B30800;
+    margin-top: 0px;
     margin-top: 80px;
     animation-name: slides;
     animation-duration: 10s;
@@ -208,6 +234,12 @@ h4 {
     }
 
 .small-icons:hover {
+    margin: 10px;
+    margin-right: 5px;
+    padding: 10px;
+    font-size: 60px;
+    height: 70px;
+    width: 70px;
     transition: 1s;
     transform:rotate(360deg);
 }
