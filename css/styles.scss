@@ -1,14 +1,10 @@
-/*style w scss */
-
 /*@import url("https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext");*/
-
-/*style głowne*/
 
 $kolor: #B30800;
 
 body {
   color: $kolor;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Poiret One', sans-serif;
   font-size: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -70,8 +66,6 @@ h4 {
 
 }
 
-
-
 .menu-glowne {
   font-size: 20px;
   font-weight: 600;
@@ -94,8 +88,6 @@ h4 {
 .menu-glowne > li > a:hover {
   color: #f02541;
 }
-
-/*style welcome*/
 
 .welcome {
   height: 700px;
@@ -329,7 +321,3 @@ h4 {
   text-align: center;
   font-size: 0.8em;
 }
-
-
-
-
