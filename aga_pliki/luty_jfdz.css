@@ -1,49 +1,60 @@
-body {
-    color:red;
-    font-size:30px;
-    font-family: Arial;
-    /*display: block;*/
-}
-span{
-    color:green;
-    font-size: 40px;
+
+.obrazek {
+    height: 400px;
+    width: 900px;
+    margin: 100px;
+    background-color: rgba(255, 0, 0, 0.1);
+    background-image: url('../images/logo-autobus.png');
+    background-repeat: repeat-y;
+    /*background-position: 200px,-50px; lub center center*/
+    background-size: cover;
 }
 
-div {
-    color: blue;
-    font-size: 50px;
-    font-family: Calibri;
-}
-#nawigacja a[href^='http://']:hover::after{
-    content: 'link zewnętrzny'
-}
+/*body {*/
+/*color:red;*/
+/*font-size:30px;*/
+/*font-family: Arial;*/
+/*!*display: block;*!*/
+/*}*/
+/*span{*/
+/*color:green;*/
+/*font-size: 40px;*/
+/*}*/
 
-li {
-    display: inline-block;
-    font-size: 20px;
-    background-color: #A20700;
-    padding:5px 10px;
-}
-.list-level2 li {background-color: blue;}
-.list-level3 li {background-color: green;}
+/*div {*/
+/*color: blue;*/
+/*font-size: 50px;*/
+/*font-family: Calibri;*/
+/*}*/
+/*#nawigacja a[href^='http://']:hover::after{*/
+/*content: 'link zewnętrzny'*/
+/*}*/
 
+/*li {*/
+/*display: inline-block;*/
+/*font-size: 20px;*/
+/*background-color: #A20700;*/
+/*padding:5px 10px;*/
+/*}*/
+/*.list-level2 li {background-color: blue;}*/
+/*.list-level3 li {background-color: green;}*/
 
-menu ul ul {
-    display: none;
-    position: absolute;
-}
-li:hover > ul {
-    display: block;
-}
- ul ul li {
-     display: block;
- }
+/*menu ul ul {*/
+/*display: none;*/
+/*position: absolute;*/
+/*}*/
+/*li:hover > ul {*/
+/*display: block;*/
+/*}*/
+/*ul ul li {*/
+/*display: block;*/
+/*}*/
 
-
+/*to nie jest potrzebne*/
 /*.list-level2 li,*/
- /*.list-level3 li{*/
-     /*display: none;*/
- /*}*/
+/*.list-level3 li{*/
+/*display: none;*/
+/*}*/
 /*.list-level1 li:hover .list-level2 li  {*/
-    /*display: block;*/
+/*display: block;*/
 /*}*/
