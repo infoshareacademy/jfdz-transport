@@ -29,25 +29,6 @@ if (z == 0) {
     document.getElementById("pole").innerHTML = z -= 1;
 }
 
-$(document).ready(function() {
-    $(window).scroll(function(){
-        if($(this).scrollTop() > 200) {
-            $('.scrollup').fadeIn();
-        }else{
-            $('.scrollup').fadeOut();
-        }
-
-    })
-
-    $('.scrollup').click(function(){
-        $('html,body').animate({
-            scrollTop: 0
-        }, 600)
-
-    })
-
-});
-
 $(document).ready(function(){
     $(window).scroll(function() {
         if(($(this).scrollTop()> 50)){
@@ -58,12 +39,21 @@ $(document).ready(function(){
     })
 
 });
+
+    $('.scrollup').click(function(){
+        $('html,body').animate({
+            scrollTop: 0
+        }, 600)
+
+    })
+
+});
+
     if (z == 0) {
         document.getElementById("pole").innerHTML = 'Formularz odblokowany';
         document.getElementById("przycisk").removeAttribute("disabled");
     } else {
         document.getElementById("pole").innerHTML = z -= 1;
-    }
 }
 
 $(document).ready(function() {
@@ -73,26 +63,7 @@ $(document).ready(function() {
         }else{
             $('.scrollup').fadeOut();
         }
-
-    })
-
-    $('.scrollup').click(function(){
-        $('html,body').animate({
-            scrollTop: 0
-        }, 600)
-
-    })
-
 });
-
-$(document).ready(function(){
-    $(window).scroll(function() {
-        if(($(this).scrollTop()> 50)){
-            $('header').addClass('naglowek-strony');
-        } else {
-            $('header').removeClass('naglowek-strony');
-        }
-    })
 
 });
 
