@@ -5,7 +5,7 @@
     <meta name="description" content="Statystyki Komunikacji GDAŃSK">
     <meta name="author" content="CELOFYZ DEV">
     <meta name="keywords" content="komunikacja, gdańsk, ztm, autobusy">
-    <link rel="stylesheet" href="aga_pliki/resetcss.css">
+    <link rel="stylesheet" href="css/resetcss.css">
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext' rel='stylesheet'
           type='text/css'>
@@ -14,19 +14,15 @@
     <title>Statystyki komunikacji ZTM Gdańsk</title>
 </head>
 <body>
-
 <header class="naglowek-strony">
     <div class="section">
         <a href="#home">
-            <div class="logo-strony left">
-
-            </div>
+            <div class="logo-strony left"></div>
         </a>
         <nav>
             <!--kamila-->
             <ul id="menu" class="menu-glowne">
                 <li><a href="">menu</a></li>
-
                 <li><a href="#home">o nas</a></li>
                 <li><a href="#features">funkcje</a></li>
                 <li><a href="#form">wyślij zapytanie</a></li>
@@ -57,97 +53,71 @@
         <h2>Poznaj korzyści z jazdy autobusem</h2>
 
         <div class="feature left">
-            <a href="" target="_blank">
-                <div class="feature-image feature-image-1"></div>
-                <h3>Rozkład jazdy</h3>
-            </a>
-
+            <!--<a href="" target="_blank">-->
+            <div class="feature-image feature-image-1"></div>
+            <h3>Rozkład jazdy</h3>
+            <!--</a>-->
             <p>W tym miejscu znajdziesz niezbędne informacje na temat linii autobusowych, przystanków i rozkładów
                 jazdy.</p>
         </div>
         <div class="feature left">
-            <a href="" target="_blank">
-                <div class="feature-image feature-image-2"></div>
-                <h3>Wirtualny przystanek </h3>
-            </a>
-
+            <!--<a href="" target="_blank">-->
+            <div class="feature-image feature-image-2"></div>
+            <h3>Wirtualny przystanek </h3>
+            <!--</a>-->
             <p>Bez wychodzenia z domu sprawdzisz ile masz czasu do odjazdu wybranego autobusu.</p>
         </div>
         <div class="feature left">
-            <a href="" target="_blank">
-                <div class="feature-image feature-image-3"></div>
-                <h3> Mobilnie</h3>
-            </a>
-
+            <!--<a href="" target="_blank">-->
+            <div class="feature-image feature-image-3"></div>
+            <h3> Mobilnie</h3>
+            <!--</a>-->
             <p>Wystarczy telefon a każdy rozkład masz w zasięgu ręki - spróbuj jakie to proste!</p>
             <!--<div style="clear:both;"></div>-->
         </div>
     </article>
 
-    <!--sekcja frmularz marcin - marcin dodalam id form do article, zeby sie ladnie formatowalo-->
+    <!-- sekcja formularz marcin -->
     <div class="clear"></div>
 
     <article class="small-icons-container">
-        <div class="small-icons-size">
-            <div class="small-icons " title="Lista linii autobusowych"><i class="fa fa-table"></i></div>
-        </div>
-        <div class="small-icons-size">
-            <div class="small-icons " title="Trasy"><i class="fa fa-map"></i></div>
-        </div>
-        <div class="small-icons-size">
-            <div class="small-icons " title="Lista przystanków"><i class="fa fa-map-marker"></i></div>
-        </div>
-        <div class="small-icons-size">
-            <div class="small-icons " title="Czas przyjazdu"><i class="fa fa-clock-o"></i></div>
-        </div>
-        <div class="small-icons-size">
-            <div class="small-icons " title="Ceny biletów"><i class="fa fa-ticket"></i></div>
-        </div>
-        <div class="small-icons-size">
-            <div class="small-icons " title="Kup mobilny bilet"><i class="fa fa-mobile"></i></div>
-        </div>
-
-
+        <div class="small-icons " title="Lista linii autobusowych"><i class="fa fa-table"></i></div>
+        <div class="small-icons " title="Trasy"><i class="fa fa-map"></i></div>
+        <div class="small-icons " title="Lista przystanków"><i class="fa fa-map-marker"></i></div>
+        <div class="small-icons " title="Czas przyjazdu"><i class="fa fa-clock-o"></i></div>
+        <div class="small-icons " title="Ceny biletów"><i class="fa fa-ticket"></i></div>
+        <div class="small-icons " title="Kup mobilny bilet"><i class="fa fa-mobile"></i></div>
     </article>
 
-
     <article id="form" class="formularz">
-
         <h2>Zapytaj nas o nasz produkt</h2>
-
         <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST">
             <div>
-                <input type="text" name="telefon" required pattern="^[0-9]*" placeholder="podaj numer telefonu"
-                       title="Podaj tylko liczby"><br>
-                <input type="text" name="email" required pattern="^\S+@\S+\.\S+$" title="Podaj prawidłowy email"
-                       placeholder="podaj email">
+                <input type="text" name="telefon" required pattern="^[0-9]*" placeholder="podaj numer telefonu" title="Podaj tylko liczby"><br>
+                <input type="text" name="email" required pattern="^\S+@\S+\.\S+$" title="Podaj prawidłowy email" placeholder="podaj email">
             </div>
             <div class="zgoda">
                 <input type="checkbox" required title="Musisz wyrazić zgodę">Wyrażam zgodę na działania marketingowe
             </div>
 
             <div id="moveM" class="mousemove">
-                <p>Poruszaj myszką żeby odblokować formularz
-
-                <div id="pole">100</div>
-                </p>
+                <p>Poruszaj myszką żeby odblokować formularz</p>
+                <span id="pole">100</span>
+                <div class="mmwidth"></div>
             </div>
 
             <input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com">
             <!--<input type="hidden" name="receiver" value="z@z.com">-->
-
             <button type="submit" value="Send" disabled id="przycisk">Wyślij Zapytanie</button>
+
         </form>
-
-
     </article>
+
     <article>
-        <div class="about">
-
-        </div>
-
+        <div class="about"></div>
     </article>
     <!--sekcja sm marcin-->
+
     <article id="social" class="social-media">
         <h2>Polub nas!</h2>
 
@@ -158,6 +128,7 @@
         <div class="clear"></div>
     </article>
 </main>
+
 <footer class="footer">
     &copy; infoshare academy 2016 / design celofyz <!-- agnieszka -->
 </footer>
@@ -165,19 +136,6 @@
 <!-- Skrypty JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/script.js"></script>
-<!--<script type="text/javascript">-->
-
-    <!--&lt;!&ndash;-->
-    <!--skryptcookiesInfo = "Ta strona korzysta z ciasteczek. Korzystając ze strony zgadzasz się na ich użycie :)";&ndash;&gt;-->
-    <!--&lt;!&ndash;-->
-    <!--skryptcookiesNaglowek = "Nagłowek polityki prywatności";&ndash;&gt;-->
-    <!--&lt;!&ndash;-->
-    <!--skryptcookiesPolityka3 = "Nowa treść punktu trzeciego";-->
-    <!--&ndash;&gt;-->
-    <!--<-->
-    <!--!&#45;&#45;skryptcookiesPozycja = "bottom"; // top lub bottom&ndash;&gt;-->
-<!--</script>-->
-<script src="js/cookie.js"></script>
 
 </body>
 </html>
