@@ -1,10 +1,11 @@
-/*@import url("https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext");*/
+//style w scss
 
-$kolor: #B30800;
+
+/*@import url("https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext");*/
 
 /*style głowne*/
 body {
-  color: $kolor;
+  color: #B30800;
   font-family: 'Poiret One', cursive;
   font-size: 20px;
   margin-left: auto;
@@ -13,7 +14,7 @@ body {
 
 h2 {
   font-size: 40px;
-  font-weight:800;
+  font-weight:900;
   margin-bottom: 25px;
 }
 
@@ -321,5 +322,7 @@ h4 {
   text-align: center;
   font-size: 0.8em;
 }
+
+
 
 
