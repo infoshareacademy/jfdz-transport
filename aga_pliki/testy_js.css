@@ -1,0 +1,12 @@
+body{
+    background-color: #3557a2;
+    color: white;
+    font-size: 40px;
+    font-family: Corbel;
+}
+#zegar{
+    border: solid darkred;
+    text-align: center;
+
+
+}

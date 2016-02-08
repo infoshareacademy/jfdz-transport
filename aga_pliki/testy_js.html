@@ -5,13 +5,32 @@
     <meta name="description" content="Statystyki Komunikacji GDAŃSK">
     <meta name="author" content="CELOFYZ DEV">
     <meta name="keywords" content="komunikacja, gdańsk, ztm, autobusy">
-    <link rel="stylesheet" href="../css/resetcss.css">
-    <link rel="stylesheet" href="luty_jfdz.css">
-    <title>luty_jfdz</title>
+    <link rel="stylesheet" href="testy_js.css">
+    <title>luty_jfdz_ js</title>
 </head>
-<body>
+<body onload="zmienslajd()">
+<span onclick="'ustawslajd()" style="cursor:crosshair">[1]</span>
+<span onclick="'ustawslajd()" style="cursor:crosshair">[2]</span>
+<span onclick="'ustawslajd()" style="cursor:crosshair">[3]</span>
+<span onclick="'ustawslajd()" style="cursor:crosshair">[4]</span>
+<span onclick="'ustawslajd()" style="cursor:crosshair">[5]</span>
+<div id="zegar"> </div>
+
+<div id="slajder"></div>
+<!--<img src="../images/public-transport-1920-01r.jpg"-->
 
 
 
+<input type='text' id="pole">
+<input type="submit" value="sprawdz" onclick="sprawdz()">
+<div id="wynik"></div>
+
+
+<input type="text" id="pole1">
+<input type="text" id="pole2">
+<input type="submit" value="pokaż" onclick="wypisz()">
+<div id="ciagliczb"></div>
+
+<script src="testy_js.js"></script>
 </body>
 </html>
