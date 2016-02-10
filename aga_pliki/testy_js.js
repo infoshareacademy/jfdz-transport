@@ -17,7 +17,7 @@ function zmienslajd() {
     var plik = "<img src=\"../images/slajd" + numer + ".png\"/>";
     document.getElementById('slajder').innerHTML = plik;
     $('#slajder').fadeIn(300);
-    setTimeout('zmienslajd()', 3000);
+    setTimeout('zmienslajd()', 300);
 }
 
 
@@ -57,4 +57,7 @@ function wypisz() {
     document.getElementById('ciagliczb').innerHTML = napis;
 }
 
+function addBox (){
+    document.getElementsByClassName('dodatkowybox').innerHTML +=document.getElementsByClassName('dodatkowybox').innerHtml + ""
 
+}
