@@ -41,32 +41,59 @@ h4 {
   margin-left: auto;
 }
 
-.naglowek-strony {
-
+.naglowek-strony-bez-tla {
   position: fixed;
   z-index: 1000;
   top:0;
   width: 100%;
   height: 80px;
-  border-bottom: 2px solid $kolor;
+  color: #ffffff;
+  transition: 0.4s;
+  margin-top: 20px;
+}
+
+.naglowek-strony {
+  /*display: none;*/
+  position: fixed;
+  z-index: 1000;
+  top:0;
+  width: 100%;
+  height: 80px;
+  border-bottom: 2px solid #B30800;
   background-color: white;
   margin-top: 0;
   box-shadow: 0 1px 2px 0 rgba(179,8,0,0.3);
-
-  .logo-strony{
-    width: 60px;
-    height:60px;
-    background-image: url('../images/logo-autobus.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    margin-left: 10px;
-    margin-top: 10px;
-  }
+  transition: all 0.25s;
+  transform: translate3d(0, 0, 0);
 
 }
 
+.naglowek-strony-bez-tla .logo-strony{
+  width: 80px;
+  height:80px;
+  background-image: url('../images/logo-autobus.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-left: 10px;
+  margin-top: 10px;
+  transition: 0.4s;
+}
+
+.naglowek-strony .logo-strony{
+  width: 60px;
+  height:60px;
+  background-image: url('../images/logo-autobus.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-left: 10px;
+  margin-top: 10px;
+  transition: 0.4s;
+}
+
 .menu-glowne {
+  /*list-style-type: none;*/
   font-size: 20px;
   font-weight: 600;
   text-align: right;
@@ -79,7 +106,7 @@ h4 {
 }
 
 .menu-glowne > li > a {
-  color: #A20700;
+  color: #ffffff;
   font-size: 26px;
   text-decoration: none;
   font-weight: 600;
@@ -89,8 +116,15 @@ h4 {
   color: #f02541;
 }
 
+.naglowek-strony .menu-glowne > li > a {
+  color: #A20700;
+  font-size: 26px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 .welcome {
-  height: 700px;
+  height: 800px;
   align-items:center;
   display:flex;
   color: white;
@@ -98,7 +132,7 @@ h4 {
   background-size: cover;
   border-bottom: 10px solid $kolor;
   background-color: $kolor;
-  margin-top: 80px;
+  margin-top: 0;
   animation-name: slides;
   animation-duration: 10s;
   animation-iteration-count: infinite;
