@@ -281,6 +281,63 @@ h4 {
   z-index: 0;
   opacity: 0.5; }
 
+/*style oNas*/
+.oNas-container {
+  background-color: white;
+  color: #B30800;
+  letter-spacing: normal;
+  text-align: center;
+  margin: 25px auto;
+  padding: 75px 0; }
+
+.oNas {
+  width: 32%;
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 15px; }
+
+.oNas a {
+  display: block;
+  text-decoration: none;
+  color: #B30800; }
+
+.oNas .oNas-image {
+  height: 250px;
+  width: 250px;
+  margin: 5px auto;
+  border: 5px solid #B30800;
+  background-color: #B30800;
+  border-radius: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.oNas .oNas-image:hover {
+  opacity: .5;
+  transition: 15s easy; }
+
+.oNas-image-1 {
+  background-image: url("../images/oNas-Aga.jpg"); }
+
+.oNas-image-2 {
+  background-image: url("../images/oNas-Kama.jpg"); }
+
+.oNas-image-3 {
+  background-image: url("../images/oNas-Lila.jpg"); }
+.oNas-image4 {
+  background-image: url("../images/oNas-Marcin.jpg"); }
+
+.oNas p {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+
+
+
+
+
+
+
 .social-media {
   margin: auto;
   text-align: center;
