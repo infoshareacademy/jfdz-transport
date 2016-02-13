@@ -11,6 +11,19 @@
           type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+
+    <script type="text/javascript">
+        // <![CDATA[
+        function flash(id, kolor, czas, kolor2, czas2)
+        {
+            document.getElementById(id).style.color = kolor;
+            setTimeout('flash("' + id + '","' + kolor2 + '",' + czas2 + ',"' + kolor + '",' + czas + ')', czas);
+        }
+        // ]]>
+    </script>
+
+
+
     <title>Statystyki komunikacji ZTM Gdańsk</title>
 </head>
 <body>
@@ -22,7 +35,7 @@
         <nav>
                 <ul id="menu" class="menu-glowne">
                 <li><a href="">menu</a></li>
-                <li><a href="#home">o nas</a></li>
+                <li><a href="#oNas">o nas</a></li>
                 <li><a href="#features">funkcje</a></li>
                 <li><a href="#form">wyślij zapytanie</a></li>
                 <li><a href="#social">polub nas</a></li>
@@ -79,10 +92,16 @@
         <div class="small-icons " title="Kup mobilny bilet"><i class="fa fa-mobile"></i></div>
     </article>
 
-    <figure class=""left">
+    <div class="clear"></div>
 
-    </figure>
-    <article id="form" class="formularz">
+
+
+
+    </article>
+    <div class="clear"></div>
+
+
+                    <article id="form" class="formularz">
         <h2>Zapytaj nas o nasz produkt</h2>
         <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST">
             <div>

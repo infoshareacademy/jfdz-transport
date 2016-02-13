@@ -1,0 +1,118 @@
+div.oNas-My {
+    background-color: maroon;
+    color: white;
+    margin: 2px;
+    padding: 2px;
+    font-size: medium;
+}
+
+
+#oNas {
+    width: 100x;
+    font-size: 1.8em;
+    font-weight: 60px;
+    padding-bottom: 1px;
+    padding-top: 1 px;
+    display:table-footer-group;
+    text-decoration: none;
+    color: #B30800;
+    text-align: center;
+    margin: auto;
+}
+.oNas h1 {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: table-footer-group;
+}
+
+
+
+p .oNas{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+    display: inline;
+}
+
+h1 .oNas {
+    background-color: lightpink;
+    color: #B30800;
+    letter-spacing: normal;
+    text-align: center;
+    margin: 25px auto;
+    padding: 75px 0; }
+
+.image-1 {
+    height: 100px;
+    width: 100px;
+    margin: 3px auto;
+    border: 3px solid #B30800;
+    background-color: #B30800;
+    border-radius: 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+    display: inline;
+}
+.image-2 {
+    height: 100px;
+    width: 100px;
+    margin: 3px auto;
+    border: 3px solid #B30800;
+    background-color: #B30800;
+    border-radius: 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+    display: inline;
+}
+.image-3 {
+    height: 100px;
+    width: 100px;
+    margin: 3px auto;
+    border: 3px solid #B30800;
+    background-color: #B30800;
+    border-radius: 70%;
+    float: left;
+    display-list: left;
+}
+
+.image-4 {
+    height: 100px;
+    width: 100px;
+    margin: 3px auto;
+    border: 3px solid #B30800;
+    background-color: #B30800;
+    border-radius: 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+    display: inline;
+}
+
+
+
+.oNas-image-2:hover {
+    opacity: 0.55;
+    transition: 5s easy; }
+
+.oNas .image-1 {
+    background-image: url("../images/oNas-Aga.jpg");
+    width: 336px;
+    height: 416px;
+}
+
+.oNas .image-2 {
+    background-image: url("../images/oNas-Kama.jpg"); }
+
+.oNas.image-3 {
+    background-image: url("../images/oNas-Lila.jpg"); }
+
+.oNas .image-4 {
+    background-image: url("../images/oNas-Marcin.jpg"); }
+
