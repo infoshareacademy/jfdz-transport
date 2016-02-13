@@ -20,6 +20,8 @@ $(document).ready( function() {
 
 });
 
+
+
 $(document).ready(function() {
     $(window).scroll(function(){
         if($(this).scrollTop() > 200) {
@@ -35,6 +37,17 @@ $(document).ready(function() {
             scrollTop: 0
         }, 600)
 
+    })
+
+});
+
+$(document).ready(function(){
+    $(window).scroll(function() {
+        if(($(this).scrollTop()> 50)){
+            $('header').addClass('naglowek-strony');
+        } else {
+            $('header').removeClass('naglowek-strony');
+        }
     })
 
 });
