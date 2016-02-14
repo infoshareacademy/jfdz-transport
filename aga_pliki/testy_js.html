@@ -8,30 +8,51 @@
     <link rel="stylesheet" href="testy_js.css">
     <title>luty_jfdz_ js</title>
 </head>
-<body onload="zmienslajd()">
-<span onclick="'ustawslajd()" style="cursor:crosshair">[1]</span>
-<span onclick="'ustawslajd()" style="cursor:crosshair">[2]</span>
-<span onclick="'ustawslajd()" style="cursor:crosshair">[3]</span>
-<span onclick="'ustawslajd()" style="cursor:crosshair">[4]</span>
-<span onclick="'ustawslajd()" style="cursor:crosshair">[5]</span>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
 <div id="zegar"> </div>
 
-<div id="slajder"></div>
+<body onload="zmienslajd()">
+
+<span onclick="ustawslajd()" style="cursor:pointer">[1]</span>
+<span onclick="ustawslajd()" style="cursor:pointer">[2]</span>
+<span onclick="ustawslajd()" style="cursor:pointer">[3]</span>
+<span onclick="ustawslajd()" style="cursor:pointer">[4]</span>
+<span onclick="ustawslajd()" style="cursor:pointer">[5]</span>
+
 <!--<img src="../images/public-transport-1920-01r.jpg"-->
+<div id="slider"></div>
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <input type='text' id="pole">
 <input type="submit" value="sprawdz" onclick="sprawdz()">
 <div id="wynik"></div>
 
+<br>
+<br>
+<br>
 
 <input type="text" id="pole1">
 <input type="text" id="pole2">
 <input type="submit" value="pokaż" onclick="wypisz()">
 <div id="ciagliczb"></div>
+<br>
+<br>
+<br>
 
-<input type="submit" class='dodatkowybox' onlick="addBox()"> wywołanie </input>
+<!--<a href class='dodatkowybox' onlick ="addBox()"> wywołanie </a>-->
+
+
 
 <script src="testy_js.js"></script>
 </body>
