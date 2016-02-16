@@ -6,18 +6,22 @@ body{
 }
 #zegar{
     border: solid darkred;
+    width: 600px;
+    margin: 5px;
+    padding:5px;
     text-align: center;
+    display: inline-block;
 
 
+}
+#slider{
+    display: block;
 }
 .dodatkowybox{
-    background-color:#3557a2;
+    background-color: #a21716;
     color: black;
-    width: 100px;
-    height: 100px;
+    width: 5px;
+    height: 5px;
+    position: relative;
 }
-
-                                                            <script type="text/javascript">
-
-
 

@@ -2,7 +2,6 @@
  * Created by agniecha on 2016-02-08.
  */
 var numer = Math.floor(Math.random()*5)+1;
-
 var timer1 = 0;
 var timer2 = 0;
 
@@ -26,7 +25,7 @@ function zmienslajd()
 {
     numer++; if (numer>5) numer=1;
 
-    var plik = "<img src=\"../images/slajd" + numer + ".png\" />";
+    var plik = "<img src=\"slajd" + numer + ".png\" />";
 
     document.getElementById("slider").innerHTML = plik;
     $("#slider").fadeIn(500);
@@ -36,23 +35,23 @@ function zmienslajd()
 
 }
 
-//
-//function odliczanie() {
-//    var dzisiaj = new Date();
-//
-//    var dzien = dzisiaj.getDate();
-//    var miesiac = dzisiaj.getMonth() + 1;
-//    var rok = dzisiaj.getFullYear();
-//    var godzina = dzisiaj.getHours();
-//    if (godzina < 10)godzina = "0" + godzina;
-//    var minuta = dzisiaj.getMinutes();
-//    if (minuta < 10)minuta = "0" + minuta;
-//    var sekunda = dzisiaj.getSeconds();
-//    if (sekunda < 10)sekunda = "0" + sekunda;
-//    document.getElementById('zegar').innerHTML = dzien + ' / ' + miesiac + ' / ' + rok + " " + " " + godzina + ": " + minuta + ": " + sekunda;
-//    setTimeout('odliczanie()', 1000);
-//}
-//onload(odliczanie());
+
+function odliczanie() {
+    var dzisiaj = new Date();
+
+    var dzien = dzisiaj.getDate();
+    var miesiac = dzisiaj.getMonth() + 1;
+    var rok = dzisiaj.getFullYear();
+    var godzina = dzisiaj.getHours();
+    if (godzina < 10)godzina = "0" + godzina;
+    var minuta = dzisiaj.getMinutes();
+    if (minuta < 10)minuta = "0" + minuta;
+    var sekunda = dzisiaj.getSeconds();
+    if (sekunda < 10)sekunda = "0" + sekunda;
+    document.getElementById('zegar').innerHTML = dzien + ' / ' + miesiac + ' / ' + rok + " " + " " + godzina + ": " + minuta + ": " + sekunda;
+    setTimeout('odliczanie()', 1000);
+}
+onload(odliczanie());
 
 function sprawdz() {
     var liczba = document.getElementById('pole').value;
@@ -72,9 +71,22 @@ function wypisz() {
     document.getElementById('ciagliczb').innerHTML = napis;
 }
 
-//function addBox (){
-//    document.getElementsByClassName('dodatkowybox').innerHTML += "dodatkowy tekst!!!!!!!!";
-}
+$(document).ready(function () {
 
+
+    $('.dodatkowybox').click (function()
+     {
+        var toWidth = $(this).width() * 200,
+            toHeight = $(this).height() * 200;
+        $(this).animate({
+            width:  toWidth,
+            height: toHeight
+        }, 1000);
+
+
+    });
+})
 
 //document.querySelector("#content").getBoundingClientRect().top
+//var pozycja = $("#content").position()
+//var pozycjaY = pozycja.top; //pozycja Y elementu div#content
