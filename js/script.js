@@ -43,7 +43,7 @@ $(document).ready(function() {
 
 $(document).ready(function(){
     $(window).scroll(function() {
-        if(($(this).scrollTop()> 50)){
+        if($(this).scrollTop()> 50){
             $('header').addClass('naglowek-strony');
         } else {
             $('header').removeClass('naglowek-strony');
@@ -51,3 +51,49 @@ $(document).ready(function(){
     })
 
 });
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+      if($(this).scrollTop()> 300) {
+          $('nav a').addClass('color-scroll-down');
+      }else {
+          $('nav a').removeClass('color-scroll-down');
+
+      }
+
+    })
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

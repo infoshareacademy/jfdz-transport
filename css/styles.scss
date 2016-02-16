@@ -41,6 +41,11 @@ h4 {
   margin-left: auto;
 }
 
+#menu li .color-scroll-down {
+  //color: #A20700;
+  color: #f02541;
+}
+
 .naglowek-strony-bez-tla {
   position: fixed;
   z-index: 1000;
@@ -99,24 +104,28 @@ h4 {
   text-align: right;
 }
 
-.menu-glowne > li {
+.menu-glowne li {
   display: inline-block;
   margin-top: 25px;
   margin-left: 50px;
 }
 
-.menu-glowne > li > a {
+.menu-glowne li a {
   color: #ffffff;
   font-size: 26px;
   text-decoration: none;
   font-weight: 600;
 }
 
-.menu-glowne > li > a:hover {
+.naglowek-strony-bez-tla .menu-glowne li a:hover {
   color: #f02541;
 }
 
-.naglowek-strony .menu-glowne > li > a {
+.naglowek-strony .menu-glowne li a:hover {
+  color: #f02541;
+}
+
+.naglowek-strony .menu-glowne li a {
   color: #A20700;
   font-size: 26px;
   text-decoration: none;
