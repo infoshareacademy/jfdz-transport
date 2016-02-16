@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*style w scss */
 /*@import url("https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext");*/
-/*style głowne*/
+/*style g┼éowne*/
 body {
   color: #B30800;
   font-family: 'Poiret One', sans-serif;
@@ -49,7 +49,9 @@ h4 {
   border-bottom: 2px solid #B30800;
   background-color: white;
   margin-top: 0;
-  box-shadow: 0 1px 2px 0 rgba(179, 8, 0, 0.3); }
+  box-shadow: 0 1px 2px 0 rgba(179, 8, 0, 0.3);
+  /*style welcome*/
+  /*style features*/ }
   .naglowek-strony .logo-strony {
     width: 60px;
     height: 60px;
@@ -59,41 +61,35 @@ h4 {
     background-size: contain;
     margin-left: 10px;
     margin-top: 10px; }
-
-.menu-glowne {
-  font-size: 20px;
-  font-weight: 600;
-  text-align: right; }
-
-.menu-glowne > li {
-  display: inline-block;
-  margin-top: 25px;
-  margin-left: 50px; }
-
-.menu-glowne > li > a {
-  color: #A20700;
-  font-size: 26px;
-  text-decoration: none;
-  font-weight: 600; }
-
-.menu-glowne > li > a:hover {
-  color: #f02541; }
-
-/*style welcome*/
-.welcome {
-  height: 700px;
-  align-items: center;
-  display: flex;
-  color: white;
-  background-image: url("../images/public-transport-1920-03r.jpg");
-  background-size: cover;
-  border-bottom: 10px solid #B30800;
-  background-color: #B30800;
-  margin-top: 80px;
-  animation-name: slides;
-  animation-duration: 10s;
-  animation-iteration-count: infinite; }
-
+  .naglowek-strony .menu-glowne {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: right; }
+  .naglowek-strony .menu-glowne > li {
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 50px; }
+  .naglowek-strony .menu-glowne > li > a {
+    color: #A20700;
+    font-size: 26px;
+    text-decoration: none;
+    font-weight: 600; }
+  .naglowek-strony .menu-glowne > li > a:hover {
+    color: #f02541; }
+  .naglowek-strony .welcome {
+    height: 700px;
+    align-items: center;
+    display: flex;
+    color: white;
+    background-image: url("../images/public-transport-1920-03r.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    border-bottom: 10px solid #B30800;
+    background-color: #B30800;
+    margin-top: 80px;
+    animation-name: slides;
+    animation-duration: 10s;
+    animation-iteration-count: infinite; }
 @keyframes slides {
   25% {
     background-image: url("../images/public-transport-1920-03r.jpg"); }
@@ -103,202 +99,173 @@ h4 {
     background-image: url("../images/public-transport-1920-02r.jpg"); }
   0% {
     background-image: url("../images/public-transport-1920-04r.jpg"); } }
-.welcome img {
-  height: 250px;
-  width: 250px;
-  margin-right: 40px;
-  float: left; }
-
-.slogan {
-  margin-left: 20px;
-  margin-top: 50px; }
-
-.slogan h1 {
-  margin-top: 0;
-  font-size: 45px;
-  font-weight: 600;
-  margin-bottom: 20px; }
-
-.slogan p {
-  font-size: 25px;
-  font-weight: 600; }
-
-/*style features*/
-.features-container {
-  background-color: white;
-  color: #B30800;
-  letter-spacing: normal;
-  text-align: center;
-  margin: 25px auto;
-  padding: 75px 0; }
-
-.feature {
-  width: 32%;
-  font-size: 20px;
-  font-weight: 600;
-  padding-bottom: 15px; }
-
-.feature a {
-  display: block;
-  text-decoration: none;
-  color: #B30800; }
-
-.feature .feature-image {
-  height: 250px;
-  width: 250px;
-  margin: 5px auto;
-  border: 5px solid #B30800;
-  background-color: #B30800;
-  border-radius: 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center; }
-
-.feature .feature-image:hover {
-  opacity: .5;
-  transition: 5s easy; }
-
-.feature-image-1 {
-  background-image: url("../images/feature-chair-600.jpg"); }
-
-.feature-image-2 {
-  background-image: url("../images/feature-hand-600.jpg"); }
-
-.feature-image-3 {
-  background-image: url("../images/feature-woman-600.jpg"); }
-
-.feature p {
-  padding-left: 10px;
-  padding-right: 10px; }
-
-.small-icons-container {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center; }
-
-.small-icons {
-  display: inline-block;
-  margin: 20px;
-  margin-right: 10px;
-  text-align: center;
-  padding: 10px;
-  font-size: 60px;
-  height: 70px;
-  width: 70px;
-  background-color: #B30800;
-  border-radius: 50%;
-  color: white; }
-
-.small-icons:hover {
-  transition: 1s;
-  transform: rotate(360deg); }
-
-.formularz {
-  background-color: #B30800;
-  background-image: url("../images/public-transport-1920-02r.jpg");
-  color: white;
-  padding: 100px 50px;
-  text-align: center; }
-  .formularz input {
-    font-size: 1.2em;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 5px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
-  .formularz button {
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1em;
-    color: #B30800;
-    margin: 10px;
+  .naglowek-strony .welcome img {
+    height: 250px;
+    width: 250px;
+    margin-right: 40px;
+    float: left; }
+  .naglowek-strony .slogan {
+    margin-left: 20px;
+    margin-top: 50px; }
+  .naglowek-strony .slogan h1 {
+    margin-top: 0;
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 20px; }
+  .naglowek-strony .slogan p {
+    font-size: 25px;
+    font-weight: 600; }
+  .naglowek-strony .features-container {
     background-color: white;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
-  .formularz button:hover {
-    background-color: #B30800;
-    color: #fff;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-    transition: 1s; }
-  .formularz button:disabled {
-    color: #cecece; }
-  .formularz .zgoda {
-    font-size: .8em; }
-  .formularz .mousemove {
-    padding: 10px;
-    margin: 10px auto;
-    height: 50px;
-    width: 400px;
-    border: 1px solid #fff;
-    font-size: .8em;
-    border-radius: 5px;
+    color: #B30800;
+    letter-spacing: normal;
     text-align: center;
+    margin: 25px auto;
+    padding: 75px 0; }
+  .naglowek-strony .feature {
+    width: 32%;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 15px; }
+  .naglowek-strony .feature a {
     display: block;
-    line-height: 1.5em;
-    position: relative;
-    z-index: 2; }
-    .formularz .mousemove p, .formularz .mousemove span {
+    text-decoration: none;
+    color: #B30800; }
+  .naglowek-strony .feature .feature-image {
+    height: 250px;
+    width: 250px;
+    margin: 5px auto;
+    border: 5px solid #B30800;
+    background-color: #B30800;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center; }
+  .naglowek-strony .feature .feature-image:hover {
+    opacity: .5;
+    transition: 5s easy; }
+  .naglowek-strony .feature-image-1 {
+    background-image: url("../images/feature-chair-600.jpg"); }
+  .naglowek-strony .feature-image-2 {
+    background-image: url("../images/feature-hand-600.jpg"); }
+  .naglowek-strony .feature-image-3 {
+    background-image: url("../images/feature-woman-600.jpg"); }
+  .naglowek-strony .feature p {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .naglowek-strony .small-icons-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+  .naglowek-strony .small-icons {
+    display: inline-block;
+    margin: 20px;
+    margin-right: 10px;
+    text-align: center;
+    padding: 10px;
+    font-size: 60px;
+    height: 70px;
+    width: 70px;
+    background-color: #B30800;
+    border-radius: 50%;
+    color: white; }
+  .naglowek-strony .small-icons:hover {
+    transition: 1s;
+    transform: rotate(360deg); }
+  .naglowek-strony .formularz {
+    background-color: #B30800;
+    background-image: url("../images/public-transport-1920-02r.jpg");
+    color: white;
+    padding: 100px 50px;
+    text-align: center; }
+    .naglowek-strony .formularz input {
+      font-size: 1.2em;
+      padding: 5px;
+      margin: 5px;
+      border-radius: 5px;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
+    .naglowek-strony .formularz button {
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 1em;
+      color: #B30800;
+      margin: 10px;
+      background-color: white;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
+    .naglowek-strony .formularz button:hover {
+      background-color: #B30800;
+      color: #fff;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+      transition: 1s; }
+    .naglowek-strony .formularz button:disabled {
+      color: #cecece; }
+    .naglowek-strony .formularz .zgoda {
+      font-size: .8em; }
+    .naglowek-strony .formularz .mousemove {
+      padding: 10px;
+      margin: 10px auto;
+      height: 50px;
+      width: 400px;
+      border: 1px solid #fff;
+      font-size: .8em;
+      border-radius: 5px;
+      text-align: center;
+      display: block;
+      line-height: 1.5em;
       position: relative;
-      z-index: 1; }
-
-.mmwidth {
-  position: relative;
-  height: 50px;
-  background-color: red;
-  background: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.9));
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  top: -50px;
-  z-index: 0;
-  opacity: 0.5; }
-
-.social-media {
-  margin: auto;
-  text-align: center;
-  padding: 20px;
-  background-color: #B30800;
-  color: floralwhite;
-  border-top: 2px solid floralwhite; }
-
-.social-media .sm-ico {
-  text-align: center;
-  margin: 10px;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  display: inline-block;
-  border-radius: 5px;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
-
-.social-media .sm-ico a {
-  color: #fff; }
-
-.social-media .sm-ico a:hover {
-  color: #fff; }
-
-.social-media .fb {
-  background-color: #4668b3; }
-
-.social-media .fb:hover {
-  background-color: #3557a2; }
-
-.social-media .gplus {
-  background-color: #d95333; }
-
-.social-media .gplus:hover {
-  background-color: #c84222; }
-
-.social-media .tw {
-  background-color: #3095d3; }
-
-.social-media .tw:hover {
-  background-color: #2084c2; }
-
-.footer {
-  background-color: #222222;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  font-size: 0.8em; }
+      z-index: 2; }
+      .naglowek-strony .formularz .mousemove p, .naglowek-strony .formularz .mousemove span {
+        position: relative;
+        z-index: 1; }
+  .naglowek-strony .mmwidth {
+    position: relative;
+    height: 50px;
+    background-color: red;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.9));
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    top: -50px;
+    z-index: 0;
+    opacity: 0.5; }
+  .naglowek-strony .social-media {
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #B30800;
+    color: floralwhite;
+    border-top: 2px solid floralwhite; }
+  .naglowek-strony .social-media .sm-ico {
+    text-align: center;
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
+  .naglowek-strony .social-media .sm-ico a {
+    color: #fff; }
+  .naglowek-strony .social-media .sm-ico a:hover {
+    color: #fff; }
+  .naglowek-strony .social-media .fb {
+    background-color: #4668b3; }
+  .naglowek-strony .social-media .fb:hover {
+    background-color: #3557a2; }
+  .naglowek-strony .social-media .gplus {
+    background-color: #d95333; }
+  .naglowek-strony .social-media .gplus:hover {
+    background-color: #c84222; }
+  .naglowek-strony .social-media .tw {
+    background-color: #3095d3; }
+  .naglowek-strony .social-media .tw:hover {
+    background-color: #2084c2; }
+  .naglowek-strony .footer {
+    background-color: #222222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.8em; }
 
 /*# sourceMappingURL=styles.css.map */
