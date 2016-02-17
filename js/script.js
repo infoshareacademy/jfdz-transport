@@ -52,18 +52,55 @@ $(document).ready(function(){
 
 });
 
+//$(document).ready(function(){
+//
+//    var home = $('#home').offset().top;
+//    var form = $('#form').offset().top;
+//    console.log(form);
+//
+//    $(window).scroll(function(){
+//      if($(this).scrollTop()> 300) {
+//          $('nav a').addClass('activeNav');
+//      }else {
+//          $('nav a').removeClass('activeNav');
+//
+//      }
+//
+//    })
+//});
+
 $(document).ready(function(){
-    $(window).scroll(function(){
-      if($(this).scrollTop()> 300) {
-          $('nav a').addClass('color-scroll-down');
-      }else {
-          $('nav a').removeClass('color-scroll-down');
+    var article = $('article'),
+        nav = $('nav'),
+        navHeight = nav.outerHeight();
 
-      }
+        //console.log(navHeight);
 
+    $(window).on('scroll', function() {
+        var currentPosition = $(this).scrollTop();
+
+        //console.log(currentPosition);
+
+        article.each(function(){
+            var top = $(this).offset().top - navHeight,
+                bottom = top + $(this).outerHeight();
+
+            //console.log(top);
+            //console.log(bottom);
+
+            if (currentPosition >= top && currentPosition <= bottom) {
+                nav.find('a').removeClass('activeNav');
+                article.removeClass('activeNav');
+
+                $(this).addClass('activeNav');
+                nav.find('a[href="#]'+$(this).attr('id')+'"]').addClass('activeNav');
+            }
+
+        })
     })
-});
 
+
+});
 
 
 

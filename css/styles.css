@@ -37,8 +37,8 @@ h4 {
   margin-right: auto;
   margin-left: auto; }
 
-#menu li .color-scroll-down {
-  color: #f02541; }
+.naglowek-strony-bez-tla .menu-glowne li a.activeNav {
+  color: #000000; }
 
 .naglowek-strony-bez-tla {
   position: fixed;
