@@ -71,22 +71,26 @@ function wypisz() {
     document.getElementById('ciagliczb').innerHTML = napis;
 }
 
-$(document).ready(function () {
+//$(".dodatkowybox").click(function(){
+//    //$('html,body').animate({
+//    //scrollTop: $("#ciagliczb").offset().top -500},
+//    //    'slow');
+//    document.getElementsByClassName('dodatkowybox').style.display="block"});
 
+$("#dodatkowybox").click(function(){
+    $('html,body').animate({
+        scrollTop: $("#ciagliczb").offset().top-100},'slow');
+    document.getElementById("dodatkowybox").style.display = "block";
+    $(this).addClass("on");
+    //document.getElementById('dodatkowybox').addClass = 'on';
+    //startGame();
+});
+$('#dodatkowybox').click(function(){
+    document.getElementById("startButton").style.display = "none";
+    document.getElementById("resetButton").style.display = "inline";
 
-    $('.dodatkowybox').click (function()
-     {
-        var toWidth = $(this).width() * 200,
-            toHeight = $(this).height() * 200;
-        $(this).animate({
-            width:  toWidth,
-            height: toHeight
-        }, 1000);
-
-
-    });
-})
-
+});
+//startGame();
 //document.querySelector("#content").getBoundingClientRect().top
 //var pozycja = $("#content").position()
 //var pozycjaY = pozycja.top; //pozycja Y elementu div#content

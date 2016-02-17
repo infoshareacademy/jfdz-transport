@@ -17,11 +17,22 @@ body{
 #slider{
     display: block;
 }
-.dodatkowybox{
-    background-color: #a21716;
-    color: black;
-    width: 5px;
-    height: 5px;
-    position: relative;
+#dodatkowybox{
+    top: 20px;
+    width: 100%;
+    height: 600px;
+    /*position: absolute;*/
+    text-align: center;
+    color:white;
+    cursor: pointer;
+    /*background-color: #B30800;*/
+}
+.on{
+    background-color: #B30800;
 }
 
+#startButton
+#resetButton{
+    color:greenyellow;
+    background-color: darkgreen;
+}
