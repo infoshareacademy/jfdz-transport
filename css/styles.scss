@@ -1,6 +1,4 @@
-/*style w scss */
 /*@import url("https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext");*/
-/*style głowne*/
 
 $kolor: #B30800;
 
@@ -66,6 +64,7 @@ h4 {
     margin-top: 10px;
   }
 
+}
 
 .menu-glowne {
   font-size: 20px;
@@ -90,15 +89,12 @@ h4 {
   color: #f02541;
 }
 
-/*style welcome*/
-
 .welcome {
   height: 700px;
   align-items:center;
   display:flex;
   color: white;
   background-image: url("../images/public-transport-1920-03r.jpg");
-  background-attachment: fixed;
   background-size: cover;
   border-bottom: 10px solid $kolor;
   background-color: $kolor;
@@ -324,8 +320,4 @@ h4 {
   padding: 15px;
   text-align: center;
   font-size: 0.8em;
-}}
-
-
-
-
+}
