@@ -85,11 +85,11 @@ $("#dodatkowybox").click(function(){
     //document.getElementById('dodatkowybox').addClass = 'on';
     //startGame();
 });
-$('#dodatkowybox').click(function(){
-    document.getElementById("startButton").style.display = "none";
-    document.getElementById("resetButton").style.display = "inline";
 
-});
+$("#resetButton").click(function(){
+      $().removeClass('on');
+ });
+
 //startGame();
 //document.querySelector("#content").getBoundingClientRect().top
 //var pozycja = $("#content").position()
