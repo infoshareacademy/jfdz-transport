@@ -9,9 +9,10 @@ console.log(wScroll);
         $('.welcome img').css({
             'transform': 'translate(0px, '+ wScroll/10+ '%)'
         });
-        $('.slogan h1').css({
+        $('.slogan').css({
             'transform': 'translate(0px, '+ wScroll/6+ '%)'
-        }); $('.slogan p').css({
-            'transform': 'translate(0px, '+ wScroll/4+ '%)'
         });
+        //$('.slogan p').css({
+        //    'transform': 'translate(0px, '+ wScroll/4+ '%)'
+        //});
 });
