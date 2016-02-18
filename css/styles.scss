@@ -138,6 +138,7 @@ h4 {
   color: white;
   background-image: url("../images/public-transport-1920-03r.jpg");
   background-size: cover;
+  background-attachment: fixed;
   border-bottom: 10px solid $kolor;
   background-color: $kolor;
   margin-top: 0;
@@ -250,11 +251,13 @@ h4 {
   background-color:$kolor ;
   border-radius: 50%;
   color:white;
+  transition: 1s;
 }
 
 .small-icons:hover {
   transition: 1s;
   transform:rotate(360deg);
+  background-color: darken($kolor,5%);
 }
 
 .formularz {
