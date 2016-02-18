@@ -1,6 +1,12 @@
 body {
-
+  font-family: "Trebuchet MS", Arial;
+  font-size: 15px;
 }
+
+h1 {font-size: 20px;}
+h2 {font-size: 18px;}
+
+
 
 .plansza {
   width: 80%;
@@ -21,6 +27,7 @@ body {
   display: inline-block;
   padding: 10px;
   margin: 20px;
+  text-align: center;
 }
 
 .aktywny {
