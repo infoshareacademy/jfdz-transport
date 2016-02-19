@@ -92,16 +92,34 @@ $(document).ready(function(){
                 nav.find('a').removeClass('activeNav');
                 article.removeClass('activeNav');
 
-                $(this).addClass('activeNav');
-                nav.find('a[href="#]'+$(this).attr('id')+'"]').addClass('activeNav');
+                //$(this).addClass('activeNav');
+                //nav.find('a[href="#]'+$(this).attr('id')+'"]').addClass('activeNav');
+                var currentNav = nav.find('a[href^=#]');
+                console.log(currentNav);
+                var currentArticle = $(this).attr('id');
+                console.log(currentArticle);
+                if (currentNav == currentArticle) {
+                    currentNav.addClass('activeNav');
+                }
+
+
             }
+
+        });
+
+        nav.find('a').on('click', function(){
+            var $el = $(this),
+                id = $el.attr('href');
+
+            $('html, body').animate({
+                scrollTop: $(id).offset().top - navHeight
+            }, 400);
+
+            return false;
 
         })
     })
-
-
 });
-
 
 
 
