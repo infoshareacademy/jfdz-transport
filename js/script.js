@@ -1,4 +1,21 @@
 
+$(window).scroll(function(){
+   var wScroll = $(this).scrollTop();
+
+    if (wScroll > 100) {
+        $('.wel').css({
+            'transform' : 'translate(0px, 300px)',
+            'transition' : 'all 2s'
+        });
+    } else {
+        $('.wel').css({
+            'transform' : 'translate(0px, 0px)',
+            'transition' : 'all 2s'
+        });
+    }
+
+});
+
 
 $(document).ready( function() {
 
@@ -13,7 +30,7 @@ $(document).ready( function() {
             $('#przycisk').removeAttr('disabled');
 
         } else {
-            $('#pole').html(z -= 1);
+            $('#pole').html(z -= 1*10);
             $('.mmwidth').width(z+'%');
         }
     });
