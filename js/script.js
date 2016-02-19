@@ -113,6 +113,7 @@ $(document).ready(function(){
                 //nav.find('a[href="#]'+$(this).attr('id')+'"]').addClass('activeNav');
                 var currentNav = nav.find('a[href^=#]');
                 console.log(currentNav);
+
                 var currentArticle = $(this).attr('id');
                 console.log(currentArticle);
                 if (currentNav == currentArticle) {
