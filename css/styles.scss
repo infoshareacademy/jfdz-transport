@@ -1,24 +1,28 @@
-/*style w scss */
 /*@import url("https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext");*/
-/*style głowne*/
 
 $kolor: #B30800;
 
+$font-one: 'Poiret One', sans-serif;
+$font-lato: 'Lato', sans-serif;
+
 body {
   color: $kolor;
-  font-family: 'Poiret One', sans-serif;
+  font-family: $font-lato;
+  font-weight: 300;
   font-size: 20px;
   margin-left: auto;
   margin-right: auto;
 }
 
 h2 {
+  font-family: $font-one;
   font-size: 40px;
   font-weight:900;
   margin-bottom: 25px;
 }
 
 h3 {
+  font-family: $font-one;
   font-size: 30px;
   font-weight:600;
   text-decoration: none;
@@ -27,6 +31,7 @@ h3 {
 }
 
 h4 {
+  font-family: $font-one;
   font-size: 20px;
   font-weight:600;
 }
@@ -43,68 +48,111 @@ h4 {
   margin-left: auto;
 }
 
-.naglowek-strony {
+.naglowek-strony-bez-tla .menu-glowne li a.activeNav {
+  //color: #A20700;
+  //color: #f02541;
+  color: #000000;
+}
 
+.naglowek-strony-bez-tla {
   position: fixed;
   z-index: 1000;
   top:0;
   width: 100%;
   height: 80px;
-  border-bottom: 2px solid $kolor;
+  color: #ffffff;
+  transition: 0.4s;
+  margin-top: 20px;
+}
+
+.naglowek-strony {
+  /*display: none;*/
+  position: fixed;
+  z-index: 1000;
+  top:0;
+  width: 100%;
+  height: 80px;
+  border-bottom: 2px solid #B30800;
   background-color: white;
   margin-top: 0;
   box-shadow: 0 1px 2px 0 rgba(179,8,0,0.3);
-
-  .logo-strony{
-    width: 60px;
-    height:60px;
-    background-image: url('../images/logo-autobus.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    margin-left: 10px;
-    margin-top: 10px;
-  }
+  transition: all 0.25s;
+  transform: translate3d(0, 0, 0);
 
 }
 
+.naglowek-strony-bez-tla .logo-strony{
+  width: 80px;
+  height:80px;
+  background-image: url('../images/logo-autobus.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-left: 10px;
+  margin-top: 10px;
+  transition: 0.4s;
+}
 
+.naglowek-strony .logo-strony{
+  width: 60px;
+  height:60px;
+  background-image: url('../images/logo-autobus.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-left: 10px;
+  margin-top: 10px;
+  transition: 0.4s;
+}
 
 .menu-glowne {
+  /*list-style-type: none;*/
+  font-family: $font-one;
   font-size: 20px;
   font-weight: 600;
   text-align: right;
 }
 
-.menu-glowne > li {
+.menu-glowne li {
   display: inline-block;
   margin-top: 25px;
   margin-left: 50px;
 }
 
-.menu-glowne > li > a {
+.menu-glowne li a {
+  color: #ffffff;
+  font-size: 26px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.naglowek-strony-bez-tla .menu-glowne li a:hover {
+  color: #f02541;
+}
+
+.naglowek-strony .menu-glowne li a:hover {
+  color: #f02541;
+}
+
+.naglowek-strony .menu-glowne li a {
   color: #A20700;
   font-size: 26px;
   text-decoration: none;
   font-weight: 600;
 }
 
-.menu-glowne > li > a:hover {
-  color: #f02541;
-}
-
-/*style welcome*/
-
 .welcome {
-  height: 700px;
+  height: 100vh;
   align-items:center;
   display:flex;
   color: white;
   background-image: url("../images/public-transport-1920-03r.jpg");
+  background-attachment: fixed ;
   background-size: cover;
+  background-attachment: fixed;
   border-bottom: 10px solid $kolor;
   background-color: $kolor;
-  margin-top: 80px;
+  margin-top: 0;
   animation-name: slides;
   animation-duration: 10s;
   animation-iteration-count: infinite;
@@ -126,10 +174,11 @@ h4 {
 
 .slogan {
   margin-left: 20px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .slogan h1 {
+  font-family: $font-one;
   margin-top: 0;
   font-size: 45px;
   font-weight: 600;
@@ -137,8 +186,8 @@ h4 {
 }
 
 .slogan p {
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 27px;
+  line-height: 1.2em;
 }
 
 /*style features*/
@@ -154,7 +203,6 @@ h4 {
 .feature {
   width: 32%;
   font-size:20px;
-  font-weight: 600;
   padding-bottom: 15px;
 }
 
@@ -174,11 +222,16 @@ h4 {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+  transform: scale(1.0);
+  transition: all 1s ease-out;
+  padding: 10px;
 }
 
 .feature .feature-image:hover {
   opacity: .5;
-  transition: 5s easy;
+  background-size: cover;
+  transform: scale(1.1);
+  transition: all 1s ease-out;
 }
 
 .feature-image-1 {background-image: url('../images/feature-chair-600.jpg');}
@@ -209,19 +262,27 @@ h4 {
   background-color:$kolor ;
   border-radius: 50%;
   color:white;
+  transition: 1s;
 }
 
 .small-icons:hover {
   transition: 1s;
   transform:rotate(360deg);
+  background-color: darken($kolor,5%);
 }
 
 .formularz {
   background-color: $kolor;
   background-image: url('../images/public-transport-1920-02r.jpg');
+  //background-attachment: 100%;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
   color:white;
   padding: 100px 50px;
   text-align: center;
+
 
   input {
     font-size: 1.2em;
@@ -296,6 +357,7 @@ h4 {
   text-align: center;
   padding: 20px;
   background-color: $kolor;
+  background: linear-gradient(180deg, $kolor, darken($kolor,10%));
   color: floralwhite;
   border-top: 2px solid floralwhite;
 }
@@ -327,7 +389,3 @@ h4 {
   text-align: center;
   font-size: 0.8em;
 }
-
-
-
-

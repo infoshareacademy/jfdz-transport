@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext");
 
-/*style głowne*/
 body {
     color: #B30800;
     font-family: 'Poiret One', cursive;
@@ -86,9 +84,6 @@ h4 {
 
 .menu-glowne > li > a:hover {
     color: #f02541;
-}
-
-/*style welcome*/
 
 .welcome {
     height: 700px;
@@ -144,7 +139,6 @@ h4 {
     font-weight: 600;
 }
 
-/*style features*/
 .features-container {
     background-color: white;
     color: #B30800;
@@ -225,20 +219,6 @@ h4 {
     border-radius: 50%;
     color: white;
 }
-.small-icons i{
-    font-size: larger;
-}
-.small-icons .fa-map{
-    font-size: 50px;}
-/*.small-icons .fa-mobile-phone {*/
-/*font-size: 36px;*/
-/*}*/
-/*.small-icons img {*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-/*}*/
-/*.small-icons span{*/
-    /*color: #B30800;*/
 
 .small-icons:hover {
     transition: 1s;
@@ -390,4 +370,5 @@ h4 {
 .clear {
     clear: both;
 }
+
 
