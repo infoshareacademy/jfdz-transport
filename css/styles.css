@@ -1,20 +1,17 @@
 /*@import url("https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext");*/
 body {
   color: #B30800;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
+  font-family: 'Poiret One', sans-serif;
   font-size: 20px;
   margin-left: auto;
   margin-right: auto; }
 
 h2 {
-  font-family: "Poiret One", sans-serif;
   font-size: 40px;
   font-weight: 900;
   margin-bottom: 25px; }
 
 h3 {
-  font-family: "Poiret One", sans-serif;
   font-size: 30px;
   font-weight: 600;
   text-decoration: none;
@@ -22,7 +19,6 @@ h3 {
   margin-top: 15px; }
 
 h4 {
-  font-family: "Poiret One", sans-serif;
   font-size: 20px;
   font-weight: 600; }
 
@@ -41,21 +37,7 @@ h4 {
   margin-right: auto;
   margin-left: auto; }
 
-.naglowek-strony-bez-tla .menu-glowne li a.activeNav {
-  color: #000000; }
-
-.naglowek-strony-bez-tla {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  color: #ffffff;
-  transition: 0.4s;
-  margin-top: 20px; }
-
 .naglowek-strony {
-  /*display: none;*/
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -64,74 +46,47 @@ h4 {
   border-bottom: 2px solid #B30800;
   background-color: white;
   margin-top: 0;
-  box-shadow: 0 1px 2px 0 rgba(179, 8, 0, 0.3);
-  transition: all 0.25s;
-  transform: translate3d(0, 0, 0); }
-
-.naglowek-strony-bez-tla .logo-strony {
-  width: 80px;
-  height: 80px;
-  background-image: url("../images/logo-autobus.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  margin-left: 10px;
-  margin-top: 10px;
-  transition: 0.4s; }
-
-.naglowek-strony .logo-strony {
-  width: 60px;
-  height: 60px;
-  background-image: url("../images/logo-autobus.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  margin-left: 10px;
-  margin-top: 10px;
-  transition: 0.4s; }
+  box-shadow: 0 1px 2px 0 rgba(179, 8, 0, 0.3); }
+  .naglowek-strony .logo-strony {
+    width: 60px;
+    height: 60px;
+    background-image: url("../images/logo-autobus.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-left: 10px;
+    margin-top: 10px; }
 
 .menu-glowne {
-  /*list-style-type: none;*/
-  font-family: "Poiret One", sans-serif;
   font-size: 20px;
   font-weight: 600;
   text-align: right; }
 
-.menu-glowne li {
+.menu-glowne > li {
   display: inline-block;
   margin-top: 25px;
   margin-left: 50px; }
 
-.menu-glowne li a {
-  color: #ffffff;
-  font-size: 26px;
-  text-decoration: none;
-  font-weight: 600; }
-
-.naglowek-strony-bez-tla .menu-glowne li a:hover {
-  color: #f02541; }
-
-.naglowek-strony .menu-glowne li a:hover {
-  color: #f02541; }
-
-.naglowek-strony .menu-glowne li a {
+.menu-glowne > li > a {
   color: #A20700;
   font-size: 26px;
   text-decoration: none;
   font-weight: 600; }
 
+.menu-glowne > li > a:hover {
+  color: #f02541; }
+
 .welcome {
-  height: 100vh;
+  height: 700px;
   align-items: center;
   display: flex;
   color: white;
   background-image: url("../images/public-transport-1920-03r.jpg");
   background-attachment: fixed;
   background-size: cover;
-  background-attachment: fixed;
   border-bottom: 10px solid #B30800;
   background-color: #B30800;
-  margin-top: 0;
+  margin-top: 80px;
   animation-name: slides;
   animation-duration: 10s;
   animation-iteration-count: infinite; }
@@ -153,18 +108,17 @@ h4 {
 
 .slogan {
   margin-left: 20px;
-  margin-top: 10px; }
+  margin-top: 50px; }
 
 .slogan h1 {
-  font-family: "Poiret One", sans-serif;
   margin-top: 0;
   font-size: 45px;
   font-weight: 600;
   margin-bottom: 20px; }
 
 .slogan p {
-  font-size: 27px;
-  line-height: 1.2em; }
+  font-size: 25px;
+  font-weight: 600; }
 
 /*style features*/
 .features-container {
@@ -178,6 +132,7 @@ h4 {
 .feature {
   width: 32%;
   font-size: 20px;
+  font-weight: 600;
   padding-bottom: 15px; }
 
 .feature a {
@@ -194,16 +149,11 @@ h4 {
   border-radius: 50%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center center;
-  transform: scale(1);
-  transition: all 1s ease-out;
-  padding: 10px; }
+  background-position: center center; }
 
 .feature .feature-image:hover {
   opacity: .5;
-  background-size: cover;
-  transform: scale(1.1);
-  transition: all 1s ease-out; }
+  transition: 5s easy; }
 
 .feature-image-1 {
   background-image: url("../images/feature-chair-600.jpg"); }
@@ -236,21 +186,15 @@ h4 {
   width: 70px;
   background-color: #B30800;
   border-radius: 50%;
-  color: white;
-  transition: 1s; }
+  color: white; }
 
 .small-icons:hover {
   transition: 1s;
-  transform: rotate(360deg);
-  background-color: #9a0700; }
+  transform: rotate(360deg); }
 
 .formularz {
   background-color: #B30800;
   background-image: url("../images/public-transport-1920-02r.jpg");
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
   color: white;
   padding: 100px 50px;
   text-align: center; }
@@ -305,12 +249,166 @@ h4 {
   z-index: 0;
   opacity: 0.5; }
 
+/*o Nas*/
+figure.snip0067 {
+  font-family: 'Raleway','Poiret One', sans-serif, sans-serif;
+  text-align: justify;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  background: #ffffff;
+  color: #000000;
+}
+
+figure.snip0067 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+figure.snip0067 img {
+  max-width: 90%;
+  position: relative;
+  display: compact;
+  border-radius: 50%;
+  border: 5px groove #B30800;  }
+
+
+figure.snip0067:before {
+  position:absolute;
+  content: '';
+  height: 100%;
+  width: 90%;
+  z-index: 1;
+  left: -20%;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #fff;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: skewX(-30deg) translateX(-80%);
+  transform: skewX(-30deg) translateX(-80%);
+  -webkit-box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+figure.snip0067 figcaption {
+  padding-left: 30px;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  width: 60%;
+  z-index: 1;
+  opacity: 0;
+}
+
+figure.snip0067 figcaption h2,
+figure.snip0067 figcaption p {
+  margin: 0;
+  text-align: center;
+  padding: 5px 0 0;
+  width: 100%;
+  font-size: small;
+  height: auto;
+}
+
+figure.snip0067 figcaption h2 {
+  font-size: 1.4em;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+figure.snip0067 figcaption h2 span {
+  font-weight: 800;
+  text-align: center;
+}
+
+figure.snip0067 figcaption p {
+  font-weight: 500;
+  font-size: small;
+  opacity: 0.8;
+  text-align: center;
+}
+
+figure.snip0067 figcaption .icons {
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 10px;
+}
+
+figure.snip0067 figcaption .icons i {
+  display: inline-block;
+  font-size: 20px;
+  background: #000000;
+  color: #ffffff;
+  margin-right: 5px;
+  opacity: 0.5;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+}
+
+figure.snip0067 figcaption a {
+  opacity: 0.7;
+}
+
+figure.snip0067 figcaption a:hover {
+  opacity: 1;
+}
+
+figure.snip0067 .position {
+  position: absolute;
+  bottom: 0;
+  width: 89.5%;
+  text-align: right;
+  padding: 15px 30px;
+  font-size: 0.9em;
+  opacity: 1;
+  font-weight: 500;
+  color: #ffffff;
+  background: #000000;
+  border-radius: 50px;
+}
+
+
+figure.snip0067.red .icons i {
+  background: #6d2018;
+}
+
+figure.snip0067.red .position {
+  background: #962d22;
+}
+
+figure.snip0067:hover figcaption,
+figure.snip0067.hover figcaption,
+figure.snip0067:hover .icons i,
+figure.snip0067.hover .icons i {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+figure.snip0067:hover:before,
+figure.snip0067.hover:before {
+  -webkit-transform: skewX(-30deg) translateX(0px);
+  transform: skewX(-30deg) translateX(0px);
+  opacity: .5;
+  transition: 1s;}
+
+
+
 .social-media {
   margin: auto;
   text-align: center;
   padding: 20px;
   background-color: #B30800;
-  background: linear-gradient(180deg, #B30800, #800600);
   color: floralwhite;
   border-top: 2px solid floralwhite; }
 
@@ -356,167 +454,3 @@ h4 {
   font-size: 0.8em; }
 
 /*# sourceMappingURL=styles.css.map */
-
-figure.snip0067 {
-  font-family: 'Raleway', Arial, sans-serif;
-  position: relative;
-  float: left;
-  overflow: hidden;
-  margin: 10px 1%;
-  min-width: 220px;
-  max-width: 310px;
-  width: 100%;
-  background: #ffffff;
-  color: #000000;
-}
-
-figure.snip0067 * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
-}
-
-figure.snip0067 img {
-  max-width: 100%;
-  position: relative;
-  display: block;
-}
-
-figure.snip0067:before {
-  position: absolute;
-  content: '';
-  height: 100%;
-  width: 90%;
-  z-index: 1;
-  left: -20%;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid #fff;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  -webkit-transform: skewX(-30deg) translateX(-80%);
-  transform: skewX(-30deg) translateX(-80%);
-  -webkit-box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
-  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
-}
-
-figure.snip0067 figcaption {
-  padding-left: 30px;
-  position: absolute;
-  left: 0;
-  top: 25%;
-  width: 60%;
-  z-index: 1;
-  opacity: 0;
-}
-
-figure.snip0067 figcaption h2,
-figure.snip0067 figcaption p {
-  margin: 0;
-  text-align: left;
-  padding: 5px 0 0;
-  width: 100%;
-}
-
-figure.snip0067 figcaption h2 {
-  font-size: 1.4em;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-
-figure.snip0067 figcaption h2 span {
-  font-weight: 800;
-}
-
-figure.snip0067 figcaption p {
-  font-weight: 500;
-  font-size: 0.9em;
-  opacity: 0.8;
-}
-
-figure.snip0067 figcaption .icons {
-  width: 100%;
-  padding: 8px 0;
-}
-
-figure.snip0067 figcaption .icons i {
-  display: inline-block;
-  font-size: 20px;
-  background: #000000;
-  color: #ffffff;
-  margin-right: 5px;
-  opacity: 0;
-  height: 35px;
-  width: 35px;
-  text-align: center;
-  line-height: 35px;
-  border-radius: 50%;
-}
-
-figure.snip0067 figcaption a {
-  opacity: 0.7;
-}
-
-figure.snip0067 figcaption a:hover {
-  opacity: 1;
-}
-
-figure.snip0067 .position {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: right;
-  padding: 15px 30px;
-  font-size: 0.9em;
-  opacity: 1;
-  font-weight: 500;
-  color: #ffffff;
-  background: #000000;
-}
-
-figure.snip0067.blue .icons i {
-  background: #164666;
-}
-
-figure.snip0067.blue .position {
-  background: #20638f;
-}
-
-figure.snip0067.red .icons i {
-  background: #6d2018;
-}
-
-figure.snip0067.red .position {
-  background: #962d22;
-}
-
-figure.snip0067.yellow .icons i {
-  background: #924d10;
-}
-
-figure.snip0067.yellow .position {
-  background: #bf6516;
-}
-
-figure.snip0067.green .icons i {
-  background: #145b32;
-}
-
-figure.snip0067.green .position {
-  background: #1e8449;
-}
-
-figure.snip0067:hover figcaption,
-figure.snip0067.hover figcaption,
-figure.snip0067:hover .icons i,
-figure.snip0067.hover .icons i {
-  opacity: 1;
-  -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
-}
-
-figure.snip0067:hover:before,
-figure.snip0067.hover:before {
-  -webkit-transform: skewX(-30deg) translateX(0px);
-  transform: skewX(-30deg) translateX(0px);
-}
