@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Statystyki Komunikacji GDAŃSK">
+    <meta name="author" content="CELOFYZ DEV">
+    <meta name="keywords" content="komunikacja, gdańsk, ztm, autobusy">
+    <link rel="stylesheet" href="testy_js.css">
+    <title>luty_jfdz_ js</title>
+</head>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<div id="zegar"> </div>
+<br>
+<body onload="zmienslajd()">
+
+<span onclick="ustawslajd(1)" style="cursor:pointer">[1]</span>
+<span onclick="ustawslajd(2)" style="cursor:pointer">[2]</span>
+<span onclick="ustawslajd(3)" style="cursor:pointer">[3]</span>
+<span onclick="ustawslajd(4)" style="cursor:pointer">[4]</span>
+<span onclick="ustawslajd(5)" style="cursor:pointer">[5]</span>
+
+<!--<img src="../images/public-transport-1920-01r.jpg"-->
+<div id="slider"></div>
+
+<br>
+<br>
+<br>
+
+<input type='text' id="pole">
+<input type="submit" value="sprawdz" onclick="sprawdz()">
+<div id="wynik"></div>
+
+<br>
+<br>
+
+<input type="text" id="pole1">
+<input type="text" id="pole2">
+<input type="submit" value="pokaż" onclick="wypisz()">
+<div id="ciagliczb"></div>
+<br>
+<br>
+<div id='dodatkowybox' > DUPA
+    <div id="resetButton">X</div>
+    </div>
+
+<script src="testy_js.js"></script>
+</body>
+</html>

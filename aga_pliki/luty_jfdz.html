@@ -12,65 +12,174 @@
 
 <body>
 
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<button onclick="document.write(5 + 6)">Try it</button>
+
+
+
+<!--<script>-->
+
+<!--document.write('hello wolrd')-->
+<!--</script>-->
+<!--<br>-->
+<!--<br>-->
+
+<!--<script>-->
+<!--var liczba =10;-->
+<!--document.write(liczba);-->
+<!--document.write(" kwadrat liczby "+ liczba+ " równa się "+ (liczba*liczba));-->
+<!--</script>-->
+<!--<br>-->
+<!--<br>-->
+<!--<script>-->
+<!--var liczba =5;-->
+<!--liczba2=3;document.write(liczba + liczba2);-->
+<!--</script>-->
+<br>
+<!--<script>-->
+<!--var pole =document.getElementsByClassName("obrazek").poleTekstowe.value;-->
+<!--document.write("tekst" + pole + "pochodzi z arkusza");-->
+<!--</script>-->
+<br>
+
+<!--<script>-->
+<!--var zmienna="10+2*4";-->
+<!--document.write(zmienna+ " " +"=");-->
+<!--document.write(eval(zmienna));-->
+<!--</script>-->
+<br>
+<!--<script>-->
+<!--var zmienna='37';-->
+<!--//    zmienna =zmienna +1;-->
+<!--zmienna++;-->
+<!--document.write(zmienna);-->
+
+<!--</script>-->
+
+<!--<script>-->
+<!--var liczba = 1;-->
+<!--if (liczba==1){-->
+<!--alert('liczba równa się'+ " "+liczba);-->
+<!--}-->
+<!--</script>-->
+<!--<script>-->
+<!--//    var zwierzak= ['kot', 'myszka miki','wielblad'];-->
+<!--var zwierzak= 'pies';-->
+<!--switch (zwierzak){-->
+<!--case 'kot':-->
+<!--case 'pies':-->
+<!--case 'koń':-->
+<!--alert("jakies domowe stworzenie");-->
+<!--break;-->
+<!--case 'wielblad':-->
+<!--alert('jakies pustynne bydle');-->
+<!--break;-->
+<!--case 'myszka miki':-->
+<!--alert ('jakies zwierze z bajki');-->
+<!--break;-->
+<!--default:-->
+<!--alert ('cokolwiek innego');-->
+
+<!--}-->
+<!--</script>-->
+<!--<script>-->
+<!--var liczbaDzieci = 25;-->
+<!--alert((liczbaDzieci%2==0)?'mamy parzystą liczb dzieci': ' mamy nieparzystą liczbe dzieci');-->
+
+<!--</script>-->
+<!--<script>-->
+    <!--for (x = 0; x < 13; x++) {-->
+        <!--console.log("i am below" + x + ' again')-->
+    <!--}-->
+    <!--;-->
+<!--</script>-->
+<table id='tabelka' ></table>
+<script>
+    var tab = document.getElementById('tabelka');
+    for (y = 1; y <= 10; y++) {
+        var tr = document.createElement('tr');
+        for (x = 1; x <= 10; x++) {
+            var tekst = document.createTextNode(x * y);
+            if (y == 1 || x == 1) {
+                var th = document.createElement('th');
+                th.appendChild(tekst);
+                tr.appendChild(th);
+            }
+            else {
+                var td = document.createElement('td');
+                td.appendChild(tekst);
+                tr.appendChild(td);
+            }
+        }
+        tab.appendChild(tr);
+    }
+
+
+</script>
+
 <!--<div class="obrazek">lalalla</div>-->
 
-<header class="naglowek-strony">
-<div class="element left element1">element 1</div>
-<div class="element left element2">element 2</div>
-<div class="element right element3">element 3</div>
-    <div class="clear"></div>
-</header>
-<main>
-    <div class="pos1"></div>
-    <div class="pos2"></div>
-</main>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<menu>
-    <ul class="list-level1">
-        <li>level 1</li>
-        <li>level 1
-            <ul class="list-level2">
-                <li>level 2</li>
-                <li>level 2</li>
-                <li>level 2
-                    <ul class="list-level3">
-                        <li>level 3</li>
-                        <li>level 3</li>
-                        <li>level 3</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>level 1</li>
-
-        </ul>
-</menu>
-</br>
-</br>
-</br>
+<!--<header class="naglowek-strony">-->
+<!--<div class="element left element1">element 1</div>-->
+<!--<div class="element left element2">element 2</div>-->
+<!--<div class="element right element3">element 3</div>-->
+<!--<div class="clear"></div>-->
+<!--</header>-->
+<!--<main>-->
+<!--<div class="pos1"></div>-->
+<!--<div class="pos2"></div>-->
+<!--</main>-->
 
 
-text troche textu body
-    <span>
-text troche textu span
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
 
-</span>
+<!--<menu>-->
+<!--<ul class="list-level1">-->
+<!--<li>level 1</li>-->
+<!--<li>level 1-->
+<!--<ul class="list-level2">-->
+<!--<li>level 2</li>-->
+<!--<li>level 2</li>-->
+<!--<li>level 2-->
+<!--<ul class="list-level3">-->
+<!--<li>level 3</li>-->
+<!--<li>level 3</li>-->
+<!--<li>level 3</li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li>level 1</li>-->
 
-<div>
-    text troche textu div
-    <div id="nawigacja">tu jest link <a href="http://wp.pl" target="_blank">link </a>
-        tojest link
-    </div>
+<!--</ul>-->
+<!--</menu>-->
+<!--</br>-->
+<!--</br>-->
+<!--</br>-->
 
-</div>
+
+<!--text troche textu body-->
+<!--<span>-->
+<!--text troche textu span-->
+
+<!--</span>-->
+
+<!--<div>-->
+<!--text troche textu div-->
+<!--<div id="nawigacja">tu jest link <a href="http://wp.pl" target="_blank">link </a>-->
+<!--tojest link-->
+<!--</div>-->
+
+<!--</div>-->
 </body>
 </html>
