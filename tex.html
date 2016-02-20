@@ -1,0 +1,127 @@
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+    <title>Wygląd - Menu rozwijane, otwierane, wysuwane - Skrypty - Kurs HTML</title>
+    <style type="text/css">
+        /* <![CDATA[ */
+        #menu0, #menu0 dl {
+            font-size: 12px;
+            position: absolute;
+            width: 150px;
+            margin: 0;
+            padding: 0;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #eee #aaa #aaa #eee;
+        }
+
+        #menu0 dt {
+            cursor: pointer;
+            margin: 0;
+            padding: 0;
+            background-color: #888;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #aaa #666 #666 #aaa;
+            padding: 4px 5px;
+        }
+
+        #menu0 dl dt {
+            background-color: #ccc;
+            color: #000;
+            text-align: left;
+            font-weight: normal;
+            font-size: 12px;
+            border: 0;
+            padding: 0;
+        }
+
+        #menu0 dd  {
+            background-color: #ccc;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            width: 150px;
+            height: 22px;
+        }
+
+        #menu0 dd.active {
+            font-weight: bold;
+        }
+
+        #menu0 dt a {
+            background: url("submenu.gif") no-repeat 140px 8px;
+            padding-right: 20px;
+        }
+
+        #menu0 a:link, #menu0 a:visited {
+            display: block;
+            color: #000;
+            text-decoration: none;
+            padding: 4px 5px;
+        }
+
+        #menu0 a:hover {
+            color: #fff;
+            background-color: #008;
+        }
+
+        #menu0 dl {
+            position: absolute;
+            border: 0;
+        }
+
+        #menu0 dl dd {
+            position: relative;
+            left: 151px;
+            bottom: 22px;
+            border-left: 1px solid #eee;
+            border-right: 1px solid #aaa;
+        }
+
+        .menu {
+            position: relative;
+        }
+
+        #menu1 {
+            left: 150px;
+        }
+
+        #menu2 {
+            left: 300px;
+        }
+        /* ]]> */
+    </style>
+</head>
+<body>
+<div class="menu">
+    <dl id="menu0">...</dl>
+    <script type="text/javascript">
+        // <![CDATA[
+        new Menu('menu0', 'menu0', true, false, 0, 0, -1, -1, true);
+        // ]]>
+    </script>
+
+    <dl id="menu1">...</dl>
+    <script type="text/javascript">
+        // <![CDATA[
+        new Menu('menu1', 'menu0', true, false, 0, 0, -1, -1, true);
+        // ]]>
+    </script>
+
+    <dl id="menu2">...</dl>
+    <script type="text/javascript">
+        // <![CDATA[
+        new Menu('menu2', 'menu0', true, false, 0, 0, -1, -1, true);
+        // ]]>
+    </script>
+</div>
+</body>
+</html>
