@@ -11,7 +11,7 @@ $(document).ready(function () {
     var pkt = 0;
 
 
-    //var runda = 3;
+
     //for (; runda>0; runda--) {};
     //console.log('runda:'+runda);
 
@@ -26,6 +26,12 @@ $(document).ready(function () {
         }
         return;
     }, 1000);
+
+    var runda = 1;
+    for (; runda <4; i++ ) {
+
+
+    $('#runda').html('Runda: '+runda);
 
 
     if (losPrzystanku == 0) {
@@ -87,6 +93,7 @@ $(document).ready(function () {
 
     }
 
+    };
 
 });
 
