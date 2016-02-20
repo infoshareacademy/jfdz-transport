@@ -47,7 +47,7 @@ $(document).ready(function() {
             $('.scrollup').fadeOut();
         }
 
-    })
+    });
 
     $('.scrollup').click(function(){
         $('html,body').animate({
@@ -102,9 +102,6 @@ $(document).ready(function(){
             var top = $(this).offset().top - navHeight,
                 bottom = top + $(this).outerHeight();
 
-            //console.log(top);
-            //console.log(bottom);
-
             if (currentPosition >= top && currentPosition <= bottom) {
                 nav.find('a').removeClass('activeNav');
                 article.removeClass('activeNav');
@@ -119,10 +116,7 @@ $(document).ready(function(){
                 if (currentNav == currentArticle) {
                     currentNav.addClass('activeNav');
                 }
-
-
             }
-
         });
 
         nav.find('a').on('click', function(){
