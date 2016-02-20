@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    //    function compareCars(a, b) {
+    //        if (a.price < b.price)
+    //            return -1;
+    //        if (a.price > b.price)
+    //            return 1;
+    //        return 0
+    //    }
+    ////
+    ////    var tablica =
+    //    [
+    //        {name: 'Ferrari', speed: 300},
+    //        {name: 'Fiat', speed: 100},
+    //        {name: 'Honda', speed: 300}
+    //    ];
+    //
+    //
+    //    [{price: 100}, {price:10},{price:33}].sort(function(a,b)
+    //    {        return a.price - b.price;});
+    //    var result =tablica.sort(compareCars);
+    //    console.log(result);
+
+
+    var People = People || {};
+    People.Students = {
+        Mike: {
+            name: 'Mike',
+            partyWith: function (students) {
+                var result = [this.name];
+                for (var i = 0; i < students.length; i++) {
+                    result.push(students[i].name);
+                }
+                return result.join(' ');
+            }
+        },
+        Rebecca: {name: 'Rebecca'},
+        Tom: {name: "Tom"},
+
+        party: function () {
+            return this.Mike.partyWith([this.Rebecca, this.Tom]);
+        }
+    }
+
+        var result = People.Students.party();
+
+//    !!!!!!!!!!!!!!!!!!!!!!!! wazne drugie rozwiazanie
+//    return (this.name +" "+ students.map(function(s) {return s.name;}.join(' '));
+
+
+</script>
+</body>
+</html>
