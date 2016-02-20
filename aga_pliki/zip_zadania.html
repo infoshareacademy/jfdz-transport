@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<script>-->
+<!--var moves = {-->
+<!--rock: {},-->
+<!--paper: {},-->
+<!--scissors: {}-->
+<!--};-->
+<!--moves.rock.beats = moves.scissors;-->
+<!--moves.scissors.beats = moves.paper;-->
+<!--moves.paper.beats = moves.rock;-->
+
+<!--Array.prototype.zip = function (secondArray, callback) {-->
+<!--return this.map(function (firstArrayItem, index) {-->
+<!--return callback(firstArrayItem, secondArray[index]);-->
+<!--});-->
+<!--};-->
+
+<!--function whoWins(p1move, p2move) {-->
+<!--return p1move !== p2move ? (p1move.beats === p2move ? 'p1 wins' : 'p2 wins') : 'draw'-->
+<!--}-->
+
+<!--var p1 = [moves.rock];-->
+<!--var p2 = [moves.paper];-->
+
+<!--function play(p1moves, p2moves) {-->
+<!--return p1moves.zip(p2moves, whoWins);-->
+<!--}-->
+
+<!--var result = play(p1, p2);-->
+
+<!--var numbersA = [11, 35, 23, 40];-->
+<!--var numbersB = [3, 4, 8, 1];-->
+
+
+<!--var numbersResult = numbersA.zip(numbersB, function(a, b) {-->
+
+<!--});-->
+<!--</script>-->
+
+
+<script>
+    Array.prototype.zip = function (secondArray, callback) {
+        return this.map(function (firstArrayItem, index) {
+            return callback(firstArrayItem, secondArray[index]);
+        });
+    };
+
+    var numbersA = [11, 35, 23, 40];
+    var numbersB = [3, 4, 8, 1];
+    var numberResult = numbersA.zip(numbersB, function (a, b) {
+   return a-b;
+    });
+//
+//    numberResult.reduce(function(prev,curr){return prev+curr;});
+//    numberResult.filter(function (item){return item>15;});
+//    numberResult.forEach(function (item){console.log(item);});
+//map
+//zip
+
+</script>
+</body>
+</html>
