@@ -1,6 +1,4 @@
 
-
-
 $(document).ready( function() {
 
     var losPrzystanku = Math.round(Math.random()*2);
@@ -27,10 +25,6 @@ $(document).ready( function() {
             }
             return;
         },1000);
-
-
-
-
 
     if (losPrzystanku == 0)
     {
