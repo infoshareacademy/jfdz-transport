@@ -69,75 +69,42 @@ $(document).ready(function(){
 
 });
 
-//$(document).ready(function(){
-//
-//    var home = $('#home').offset().top;
-//    var form = $('#form').offset().top;
-//    console.log(form);
-//
-//    $(window).scroll(function(){
-//      if($(this).scrollTop()> 300) {
-//          $('nav a').addClass('activeNav');
-//      }else {
-//          $('nav a').removeClass('activeNav');
-//
-//      }
-//
-//    })
-//});
 
 $(document).ready(function(){
-    var article = $('article'),
-        nav = $('nav'),
-        navHeight = nav.outerHeight();
+    $(window).scroll(onScroll);
 
-        //console.log(navHeight);
-
-    $(window).on('scroll', function() {
-        var currentPosition = $(this).scrollTop();
-
-        //console.log(currentPosition);
-
-        article.each(function(){
-            var top = $(this).offset().top - navHeight,
-                bottom = top + $(this).outerHeight();
-
-            //console.log(top);
-            //console.log(bottom);
-
-            if (currentPosition >= top && currentPosition <= bottom) {
-                nav.find('a').removeClass('activeNav');
-                article.removeClass('activeNav');
-
-                //$(this).addClass('activeNav');
-                //nav.find('a[href="#]'+$(this).attr('id')+'"]').addClass('activeNav');
-                var currentNav = nav.find('a[href^=#]');
-                console.log(currentNav);
-
-                var currentArticle = $(this).attr('id');
-                console.log(currentArticle);
-                if (currentNav == currentArticle) {
-                    currentNav.addClass('activeNav');
-                }
-
-
+    function onScroll(event) {
+        var scrollPos = $(document).scrollTop();
+        $('nav a').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('nav a').removeClass("active");
+                currLink.addClass("active");
             }
-
+            else {
+                currLink.removeClass("active");
+            }
         });
-
-        nav.find('a').on('click', function(){
-            var $el = $(this),
-                id = $el.attr('href');
-
-            $('html, body').animate({
-                scrollTop: $(id).offset().top - navHeight
-            }, 400);
-
-            return false;
-
-        })
-    })
+    }
 });
+
+
+
+//
+//        nav.find('a').on('click', function(){
+//            var $el = $(this),
+//                id = $el.attr('href');
+//
+//            $('html, body').animate({
+//                scrollTop: $(id).offset().top - navHeight
+//            }, 400);
+//
+//            return false;
+//
+//        })
+//    })
+//});
 
 
 
