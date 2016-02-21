@@ -1,15 +1,13 @@
 
 
+
 $(document).ready( function() {
 
     var losPrzystanku = Math.round(Math.random()*2);
-
     var bs1 = $('#busstop1');
     var bs2 = $('#busstop2');
     var bs3 = $('#busstop3');
-
     var czas = Math.round(Math.random()*5);
-
     var pkt = 0;
 
 
