@@ -44,9 +44,6 @@ h4 {
 #menu-active .menu-glowne li a.active {
   color: #f02541; }
 
-#menu-active .menu-glowne a.active {
-  color: #000000; }
-
 .naglowek-strony-bez-tla {
   position: fixed;
   z-index: 1000;
@@ -299,7 +296,7 @@ h4 {
 
 .onas-container {
   background-color: white;
-  color: #b30800;
+  color: #B30800;
   letter-spacing: normal;
   text-align: center;
   margin: 25px auto;
