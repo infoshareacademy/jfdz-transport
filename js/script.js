@@ -17,6 +17,7 @@ $(window).scroll(function(){
 });
 
 
+
 $(document).ready( function() {
 
     var z = 100;
@@ -98,7 +99,7 @@ $(document).ready(function(){
         $('nav a').each(function () {
             var currLink = $(this);
             var refElement = $(currLink.attr("href"));
-            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            if (refElement.position().top <= scrollPos-1 && refElement.position().top + refElement.height() > scrollPos) {
                 $('nav a').removeClass("active");
                 currLink.addClass("active");
             }

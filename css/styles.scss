@@ -5,6 +5,34 @@ $kolor: #B30800;
 $font-one: 'Poiret One', sans-serif;
 $font-lato: 'Lato', sans-serif;
 
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+
+
 body {
   color: $kolor;
   font-family: $font-lato;
@@ -48,10 +76,8 @@ h4 {
   margin-left: auto;
 }
 
-.naglowek-strony .menu-glowne li a.active {
-  //color: #A20700;
-  //color: #f02541;
-  color: #000000;
+#menu-active .menu-glowne li a.active {
+  color: #f02541;
 }
 
 .naglowek-strony-bez-tla {
@@ -343,7 +369,9 @@ h4 {
 .onas-container {
   background-color: white;
   color: $kolor;
-  object-position: ;  letter-spacing: normal;
+  //ToDo
+  //object-position: ;
+  letter-spacing: normal;
   text-align: center;
   margin: 25px auto;
   padding: 75px 0; }
@@ -372,7 +400,8 @@ figure.onas * {
 figure.onas img {
   max-width: 90%;
   position: relative;
-  display: compact;
+  //ToDo
+  //display: compact;
   border-radius: 50%;
   border: 5px groove #B30800;  }
 
