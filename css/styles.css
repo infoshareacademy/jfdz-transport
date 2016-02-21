@@ -114,6 +114,9 @@ h4 {
 .naglowek-strony .menu-glowne li a:hover {
   color: #f02541; }
 
+#menu-active .menu-glowne .active {
+  color: #222222; }
+
 .naglowek-strony .menu-glowne li a {
   color: #A20700;
   font-size: 26px;
