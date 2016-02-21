@@ -13,6 +13,12 @@ $(document).ready( function() {
     //for (; runda>0; runda--) {};
     //console.log('runda:'+runda);
 
+    var przystanek = {
+        autobus: true,
+    };
+
+
+
     setInterval( function odliczanie() {
 
 
