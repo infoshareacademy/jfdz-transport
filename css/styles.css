@@ -300,7 +300,7 @@ h4 {
 
 .onas-container {
   background-color: white;
-  color: #B30800;
+  color: #b30800;
   letter-spacing: normal;
   text-align: center;
   margin: 25px auto;
@@ -328,7 +328,6 @@ figure.onas * {
 figure.onas img {
   max-width: 90%;
   position: relative;
-  display: compact;
   border-radius: 50%;
   border: 5px groove #B30800; }
 
