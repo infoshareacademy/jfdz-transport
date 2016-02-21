@@ -29,11 +29,11 @@ $(document).ready(function () {
 
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
-    $('#menu-glowne a').each(function () {
+    $('#menu a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('#menu-glowne ul li a').removeClass("active");
+            $('#menu ul li a').removeClass("active");
             currLink.addClass("active");
         }
         else{
