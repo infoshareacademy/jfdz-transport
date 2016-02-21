@@ -41,6 +41,9 @@ h4 {
   margin-right: auto;
   margin-left: auto; }
 
+.naglowek-strony .menu-glowne li a.active {
+  color: #f02541; }
+
 .naglowek-strony-bez-tla .menu-glowne li a.activeNav {
   color: #000000; }
 
