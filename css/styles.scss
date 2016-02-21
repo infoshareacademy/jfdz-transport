@@ -48,10 +48,8 @@ h4 {
   margin-left: auto;
 }
 
-.naglowek-strony-bez-tla .menu-glowne li a.activeNav {
-  //color: #A20700;
-  //color: #f02541;
-  color: #000000;
+#menu-active .menu-glowne li a.active {
+  color: #f02541;
 }
 
 .naglowek-strony-bez-tla {
@@ -343,7 +341,9 @@ h4 {
 .onas-container {
   background-color: white;
   color: $kolor;
-  object-position: ;  letter-spacing: normal;
+  //ToDo
+  //object-position: ;
+  letter-spacing: normal;
   text-align: center;
   margin: 25px auto;
   padding: 75px 0; }
@@ -372,7 +372,8 @@ figure.onas * {
 figure.onas img {
   max-width: 90%;
   position: relative;
-  display: compact;
+  //ToDo
+  //display: compact;
   border-radius: 50%;
   border: 5px groove #B30800;  }
 
