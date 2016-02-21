@@ -1,0 +1,44 @@
+<script>
+
+    var moves={
+  rock:{},
+     paper:{},
+    scissors:{}
+
+
+
+  moves.rock.beats=moves.scissors;
+ moves.paper.beats=moves.rock;
+ moves.scissors.beats=moves.paper;
+
+
+   Array.prototype.zip=function(a,callback){ return this.map(function(b,index) {
+     return callback(a, b[index]);
+
+   });
+   };
+
+  function whoWins(p1move, p2move ) {
+       return p1move !== p2move ? (p1move.beats === p2move ? 'p1 win' : 'p2 win') : 'draw'
+
+  }
+
+var p1=[moves.rock, moves.paper];
+ var p2=[moves.paper,moves.rock];
+
+  for (var i=0; i<p1.length; i++){
+     var result = whoWins(p1[i], p2[i])
+       console.log(result);
+
+    }
+
+
+    var numbersA = [12, 13, 14, 15];
+    var numbersB = [ 1, 2, 3, 4];
+
+
+    var numbersResult = numbersA.zip(numbersB, function(a,b){
+        return a-b;
+    });
+
+</script>
