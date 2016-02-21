@@ -7,11 +7,12 @@
     <meta name="keywords" content="komunikacja, gdańsk, ztm, autobusy">
     <link rel="stylesheet" href="css/resetcss.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Poiret+One|Lato:300,400,500&subset=latin,latin-ext' rel='stylesheet'
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext' rel='stylesheet'
           type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
-
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,800" rel="stylesheet" type="text/css">
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
 
@@ -23,13 +24,12 @@
         <a href="#home">
             <div class="logo-strony left"></div>
         </a>
-        <nav>
-                <ul id="menu" class="menu-glowne">
-                <li><a href="">menu</a></li>
-                <li><a href="#home">o nas</a></li>
+        <nav id="menu-active">
+            <ul id="menu" class="menu-glowne">
+                <li><a href="#home"  class="active">menu</a></li>
                 <li><a href="#features">funkcje</a></li>
                 <li><a href="#form">wyślij zapytanie</a></li>
-                    <li><a href="#snip0067">o nas</a></li>
+                <li><a href="#onas">o nas</a></li>
                 <li><a href="#social">polub nas</a></li>
             </ul>
         </nav>
@@ -51,24 +51,24 @@
             </div>
         </div>
     </article>
-        <article id="features" class="features-container ">
+    <article id="features" class="features-container ">
         <h2>Poznaj korzyści z jazdy autobusem</h2>
 
         <div class="feature left">
-                     <div class="feature-image feature-image-1"></div>
+            <div class="feature-image feature-image-1"></div>
             <h3>Rozkład jazdy</h3>
-                   <p>W tym miejscu znajdziesz niezbędne informacje na temat linii autobusowych, przystanków i rozkładów
+            <p>W tym miejscu znajdziesz niezbędne informacje na temat linii autobusowych, przystanków i rozkładów
                 jazdy.</p>
         </div>
         <div class="feature left">
-                 <div class="feature-image feature-image-2"></div>
+            <div class="feature-image feature-image-2"></div>
             <h3>Wirtualny przystanek </h3>
-                   <p>Bez wychodzenia z domu sprawdzisz ile masz czasu do odjazdu wybranego autobusu.</p>
+            <p>Bez wychodzenia z domu sprawdzisz ile masz czasu do odjazdu wybranego autobusu.</p>
         </div>
         <div class="feature left">
-                        <div class="feature-image feature-image-3"></div>
+            <div class="feature-image feature-image-3"></div>
             <h3> Mobilnie</h3>
-           <p>Wystarczy telefon a każdy rozkład masz w zasięgu ręki - spróbuj jakie to proste!</p>
+            <p>Wystarczy telefon a każdy rozkład masz w zasięgu ręki - spróbuj jakie to proste!</p>
 
         </div>
     </article>
@@ -106,14 +106,14 @@
             </div>
 
             <input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com">
-                    <button type="submit" value="Send" disabled id="przycisk">Wyślij Zapytanie</button>
+            <button type="submit" value="Send" disabled id="przycisk">Wyślij Zapytanie</button>
 
         </form>
     </article>
 
     <!--Lila o nas-->
     <article id="onas">
-        <figure class="snip0067 red">
+        <figure class="onas red">
             <img src="images/aga.jpg" width="277" height="297" alt="Aga" />
             <figcaption>
                 <h2>Agnieszka <span>Cieślawska</span></h2>
@@ -124,7 +124,7 @@
             </figcaption>
             <div class="position">Celofyz Team</div>
         </figure>
-        <figure class="snip0067 red">
+        <figure class="onas red">
             <img src="images/kamila.jpg" width="277" height="297" alt="Kamila" />
             <figcaption>
                 <h2>Kamila <span>Żabik</span></h2>
@@ -135,7 +135,7 @@
             </figcaption>
             <div class="position">Celofyz Team </div>
         </figure>
-        <figure class="snip0067 red"><img src="images/Lilka.jpg" width="277" height="297" alt="Lila">
+        <figure class="onas red"><img src="images/Lilka.jpg" width="277" height="297" alt="Lila">
             <figcaption>
                 <h2>Liliana <span>Król</span></h2>
                 <p>Liliana podejmuje ryzykowne wyzwania i nie boi się porażek.</p>
@@ -158,7 +158,7 @@
         </figure>
     </article>
 
-   <div class="clear"></div>
+    <div class="clear"></div>
 
     <article id="social" class="social-media">
         <h2>Polub nas!</h2>
@@ -174,7 +174,7 @@
 <footer class="footer">
     &copy; infoshare academy 2016 / design celofyz
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/scroll_okna.js"></script>
 
