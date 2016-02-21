@@ -1,27 +1,26 @@
-
-$(window).scroll(function(){
-   var wScroll = $(this).scrollTop();
+$(window).scroll(function () {
+    var wScroll = $(this).scrollTop();
 
     if (wScroll > 100) {
         $('.wel').css({
-            'transform' : 'translate(0px, 300px)',
-            'transition' : 'all 2s'
+            'transform': 'translate(0px, 300px)',
+            'transition': 'all 2s'
         });
     } else {
         $('.wel').css({
-            'transform' : 'translate(0px, 0px)',
-            'transition' : 'all 2s'
+            'transform': 'translate(0px, 0px)',
+            'transition': 'all 2s'
         });
     }
 
 });
 
 
-$(document).ready( function() {
+$(document).ready(function () {
 
     var z = 100;
 
-    $('#moveM').mousemove( function() {
+    $('#moveM').mousemove(function () {
         console.log('DZIALA');
 
 
@@ -30,26 +29,25 @@ $(document).ready( function() {
             $('#przycisk').removeAttr('disabled');
 
         } else {
-            $('#pole').html(z -= 1*10);
-            $('.mmwidth').width(z+'%');
+            $('#pole').html(z -= 1 * 10);
+            $('.mmwidth').width(z + '%');
         }
     });
 
 });
 
 
-
-$(document).ready(function() {
-    $(window).scroll(function(){
-        if($(this).scrollTop() > 200) {
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
             $('.scrollup').fadeIn();
-        }else{
+        } else {
             $('.scrollup').fadeOut();
         }
 
     })
 
-    $('.scrollup').click(function(){
+    $('.scrollup').click(function () {
         $('html,body').animate({
             scrollTop: 0
         }, 600)
@@ -58,9 +56,9 @@ $(document).ready(function() {
 
 });
 
-$(document).ready(function(){
-    $(window).scroll(function() {
-        if($(this).scrollTop()> 50){
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
             $('header').addClass('naglowek-strony');
         } else {
             $('header').removeClass('naglowek-strony');
@@ -69,41 +67,23 @@ $(document).ready(function(){
 
 });
 
-//$(document).ready(function(){
-//
-//    var home = $('#home').offset().top;
-//    var form = $('#form').offset().top;
-//    console.log(form);
-//
-//    $(window).scroll(function(){
-//      if($(this).scrollTop()> 300) {
-//          $('nav a').addClass('activeNav');
-//      }else {
-//          $('nav a').removeClass('activeNav');
-//
-//      }
-//
-//    })
-//});
 
-$(document).ready(function(){
+$(document).ready(function () {
     var article = $('article'),
         nav = $('nav'),
         navHeight = nav.outerHeight();
 
-        //console.log(navHeight);
+    //console.log(navHeight);
 
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         var currentPosition = $(this).scrollTop();
 
         //console.log(currentPosition);
 
-        article.each(function(){
+        article.each(function () {
             var top = $(this).offset().top - navHeight,
                 bottom = top + $(this).outerHeight();
 
-            //console.log(top);
-            //console.log(bottom);
 
             if (currentPosition >= top && currentPosition <= bottom) {
                 nav.find('a').removeClass('activeNav');
@@ -125,7 +105,7 @@ $(document).ready(function(){
 
         });
 
-        nav.find('a').on('click', function(){
+        nav.find('a').on('click', function () {
             var $el = $(this),
                 id = $el.attr('href');
 
