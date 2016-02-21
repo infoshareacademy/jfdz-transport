@@ -1,6 +1,6 @@
 /*@import url("https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext");*/
 body {
-  color: #b30800;
+  color: #B30800;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 20px;
@@ -40,6 +40,9 @@ h4 {
   width: 1000px;
   margin-right: auto;
   margin-left: auto; }
+
+.naglowek-strony .menu-glowne li a.active {
+  color: #f02541; }
 
 .naglowek-strony-bez-tla .menu-glowne li a.activeNav {
   color: #000000; }
@@ -132,8 +135,8 @@ h4 {
   background-attachment: fixed;
   background-size: cover;
   background-attachment: fixed;
-  border-bottom: 10px solid #b30800;
-  background-color: #b30800;
+  border-bottom: 10px solid #B30800;
+  background-color: #B30800;
   margin-top: 0;
   animation-name: slides;
   animation-duration: 10s;
@@ -142,16 +145,12 @@ h4 {
 @keyframes slides {
   25% {
     background-image: url("../images/public-transport-1920-03r.jpg"); }
-
   50% {
     background-image: url("../images/public-transport-1920-01r.jpg"); }
-
   75% {
     background-image: url("../images/public-transport-1920-02r.jpg"); }
-
   0% {
     background-image: url("../images/public-transport-1920-04r.jpg"); } }
-
 .welcome img {
   height: 250px;
   width: 250px;
@@ -176,7 +175,7 @@ h4 {
 /*style features*/
 .features-container {
   background-color: white;
-  color: #b30800;
+  color: #B30800;
   letter-spacing: normal;
   text-align: center;
   margin: 25px auto;
@@ -190,14 +189,14 @@ h4 {
 .feature a {
   display: block;
   text-decoration: none;
-  color: #b30800; }
+  color: #B30800; }
 
 .feature .feature-image {
   height: 250px;
   width: 250px;
   margin: 5px auto;
-  border: 5px solid #b30800;
-  background-color: #b30800;
+  border: 5px solid #B30800;
+  background-color: #B30800;
   border-radius: 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -241,7 +240,7 @@ h4 {
   font-size: 60px;
   height: 70px;
   width: 70px;
-  background-color: #b30800;
+  background-color: #B30800;
   border-radius: 50%;
   color: white;
   transition: 1s; }
@@ -252,7 +251,7 @@ h4 {
   background-color: #9a0700; }
 
 .formularz {
-  background-color: #b30800;
+  background-color: #B30800;
   background-image: url("../images/public-transport-1920-02r.jpg");
   background-attachment: fixed;
   background-position: center center;
@@ -271,12 +270,12 @@ h4 {
     padding: 10px;
     border-radius: 5px;
     font-size: 1em;
-    color: #b30800;
+    color: #B30800;
     margin: 10px;
     background-color: white;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
   .formularz button:hover {
-    background-color: #b30800;
+    background-color: #B30800;
     color: #fff;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
     transition: 1s; }
@@ -316,8 +315,8 @@ h4 {
   margin: auto;
   text-align: center;
   padding: 20px;
-  background-color: #b30800;
-  background: linear-gradient(180deg, #b30800, #800600);
+  background-color: #B30800;
+  background: linear-gradient(180deg, #B30800, #800600);
   color: floralwhite;
   border-top: 2px solid floralwhite; }
 
@@ -361,3 +360,5 @@ h4 {
   padding: 15px;
   text-align: center;
   font-size: 0.8em; }
+
+/*# sourceMappingURL=styles.css.map */
