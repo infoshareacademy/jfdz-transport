@@ -147,6 +147,7 @@ h4 {
   display:flex;
   color: white;
   background-image: url("../images/public-transport-1920-03r.jpg");
+  background-attachment: fixed ;
   background-size: cover;
   background-attachment: fixed;
   border-bottom: 10px solid $kolor;
@@ -273,9 +274,10 @@ h4 {
 .formularz {
   background-color: $kolor;
   background-image: url('../images/public-transport-1920-02r.jpg');
+  //background-attachment: 100%;
   background-attachment: fixed;
   background-position: center center;
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
   color:white;
   padding: 100px 50px;
