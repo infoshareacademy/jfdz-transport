@@ -73,6 +73,26 @@ $(document).ready(function(){
 $(document).ready(function(){
     $(window).scroll(onScroll);
 
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+
     function onScroll(event) {
         var scrollPos = $(document).scrollTop();
         $('nav a').each(function () {
@@ -88,24 +108,6 @@ $(document).ready(function(){
         });
     }
 });
-
-
-
-//
-//        nav.find('a').on('click', function(){
-//            var $el = $(this),
-//                id = $el.attr('href');
-//
-//            $('html, body').animate({
-//                scrollTop: $(id).offset().top - navHeight
-//            }, 400);
-//
-//            return false;
-//
-//        })
-//    })
-//});
-
 
 
 
