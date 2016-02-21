@@ -1,21 +1,23 @@
 
-
 $(document).ready( function() {
 
     var losPrzystanku = Math.round(Math.random()*2);
-
     var bs1 = $('#busstop1');
     var bs2 = $('#busstop2');
     var bs3 = $('#busstop3');
-
     var czas = Math.round(Math.random()*5);
-
     var pkt = 0;
 
 
     //var runda = 3;
     //for (; runda>0; runda--) {};
     //console.log('runda:'+runda);
+
+    var przystanek = {
+        autobus: true,
+    };
+
+
 
     setInterval( function odliczanie() {
 
@@ -29,10 +31,6 @@ $(document).ready( function() {
             }
             return;
         },1000);
-
-
-
-
 
     if (losPrzystanku == 0)
     {
