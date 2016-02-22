@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Statystyki Komunikacji GDAŃSK">
@@ -10,19 +10,20 @@
 </head>
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 
-<div id="zegar"> </div>
+<div id="zegar"></div>
 <br>
-<body onload="zmienslajd()">
+<body>
+<div onload="zmienslajd()">
 
-<span onclick="ustawslajd(1)" style="cursor:pointer">[1]</span>
-<span onclick="ustawslajd(2)" style="cursor:pointer">[2]</span>
-<span onclick="ustawslajd(3)" style="cursor:pointer">[3]</span>
-<span onclick="ustawslajd(4)" style="cursor:pointer">[4]</span>
-<span onclick="ustawslajd(5)" style="cursor:pointer">[5]</span>
+    <span onclick="ustawslajd(1)" style="cursor:pointer">[1]</span>
+    <span onclick="ustawslajd(2)" style="cursor:pointer">[2]</span>
+    <span onclick="ustawslajd(3)" style="cursor:pointer">[3]</span>
+    <span onclick="ustawslajd(4)" style="cursor:pointer">[4]</span>
+    <span onclick="ustawslajd(5)" style="cursor:pointer">[5]</span>
 
-<!--<img src="../images/public-transport-1920-01r.jpg"-->
-<div id="slider"></div>
-
+    <!--<img src="../images/public-transport-1920-01r.jpg"-->
+    <div id="slider"></div>
+</div>
 <br>
 <br>
 <br>
@@ -40,10 +41,9 @@
 <div id="ciagliczb"></div>
 <br>
 <br>
-<div id='dodatkowybox' > DUPA
-    <div id="resetButton">X</div>
-    </div>
 
+<div id='dodatkowybox'> DUPA
+</div>
 <script src="testy_js.js"></script>
 </body>
 </html>
