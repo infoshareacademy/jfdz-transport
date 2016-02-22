@@ -5,12 +5,12 @@ $(window).scroll(function(){
     if (wScroll > 100) {
         $('.wel').css({
             'transform' : 'translate(0px, 300px)',
-            'transition' : 'all 2s'
+            'transition' : 'all 2s ease-out'
         });
     } else {
         $('.wel').css({
             'transform' : 'translate(0px, 0px)',
-            'transition' : 'all 2s'
+            'transition' : 'all 2s ease-out'
         });
     }
 
