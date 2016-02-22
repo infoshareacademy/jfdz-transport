@@ -5,6 +5,34 @@ $kolor: #B30800;
 $font-one: 'Poiret One', sans-serif;
 $font-lato: 'Lato', sans-serif;
 
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+
+
 body {
   color: $kolor;
   font-family: $font-lato;
@@ -46,6 +74,10 @@ h4 {
   width: 1000px;
   margin-right: auto;
   margin-left: auto;
+}
+
+#menu-active .menu-glowne li a.active {
+  color: #f02541;
 }
 
 .naglowek-strony-bez-tla {
@@ -107,24 +139,28 @@ h4 {
   text-align: right;
 }
 
-.menu-glowne > li {
+.menu-glowne li {
   display: inline-block;
   margin-top: 25px;
   margin-left: 50px;
 }
 
-.menu-glowne > li > a {
+.menu-glowne li a {
   color: #ffffff;
   font-size: 26px;
   text-decoration: none;
   font-weight: 600;
 }
 
-.menu-glowne > li > a:hover {
+.naglowek-strony-bez-tla .menu-glowne li a:hover {
   color: #f02541;
 }
 
-.naglowek-strony .menu-glowne > li > a {
+.naglowek-strony .menu-glowne li a:hover {
+  color: #f02541;
+}
+
+.naglowek-strony .menu-glowne li a {
   color: #A20700;
   font-size: 26px;
   text-decoration: none;
@@ -137,6 +173,7 @@ h4 {
   display:flex;
   color: white;
   background-image: url("../images/public-transport-1920-03r.jpg");
+  background-attachment: fixed ;
   background-size: cover;
   background-attachment: fixed;
   border-bottom: 10px solid $kolor;
@@ -263,9 +300,10 @@ h4 {
 .formularz {
   background-color: $kolor;
   background-image: url('../images/public-transport-1920-02r.jpg');
+  //background-attachment: 100%;
   background-attachment: fixed;
   background-position: center center;
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
   color:white;
   padding: 100px 50px;
@@ -327,6 +365,170 @@ h4 {
 
 
 }
+
+.onas-container {
+  background-color: white;
+  color: $kolor;
+  //ToDo
+  //object-position: ;
+  letter-spacing: normal;
+  text-align: center;
+  margin: 25px auto;
+  padding: 75px 0; }
+
+figure.onas {
+  font-family: 'Raleway','Poiret One', sans-serif, sans-serif;
+  text-align: justify;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  background: #ffffff;
+  color: #000000;
+}
+
+figure.onas * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+figure.onas img {
+  max-width: 90%;
+  position: relative;
+  //ToDo
+  //display: compact;
+  border-radius: 50%;
+  border: 5px groove #B30800;  }
+
+
+figure.onas:before {
+  position:absolute;
+  content: '';
+  height: 100%;
+  width: 90%;
+  z-index: 1;
+  left: -20%;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #fff;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: skewX(-30deg) translateX(-80%);
+  transform: skewX(-30deg) translateX(-80%);
+  -webkit-box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+figure.onas figcaption {
+  padding-left: 30px;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  width: 60%;
+  z-index: 1;
+  opacity: 0;
+}
+
+figure.onas figcaption h2,
+figure.onas figcaption p {
+  margin: 0;
+  text-align: center;
+  padding: 5px 0 0;
+  width: 100%;
+  font-size: small;
+  height: auto;
+}
+
+figure.onas figcaption h2 {
+  font-size: 1.4em;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+figure.onas figcaption h2 span {
+  font-weight: 800;
+  text-align: center;
+}
+
+figure.onas figcaption p {
+  font-weight: 500;
+  font-size: small;
+  opacity: 0.8;
+  text-align: center;
+}
+
+figure.onas figcaption .icons {
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 10px;
+}
+
+figure.onas figcaption .icons i {
+  display: inline-block;
+  font-size: 20px;
+  background: #000000;
+  color: #ffffff;
+  margin-right: 5px;
+  opacity: 0.5;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+}
+
+figure.onas figcaption a {
+  opacity: 0.7;
+}
+
+figure.onas7 figcaption a:hover {
+  opacity: 1;
+}
+
+figure.onas .position {
+  position: absolute;
+  bottom: 0;
+  width: 89.5%;
+  text-align: right;
+  padding: 15px 30px;
+  font-size: 0.9em;
+  opacity: 1;
+  font-weight: 500;
+  color: #ffffff;
+  background: #000000;
+  border-radius: 50px;
+}
+
+
+figure.onas.red .icons i {
+  background: #6d2018;
+}
+
+figure.onas.red .position {
+  background: #962d22;
+}
+
+figure.onas:hover figcaption,
+figure.sonas.hover figcaption,
+figure.onas:hover .icons i,
+figure.onas.hover .icons i {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+figure.onas:hover:before,
+figure.onas.hover:before {
+  -webkit-transform: skewX(-30deg) translateX(0px);
+  transform: skewX(-30deg) translateX(0px);
+  opacity: .5;
+  transition: 1s;}
+
 
 .mmwidth {
   position: relative;
