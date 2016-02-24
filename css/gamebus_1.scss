@@ -49,6 +49,10 @@ h1 {font-size: 18px;}
   text-align: center;
 }
 
-.bus-color {
+.bus-active {
   background-color: black;
+}
+
+.bus-no-active {
+  background-color: deepskyblue;
 }
