@@ -123,29 +123,42 @@ $(document).ready(function() {
         console.log(x2);
     }
 
+    var howLongBusStop = Math.floor((Math.random() * 5) + 1);
+    bus1.timer = function setBusTime(howLongBusStop) {
 
-    function setBusTime() {
 
-        var howLongBusStop = Math.floor((Math.random() * 5) + 1);
         var timerBusStop = setInterval(function () {
             howLongBusStop--;
-
+            console.log(howLongBusStop);
             if (howLongBusStop == 0) {
-                bus3.Id.addClass('bus-active');
-                bus2.Id.addClass('bus-no-active');
-                bus1.Id.addClass('bus-no-active');
 
                 clearInterval(timerBusStop);
 
             }
 
         }, 1000);
-    }
-    setBusTime();
+    };
+    //setBusTime();
 
 
 });
 
+var howLongBusStop = Math.floor((Math.random() * 5) + 1);
+function setBusTime(howLongBusStop) {
+
+
+    var timerBusStop = setInterval(function () {
+        howLongBusStop--;
+        console.log(howLongBusStop);
+        if (howLongBusStop == 0) {
+
+            clearInterval(timerBusStop);
+
+        }
+
+    }, 1000);
+};
+bus1.timer = setBusTime(howLongBusStop);
 
 
 
