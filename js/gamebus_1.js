@@ -38,6 +38,26 @@ $(document).ready(function() {
     gameOver = false;
     var button = $('input');
 
+    var howLongBusStop1 = Math.floor((Math.random() * 5) + 3);
+    //
+    //function setBusTime(howLongBusStop) {
+    //
+    //    var timerBusStop = setInterval(function () {
+    //        howLongBusStop--;
+    //        var t = howLongBusStop;
+    //        var czasPostoju = [];
+    //        nowaTabliac = czasPostoju.push[t];
+    //        console.log(t);
+    //        if (howLongBusStop == 0) {
+    //
+    //            clearInterval(timerBusStop);
+    //        }
+    //
+    //    }, 1000);
+    //
+    //}
+
+
     function setTime() {
 
         var sec = parseInt($('.second').text());
@@ -58,107 +78,94 @@ $(document).ready(function() {
 
     var count = 0;
 
+    //bus1.timer = setBusTime(howLongBusStop1);
 
-    var getBus = Math.floor((Math.random() * 3) + 1);
+    function jakas () {
+        var getBus = Math.floor((Math.random() * 3) + 1);
 
-    if (getBus == bus1.number) {
+        if (getBus == bus1.number) {
 
-        bus1.Id.addClass('bus-active');
-        bus2.Id.addClass('bus-no-active');
-        bus3.Id.addClass('bus-no-active');
-
-        $('.bus-active').on('click', function () {
-            count++;
-            $('#points').html("Punkty: " + count);
-        });
-
-        $('.bus-no-active').on('click', function () {
-            count -= 10;
-            $('#points').html("Punkty: " + count);
-        });
+            bus1.Id.addClass('bus-active');
+            //setTimeout(function(){bus1.Id.removeClass('bus-active');}, howLongBusStop1);
+            bus2.Id.addClass('bus-no-active');
+            bus3.Id.addClass('bus-no-active');
 
 
-    } else if (getBus == bus2.number) {
+            $('.bus-active').on('click', function () {
+                count++;
+                $('#points').html("Punkty: " + count);
+            });
 
-        bus2.Id.addClass('bus-active');
-        bus1.Id.addClass('bus-no-active');
-        bus3.Id.addClass('bus-no-active');
+            $('.bus-no-active').on('click', function () {
+                count -= 10;
+                $('#points').html("Punkty: " + count);
+            });
 
-        $('.bus-active').on('click', function () {
-            count++;
-            $('#points').html("Punkty: " + count);
-        });
-
-        $('.bus-no-active').on('click', function () {
-            count -= 10;
-            $('#points').html("Punkty: " + count);
-        });
+            //if(bus1.timer == false) {
+            //    bus1.Id.removeClass('bus-active');
+            //    bus2.Id.removeClass('bus-no-active');
+            //    bus3.Id.removeClass('bus-no-active');
+            //}
 
 
-    } else {
-        bus3.Id.addClass('bus-active');
-        bus2.Id.addClass('bus-no-active');
-        bus1.Id.addClass('bus-no-active');
+        } else if (getBus == bus2.number) {
 
-        $('.bus-active').on('click', function () {
-            count++;
-            $('#points').html("Punkty: " + count);
-        });
+            bus2.Id.addClass('bus-active');
+            bus1.Id.addClass('bus-no-active');
+            bus3.Id.addClass('bus-no-active');
 
-        $('.bus-no-active').on('click', function () {
-            count -= 10;
-            $('#points').html("Punkty: " + count);
-        });
+            $('.bus-active').on('click', function () {
+                count++;
+                $('#points').html("Punkty: " + count);
+            });
+
+            $('.bus-no-active').on('click', function () {
+                count -= 10;
+                $('#points').html("Punkty: " + count);
+            });
+
+
+        } else {
+            bus3.Id.addClass('bus-active');
+            bus2.Id.addClass('bus-no-active');
+            bus1.Id.addClass('bus-no-active');
+
+            $('.bus-active').on('click', function () {
+                count++;
+                $('#points').html("Punkty: " + count);
+            });
+
+            $('.bus-no-active').on('click', function () {
+                count -= 10;
+                $('#points').html("Punkty: " + count);
+            });
+
+        }
+        setTimeout(jakas, howLongBusStop1);
 
     }
 
 
 
-    function losujAutobus (){
-        setInterval(getBus, 1000)
-    }
+    jakas();
 
-    function setBusStop() {
-        x2 = Math.floor((Math.random()* 3) +1);
-        console.log(x2);
-    }
+    //function losujAutobus (){
+    //    setInterval(getBus, 1000)
+    //}
 
-    var howLongBusStop = Math.floor((Math.random() * 5) + 1);
-    bus1.timer = function setBusTime(howLongBusStop) {
+    //function setBusStop() {
+    //    x2 = Math.floor((Math.random()* 3) +1);
+    //    console.log(x2);
+    //}
 
 
-        var timerBusStop = setInterval(function () {
-            howLongBusStop--;
-            console.log(howLongBusStop);
-            if (howLongBusStop == 0) {
-
-                clearInterval(timerBusStop);
-
-            }
-
-        }, 1000);
-    };
     //setBusTime();
 
 
 });
 
-var howLongBusStop = Math.floor((Math.random() * 5) + 1);
-function setBusTime(howLongBusStop) {
 
 
-    var timerBusStop = setInterval(function () {
-        howLongBusStop--;
-        console.log(howLongBusStop);
-        if (howLongBusStop == 0) {
-
-            clearInterval(timerBusStop);
-
-        }
-
-    }, 1000);
-};
-bus1.timer = setBusTime(howLongBusStop);
 
 
 
@@ -206,5 +213,78 @@ bus1.timer = setBusTime(howLongBusStop);
 //function setTimeBus() {
 //
 //}
+
+
+
+
+
+
+
+var howLongBusStop1 = Math.floor((Math.random() * 5) + 1);
+
+//function setBusTime(howLongBusStop) {
+//
+//    var timerBusStop = setInterval(function () {
+//        howLongBusStop--;
+//        var t = howLongBusStop;
+//        var czasPostoju = [];
+//        nowaTabliac = czasPostoju.push[t];
+//        console.log(t);
+//        if (howLongBusStop == 0) {
+//
+//            clearInterval(timerBusStop);
+//        }
+//
+//    }, 1000);
+//
+//}
+
+//function odliczanie()
+//{
+//    var howLongBusStop1 = Math.floor((Math.random() * 5) + 1);
+//    howLongBusStop1--;
+//    console.log(howLongBusStop1);
+//    //document.forms["my_form"].elements[0].value++;
+//    setTimeout("odliczanie()", 1000);
+//    clearTimeout(odliczanie());
+//}
+//
+//odliczanie();
+//clearTimeout(odliczanie());
+
+//function odliczanie (){
+//    var howLongBusStop1 = Math.floor((Math.random() * 5) + 1);
+//    console.log(howLongBusStop1--);
+//
+//    to = setTimeout(function(){ odliczanie()}, howLongBusStop1*1000);
+//
+//}
+//odliczanie();
+//clearTimeout(to);
+//
+//function stopCount() {
+//    clearTimeout(to);
+//    timer_is_on = 0;
+//}
+//
+//
+//setTimeout()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
