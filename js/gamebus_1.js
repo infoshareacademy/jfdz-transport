@@ -39,6 +39,9 @@ $(document).ready(function() {
     var button = $('input');
 
     var howLongBusStop1 = Math.floor((Math.random() * 5) + 3);
+    var howLongBusStop2 = Math.floor((Math.random() * 5) + 3);
+    var howLongBusStop3 = Math.floor((Math.random() * 5) + 3);
+
     //
     //function setBusTime(howLongBusStop) {
     //
@@ -80,73 +83,72 @@ $(document).ready(function() {
 
     //bus1.timer = setBusTime(howLongBusStop1);
 
+    function jakas() {
 
 
-                    var getBus = Math.floor((Math.random() * 3) + 1);
+        var getBus = Math.floor((Math.random() * 5) + 1);
 
-            if (getBus == bus1.number) {
+        if (getBus == bus1.number) {
 
-                bus1.Id.addClass('bus-active');
-                $(function() {
-                    var howLongBusStop1 = Math.floor((Math.random() * 5) + 5*1000);
-                    var $b1 = $("#bus1");
-                    setInterval(function() {
-                        $b1.toggleClass("bus-active");
-                    }, howLongBusStop1);
-                });
-                bus2.Id.addClass('bus-no-active').removeClass('bus-active');
-                bus3.Id.addClass('bus-no-active').removeClass('bus-active');
+            bus1.Id.addClass('bus-active');
+            setTimeout(function(){bus1.Id.removeClass('bus-active');}, howLongBusStop1*1000);
+            bus2.Id.addClass('bus-no-active').removeClass('bus-active');
+            bus3.Id.addClass('bus-no-active').removeClass('bus-active');
 
 
-                $('.bus-active').on('click', function () {
-                    count += 11;
-                    $('#points').html("Punkty: " + count);
-                });
+            $('.bus-active').on('click', function () {
+                count++;
+                $('#points').html("Punkty: " + count);
+            });
 
-                $('.bus-no-active').on('click', function () {
-                    count -= 10;
-                    $('#points').html("Punkty: " + count);
-                });
-
-            } else if (getBus == bus2.number) {
-
-                bus2.Id.addClass('bus-active');
-                bus1.Id.addClass('bus-no-active');
-                bus3.Id.addClass('bus-no-active');
-
-                $('.bus-active').on('click', function () {
-                    count++;
-                    $('#points').html("Punkty: " + count);
-                });
-
-                $('.bus-no-active').on('click', function () {
-                    count -= 10;
-                    $('#points').html("Punkty: " + count);
-                });
+            $('.bus-no-active').on('click', function () {
+                count -= 10;
+                $('#points').html("Punkty: " + count);
+            });
 
 
-            } else {
-                bus3.Id.addClass('bus-active');
-                bus2.Id.addClass('bus-no-active');
-                bus1.Id.addClass('bus-no-active');
+        } else if (getBus == bus2.number) {
 
-                $('.bus-active').on('click', function () {
-                    count++;
-                    $('#points').html("Punkty: " + count);
-                });
+            bus2.Id.addClass('bus-active');
+            setTimeout(function(){bus2.Id.removeClass('bus-active');}, howLongBusStop2*1000);
+            bus1.Id.addClass('bus-no-active').removeClass('bus-active');
+            bus3.Id.addClass('bus-no-active').removeClass('bus-active');
 
-                $('.bus-no-active').on('click', function () {
-                    count -= 10;
-                    $('#points').html("Punkty: " + count);
-                });
+            $('.bus-active').on('click', function () {
+                count++;
+                $('#points').html("Punkty: " + count);
+            });
 
-            }
+            $('.bus-no-active').on('click', function () {
+                count -= 10;
+                $('#points').html("Punkty: " + count);
+            });
 
+
+        } else {
+            bus3.Id.addClass('bus-active');
+            setTimeout(function(){bus3.Id.removeClass('bus-active');}, howLongBusStop3*1000);
+            bus2.Id.addClass('bus-no-active').removeClass('bus-active');
+            bus1.Id.addClass('bus-no-active').removeClass('bus-active');
+
+            $('.bus-active').on('click', function () {
+                count++;
+                $('#points').html("Punkty: " + count);
+            });
+
+            $('.bus-no-active').on('click', function () {
+                count -= 10;
+                $('#points').html("Punkty: " + count);
+            });
+
+        }
+        //setTimeout(jakas, 3000);
+
+    }
+
+    isetInterval(jakas, 1000);
 
 });
-
-
-
 
 
 

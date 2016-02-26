@@ -65,8 +65,8 @@ $(document).ready(function() {
                 $b2.toggleClass("bus-active");
             }, howLongBusStop2);
         });
-        bus1.Id.addClass('bus-no-active');
-        bus3.Id.addClass('bus-no-active');
+        bus1.Id.addClass('bus-no-active').removeClass('bus-active');
+        bus3.Id.addClass('bus-no-active').removeClass('bus-active');
 
 
     } else {
