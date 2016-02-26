@@ -40,40 +40,6 @@ $(document).ready(function() {
     var howLongBusStop1 = Math.floor((Math.random() * 5) + 3);
 
 
-//function setBusTime() {
-//
-//    var howLongBusStop = Math.floor((Math.random() * 5) + 1);
-//    var timerBusStop = setInterval(function () {
-//        howLongBusStop--;
-//        console.log(howLongBusStop);
-//        if (howLongBusStop == 0) {
-//
-//            clearInterval(timerBusStop);
-//
-//        }
-//
-//    }, 1000);
-//}
-
-    //jakasF = setInterval(drugF, 1000);
-    //
-    //var howLongBusStop1 = 0;
-    //howLongBusStop1 = Math.floor((Math.random() * 5) + 1);
-    //function drugF() {
-    //    howLongBusStop1 = howLongBusStop1--;
-    //    if(howLongBusStop1 < 10) {
-    //        console.log(howLongBusStop1)
-    //
-    //    }
-    //    //else if (howLongBusStop1 > 20){
-    //    //    clearInterval(jakasF);
-    //    //}
-    //}
-//
-//    clearInterval(jakasF);
-
-
-//
     var getBus = Math.floor((Math.random() * 3) + 1);
 
     if (getBus == bus1.number) {
@@ -82,6 +48,7 @@ $(document).ready(function() {
         //setTimeout(function(){bus1.Id.removeClass('bus-active');}, howLongBusStop1 * 1000);
 
         var $ta = $("#bus1");
+        var howLongBusStop1 = Math.floor((Math.random() * 5) + 5*1000);
         setInterval(function() {
             $ta.toggleClass("bus-active");
         }, howLongBusStop1);
@@ -121,36 +88,6 @@ $(document).ready(function() {
     }
 });
 
-
-$(document).ready(function() {
-
-//$(function() {
-//    var howLongBusStop1 = Math.floor((Math.random() * 5) + 3);
-//    var fa = $("#bus1");
-//    setInterval(function() {
-//
-//        if ($fa.hasClass('bus-active') ){
-//            $fa.removeClass('bus-active')
-//        } else {
-//            $fa.addClass('bus-active');
-//        }
-//
-//        //fa = (fa.hasClass('bus-active')) ? fa.addClass('bus-no-active') : fa.addClass('bus-active');
-//    }, 3000);
-//
-//
-//
-//})
-
-});
-
-//$(function() {
-//    var howLongBusStop1 = Math.floor((Math.random() * 5) + 4*1000);
-//    var $ta = $("#bus1");
-//    setInterval(function() {
-//        $ta.toggleClass("bus-active");
-//    }, howLongBusStop1);
-//});
 
 
 
