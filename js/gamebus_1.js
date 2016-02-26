@@ -80,74 +80,83 @@ $(document).ready(function() {
 
     //bus1.timer = setBusTime(howLongBusStop1);
 
-    function jakas () {
-        var getBus = Math.floor((Math.random() * 3) + 1);
-
-        if (getBus == bus1.number) {
-
-            bus1.Id.addClass('bus-active');
-            //setTimeout(function(){bus1.Id.removeClass('bus-active');}, howLongBusStop1);
-            bus2.Id.addClass('bus-no-active');
-            bus3.Id.addClass('bus-no-active');
 
 
-            $('.bus-active').on('click', function () {
-                count++;
-                $('#points').html("Punkty: " + count);
-            });
+                    var getBus = Math.floor((Math.random() * 3) + 1);
 
-            $('.bus-no-active').on('click', function () {
-                count -= 10;
-                $('#points').html("Punkty: " + count);
-            });
+            if (getBus == bus1.number) {
 
-            //if(bus1.timer == false) {
-            //    bus1.Id.removeClass('bus-active');
-            //    bus2.Id.removeClass('bus-no-active');
-            //    bus3.Id.removeClass('bus-no-active');
-            //}
-
-
-        } else if (getBus == bus2.number) {
-
-            bus2.Id.addClass('bus-active');
-            bus1.Id.addClass('bus-no-active');
-            bus3.Id.addClass('bus-no-active');
-
-            $('.bus-active').on('click', function () {
-                count++;
-                $('#points').html("Punkty: " + count);
-            });
-
-            $('.bus-no-active').on('click', function () {
-                count -= 10;
-                $('#points').html("Punkty: " + count);
-            });
+                bus1.Id.addClass('bus-active');
+                $(function() {
+                    var howLongBusStop1 = Math.floor((Math.random() * 5) + 5*1000);
+                    var $b1 = $("#bus1");
+                    setInterval(function() {
+                        $b1.toggleClass("bus-active");
+                    }, howLongBusStop1);
+                });
+                bus2.Id.addClass('bus-no-active');
+                bus3.Id.addClass('bus-no-active');
 
 
-        } else {
-            bus3.Id.addClass('bus-active');
-            bus2.Id.addClass('bus-no-active');
-            bus1.Id.addClass('bus-no-active');
+                $('.bus-active').on('click', function () {
+                    count += 11;
+                    $('#points').html("Punkty: " + count);
+                });
 
-            $('.bus-active').on('click', function () {
-                count++;
-                $('#points').html("Punkty: " + count);
-            });
+                $('.bus-no-active').on('click', function () {
+                    count -= 10;
+                    $('#points').html("Punkty: " + count);
+                });
 
-            $('.bus-no-active').on('click', function () {
-                count -= 10;
-                $('#points').html("Punkty: " + count);
-            });
-
-        }
-        setTimeout(jakas, howLongBusStop1);
-
-    }
+                //if(bus1.timer == false) {
+                //    bus1.Id.removeClass('bus-active');
+                //    bus2.Id.removeClass('bus-no-active');
+                //    bus3.Id.removeClass('bus-no-active');
+                //}
 
 
+            } else if (getBus == bus2.number) {
 
-    jakas();
+                bus2.Id.addClass('bus-active');
+                bus1.Id.addClass('bus-no-active');
+                bus3.Id.addClass('bus-no-active');
+
+                $('.bus-active').on('click', function () {
+                    count++;
+                    $('#points').html("Punkty: " + count);
+                });
+
+                $('.bus-no-active').on('click', function () {
+                    count -= 10;
+                    $('#points').html("Punkty: " + count);
+                });
+
+
+            } else {
+                bus3.Id.addClass('bus-active');
+                bus2.Id.addClass('bus-no-active');
+                bus1.Id.addClass('bus-no-active');
+
+                $('.bus-active').on('click', function () {
+                    count++;
+                    $('#points').html("Punkty: " + count);
+                });
+
+                $('.bus-no-active').on('click', function () {
+                    count -= 10;
+                    $('#points').html("Punkty: " + count);
+                });
+
+            }
+
+
+
+
+
+
+
+
+
 
     //function losujAutobus (){
     //    setInterval(getBus, 1000)
