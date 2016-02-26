@@ -37,8 +37,6 @@ $(document).ready(function() {
     gameOver = false;
     var button = $('input');
 
-    var howLongBusStop1 = Math.floor((Math.random() * 5) + 3);
-
 
     var getBus = Math.floor((Math.random() * 3) + 1);
 
@@ -52,8 +50,8 @@ $(document).ready(function() {
         setInterval(function() {
             $ta.toggleClass("bus-active");
         }, howLongBusStop1);
-        bus2.Id.addClass('bus-no-active');
-        bus3.Id.addClass('bus-no-active');
+        bus2.Id.addClass('bus-no-active').removeClass('bus-active');
+        bus3.Id.addClass('bus-no-active').removeClass('bus-active');
 
 
     } else if (getBus == bus2.number) {
@@ -73,14 +71,16 @@ $(document).ready(function() {
 
     } else {
         bus3.Id.addClass('bus-active');
-        //setTimeout(function(){bus3.Id.removeClass('bus-active');}, howLongBusStop1 * 1000);
-        $(function() {
-            var howLongBusStop3 = Math.floor((Math.random() * 5) + 5*1000);
-            var $b3 = $("#bus3");
-            setInterval(function() {
-                $b3.toggleClass("bus-active");
-            }, howLongBusStop3);
-        });
+        var howLongBusStop3 = Math.floor((Math.random() * 5) + 5*1000);
+        setTimeout(function(){bus3.Id.removeClass('bus-active');}, howLongBusStop3 * 1000);
+        ////$(function() {
+        //    var howLongBusStop3 = Math.floor((Math.random() * 5) + 5*1000);
+        //    setTimeout(function(){bus3.Id.removeClass('bus-active');}, howLongBusStop3 * 1000);
+        //    //var $b3 = $("#bus3");
+        //    //setInterval(function() {
+        //    //    $b3.toggleClass("bus-active");
+        //    //}, howLongBusStop3);
+        //});
         bus2.Id.addClass('bus-no-active');
         bus1.Id.addClass('bus-no-active');
 

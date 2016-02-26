@@ -94,8 +94,8 @@ $(document).ready(function() {
                         $b1.toggleClass("bus-active");
                     }, howLongBusStop1);
                 });
-                bus2.Id.addClass('bus-no-active');
-                bus3.Id.addClass('bus-no-active');
+                bus2.Id.addClass('bus-no-active').removeClass('bus-active');
+                bus3.Id.addClass('bus-no-active').removeClass('bus-active');
 
 
                 $('.bus-active').on('click', function () {
