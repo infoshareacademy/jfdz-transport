@@ -7,12 +7,12 @@
     <meta name="keywords" content="komunikacja, gdańsk, ztm, autobusy">
     <link rel="stylesheet" href="css/resetcss.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Poiret+One|Lato:300,400,500&subset=latin,latin-ext' rel='stylesheet'
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext' rel='stylesheet'
           type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
-
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,800" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,800|Lato:300,400,500&subset=latin,latin-ext" type="text/css">
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
 
     <title>Statystyki komunikacji ZTM Gdańsk</title>
@@ -24,9 +24,8 @@
             <div class="logo-strony left"></div>
         </a>
         <nav id="menu-active">
-                <ul id="menu" class="menu-glowne">
+            <ul id="menu" class="menu-glowne">
                 <li><a href="#home">menu</a></li>
-                <!--<li><a href="#onas">o nas</a></li>-->
                 <li><a href="#features">funkcje</a></li>
                 <li><a href="#form">wyślij zapytanie</a></li>
                 <li><a href="#onas">o nas</a></li>
@@ -51,31 +50,31 @@
             </div>
         </div>
     </article>
-        <article id="features" class="features-container ">
+    <article id="features" class="features-container cf">
         <h2>Poznaj korzyści z jazdy autobusem</h2>
 
         <div class="feature left">
-                     <div class="feature-image feature-image-1"></div>
+            <div class="feature-image feature-image-1"></div>
             <h3>Rozkład jazdy</h3>
-                   <p>W tym miejscu znajdziesz niezbędne informacje na temat linii autobusowych, przystanków i rozkładów
+            <p>W tym miejscu znajdziesz niezbędne informacje na temat linii autobusowych, przystanków i rozkładów
                 jazdy.</p>
         </div>
         <div class="feature left">
-                 <div class="feature-image feature-image-2"></div>
+            <div class="feature-image feature-image-2"></div>
             <h3>Wirtualny przystanek </h3>
-                   <p>Bez wychodzenia z domu sprawdzisz ile masz czasu do odjazdu wybranego autobusu.</p>
+            <p>Bez wychodzenia z domu sprawdzisz ile masz czasu do odjazdu wybranego autobusu.</p>
         </div>
         <div class="feature left">
-                        <div class="feature-image feature-image-3"></div>
+            <div class="feature-image feature-image-3"></div>
             <h3> Mobilnie</h3>
-           <p>Wystarczy telefon a każdy rozkład masz w zasięgu ręki - spróbuj jakie to proste!</p>
+            <p>Wystarczy telefon a każdy rozkład masz w zasięgu ręki - spróbuj jakie to proste!</p>
 
         </div>
     </article>
 
     <div class="clear"></div>
 
-    <article class="small-icons-container">
+    <article class="small-icons-container cf">
         <div class="small-icons " title="Lista linii autobusowych"><i class="fa fa-table"></i></div>
         <div class="small-icons " title="Trasy"><i class="fa fa-map"></i></div>
         <div class="small-icons " title="Lista przystanków"><i class="fa fa-map-marker"></i></div>
@@ -106,14 +105,14 @@
             </div>
 
             <input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com">
-                    <button type="submit" value="Send" disabled id="przycisk">Wyślij Zapytanie</button>
+            <button type="submit" value="Send" disabled id="przycisk">Wyślij Zapytanie</button>
 
         </form>
     </article>
 
     <!--Lila o nas-->
-    <article id="onas">
-        <figure class="snip0067 red">
+    <article id="onas" class="cf">
+        <figure class="onas red">
             <img src="images/aga.jpg" width="277" height="297" alt="Aga" />
             <figcaption>
                 <h2>Agnieszka <span>Cieślawska</span></h2>
@@ -124,7 +123,7 @@
             </figcaption>
             <div class="position">Celofyz Team</div>
         </figure>
-        <figure class="snip0067 red">
+        <figure class="onas red">
             <img src="images/kamila.jpg" width="277" height="297" alt="Kamila" />
             <figcaption>
                 <h2>Kamila <span>Żabik</span></h2>
@@ -135,7 +134,7 @@
             </figcaption>
             <div class="position">Celofyz Team </div>
         </figure>
-        <figure class="snip0067 red"><img src="images/Lilka.jpg" width="277" height="297" alt="Lila">
+        <figure class="onas red"><img src="images/Lilka.jpg" width="277" height="297" alt="Lila">
             <figcaption>
                 <h2>Liliana <span>Król</span></h2>
                 <p>Liliana podejmuje ryzykowne wyzwania i nie boi się porażek.</p>
@@ -145,18 +144,19 @@
             </figcaption>
             <div class="position">Celofyz Team </div>
         </figure>
-    <figure class="snip0067 red">
-        <img src="images/marcin.jpg" width="277" height="297" alt="Marcin" />
-        <figcaption>
-            <h2>Marcin <span>Wirkus</span></h2>
-            <p>Marcin nie lubi dwuznacznych czy wątpliwych sytuacji. </p>
-            <div class="icons"><a href="https://www.facebook.com/MW.Marcin.Wirkus?fref=ts"><i class="ion-social-facebook-outline"></i></a>
-                <a href="http://localhost:63342/jfdz-transport/index.html#form"><i class="ion-ios-contact-outline"></i></a>
-                <a href="#"><i class="ion-ios-telephone"></i></a></div>
-        </figcaption>
-        <div class="position"><b>Celofyz Team</b></div>
-    </figure>
-</article>
+        <figure class="onas red">
+            <img src="images/marcin.jpg" width="277" height="297" alt="Marcin" />
+            <figcaption>
+                <h2>Marcin <span>Wirkus</span></h2>
+                <p>Marcin nie lubi dwuznacznych czy wątpliwych sytuacji. </p>
+                <div class="icons"><a href="https://www.facebook.com/MW.Marcin.Wirkus?fref=ts"><i class="ion-social-facebook-outline"></i></a>
+                    <a href="http://localhost:63342/jfdz-transport/index.html#form"><i class="ion-ios-contact-outline"></i></a>
+                    <a href="#"><i class="ion-ios-telephone"></i></a></div>
+            </figcaption>
+            <div class="position"><b>Celofyz Team</b></div>
+        </figure>
+
+    </article>
 
    <div class="clear"></div>
 
@@ -174,7 +174,7 @@
 <footer class="footer">
     &copy; infoshare academy 2016 / design celofyz
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/scroll_okna.js"></script>
 <script src="js/menu_podswietlane.js"></script>
