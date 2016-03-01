@@ -37,6 +37,14 @@ $(document).ready(function() {
     gameOver = false;
     var button = $('input');
 
+    function go() {
+
+        $(bus1.Id).animate({'left': '100px'}, 1000, 'linear');
+
+    }
+    go();
+
+
 
     var getBus = Math.floor((Math.random() * 3) + 1);
 
@@ -86,6 +94,9 @@ $(document).ready(function() {
 
 
     }
+
+
+
 });
 
 
