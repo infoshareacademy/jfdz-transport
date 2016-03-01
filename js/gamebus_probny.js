@@ -41,7 +41,6 @@ $(document).ready(function() {
 
 
 
-        $('h1').animate({'left': '=100px'}, 1000);
 
 
 
@@ -99,24 +98,10 @@ $(document).ready(function() {
 
     }
 
-    function go1 () {
-        $(bus1.Id).animate({
-                'left': '100px'},
-            1000, 'linear');
-    }
-
-    go1();
 
 
 });
 
-//function go1 (a) {
-//    $(a).animate({
-//            'left': '100px'},
-//        1000, 'linear');
-//}
-//
-//go1(bus1.ID);
 
 
 
