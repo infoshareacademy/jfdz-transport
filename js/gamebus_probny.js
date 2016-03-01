@@ -37,12 +37,13 @@ $(document).ready(function() {
     gameOver = false;
     var button = $('input');
 
-    function go() {
 
-        $(bus1.Id).animate({'left': '100px'}, 1000, 'linear');
 
-    }
-    go();
+
+
+        $('h1').animate({'left': '=100px'}, 1000);
+
+
 
 
 
@@ -58,6 +59,9 @@ $(document).ready(function() {
         setInterval(function() {
             $ta.toggleClass("bus-active");
         }, howLongBusStop1);
+
+
+
         bus2.Id.addClass('bus-no-active').removeClass('bus-active');
         bus3.Id.addClass('bus-no-active').removeClass('bus-active');
 
@@ -95,11 +99,24 @@ $(document).ready(function() {
 
     }
 
+    function go1 () {
+        $(bus1.Id).animate({
+                'left': '100px'},
+            1000, 'linear');
+    }
+
+    go1();
 
 
 });
 
-
+//function go1 (a) {
+//    $(a).animate({
+//            'left': '100px'},
+//        1000, 'linear');
+//}
+//
+//go1(bus1.ID);
 
 
 
