@@ -76,6 +76,7 @@ h4 {
   margin-left: auto;
 }
 
+
 #menu-active .menu-glowne li a.active {
   color: #f02541;
 }
@@ -268,6 +269,16 @@ h4 {
 .feature-image-2 {background-image: url('../images/feature-hand-600.jpg');}
 .feature-image-3 {background-image: url('../images/feature-woman-600.jpg');}
 
+.feature .feature-image-1{
+  transform: translate(-400px,0px);
+}
+.feature-image-2{
+  position: relative;
+  z-index: 3;
+}
+.feature .feature-image-3{
+  transform: translate(400px,0px);
+}
 .feature p {
   padding-left:10px;
   padding-right:10px;
@@ -286,9 +297,9 @@ h4 {
   margin-right: 10px;
   text-align: center;
   padding: 10px;
-  font-size: 60px;
-  height: 70px;
-  width: 70px;
+  font-size: 80px;
+  height: 90px;
+  width: 90px;
   background-color:$kolor ;
   border-radius: 50%;
   color:white;
@@ -298,11 +309,15 @@ h4 {
 //font-size:70px;
 //  padding:0px;
 //}nvm
+
+.small-icons {
+  transform:rotate(360deg), translate (-300px,0px);
+  background-color: darken($kolor,5%);
+}
 .small-icons:hover {
   transition: 1s;
   transform:rotate(360deg);
-  background-color: darken($kolor,5%);
-}
+  background-color: darken($kolor,5%);}
 
 .formularz {
   background-color: $kolor;

@@ -63,8 +63,10 @@ $(document).ready(function(){
     $(window).scroll(function() {
         if($(this).scrollTop()> 50){
             $('header').addClass('naglowek-strony');
+            $('.menu-glowne li').css({'margin-left': '10px'});
         } else {
             $('header').removeClass('naglowek-strony');
+            $('.menu-glowne li').css({'margin-left': '50px'});
         }
     })
 
@@ -109,34 +111,3 @@ $(document).ready(function(){
         });
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
