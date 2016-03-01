@@ -63,10 +63,10 @@ $(document).ready(function(){
     $(window).scroll(function() {
         if($(this).scrollTop()> 50){
             $('header').addClass('naglowek-strony');
-            $('.menu-glowne li').css({'margin-left': '10px'});
+            $('.menu-glowne li').css({'margin-left': '10px', 'transition':'0.3s'});
         } else {
             $('header').removeClass('naglowek-strony');
-            $('.menu-glowne li').css({'margin-left': '50px'});
+            $('.menu-glowne li').css({'margin-left': '50px','transition':'0.3s'});
         }
     })
 
