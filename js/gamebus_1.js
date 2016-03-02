@@ -24,9 +24,9 @@ $(document).ready(function() {
         points: ''
     };
 
-    bus1.Id = $('#bus1');
-    bus2.Id = $('#bus2');
-    bus3.Id = $('#bus3');
+    bus1Id = $('#bus1');
+    bus2Id = $('#bus2');
+    bus3Id = $('#bus3');
 
     var busstop = {
         number: '1',
@@ -42,23 +42,35 @@ $(document).ready(function() {
     var howLongBusStop2 = Math.floor((Math.random() * 5) + 1);
     var howLongBusStop3 = Math.floor((Math.random() * 5) + 1);
 
-    //
-    //function setBusTime(howLongBusStop) {
-    //
-    //    var timerBusStop = setInterval(function () {
-    //        howLongBusStop--;
-    //        var t = howLongBusStop;
-    //        var czasPostoju = [];
-    //        nowaTabliac = czasPostoju.push[t];
-    //        console.log(t);
-    //        if (howLongBusStop == 0) {
-    //
-    //            clearInterval(timerBusStop);
-    //        }
-    //
-    //    }, 1000);
-    //
-    //}
+
+    var bus4 = document.getElementById("bus1");
+    var a = Math.floor(((Math.random() * 5) + 3)* 1000);
+    var y = Math.floor(((Math.random() * 5) + 3)* 1000);
+
+    function move() {
+
+        if (bus4.offsetLeft < 30 || bus4.offsetLeft <= 700) {
+            $("#bus1").animate({
+                left: 700
+
+            }, howLongBusStop1 * 1000, "linear");
+            console.log(bus4.offsetLeft);
+        } else {
+            console.log(bus4.offsetLeft);
+            $("#bus1").animate({
+                left: 0
+
+            }, howLongBusStop1 * 1000, "linear");
+
+            //setTimeout(move, a)
+        }
+
+    }
+    setInterval(move, 2000);
+
+
+
+
 
 
     function setTime() {
@@ -90,16 +102,16 @@ $(document).ready(function() {
 
         if (getBus == bus1.number) {
 
-            bus1.Id.addClass('bus-active');
-            bus1.Id.removeClass('bus-no-active');
+            bus1Id.addClass('bus-active');
+            bus1Id.removeClass('bus-no-active');
 
             setTimeout(function(){
-                bus1.Id.removeClass('bus-active');
-                bus1.Id.addClass('bus-no-active');
+                bus1Id.removeClass('bus-active');
+                bus1Id.addClass('bus-no-active');
             }, howLongBusStop1*1000);
 
-            bus2.Id.addClass('bus-no-active').removeClass('bus-active');
-            bus3.Id.addClass('bus-no-active').removeClass('bus-active');
+            bus2Id.addClass('bus-no-active').removeClass('bus-active');
+            bus3Id.addClass('bus-no-active').removeClass('bus-active');
 
 
             //$('.bus-active').on('click', function () {
@@ -115,28 +127,28 @@ $(document).ready(function() {
 
         } else if (getBus == bus2.number) {
 
-            bus2.Id.addClass('bus-active');
-            bus2.Id.removeClass('bus-no-active');
+            bus2Id.addClass('bus-active');
+            bus2Id.removeClass('bus-no-active');
 
             setTimeout(function(){
-                bus2.Id.removeClass('bus-active');
-                bus2.Id.addClass('bus-no-active');
+                bus2Id.removeClass('bus-active');
+                bus2Id.addClass('bus-no-active');
             }, howLongBusStop2*1000);
 
-            bus1.Id.addClass('bus-no-active').removeClass('bus-active');
-            bus3.Id.addClass('bus-no-active').removeClass('bus-active');
+            bus1Id.addClass('bus-no-active').removeClass('bus-active');
+            bus3Id.addClass('bus-no-active').removeClass('bus-active');
 
         } else {
-            bus3.Id.addClass('bus-active');
-            bus3.Id.removeClass('bus-no-active');
+            bus3Id.addClass('bus-active');
+            bus3Id.removeClass('bus-no-active');
 
             setTimeout(function(){
-                bus3.Id.removeClass('bus-active');
-                bus3.Id.addClass('bus-no-active');
+                bus3Id.removeClass('bus-active');
+                bus3Id.addClass('bus-no-active');
             }, howLongBusStop3*1000);
 
-            bus2.Id.addClass('bus-no-active').removeClass('bus-active');
-            bus1.Id.addClass('bus-no-active').removeClass('bus-active');
+            bus2Id.addClass('bus-no-active').removeClass('bus-active');
+            bus1Id.addClass('bus-no-active').removeClass('bus-active');
 
         }
         //setTimeout(jakas, 3000);

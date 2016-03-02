@@ -38,7 +38,39 @@ $(document).ready(function() {
     var button = $('input');
 
 
+    //var kwadrat2 =  $("#child");
 
+    var bus4 = document.getElementById("bus1");
+    var a = Math.floor(((Math.random() * 5) + 3)* 1000);
+    var y = Math.floor(((Math.random() * 5) + 3)* 1000);
+
+    function move() {
+
+        if (bus4.offsetLeft < 30 ) {
+            $("#bus1").animate({
+                left: 300
+
+            }, a, "linear");
+            console.log(bus4.offsetLeft);
+        }else if(bus1.offsetLeft >= 299 ){
+            ("#bus1").animate({
+                left: 300
+
+            }, a, "linear");
+            console.log(bus4.offsetLeft);
+
+        }else {
+            console.log(bus4.offsetLeft);
+            $("#bus1").animate({
+                left: 0
+
+            }, y, "linear");
+
+            setTimeout(move, a)
+        }
+    }
+
+    setInterval(move, 2000);
 
 
 
@@ -48,12 +80,14 @@ $(document).ready(function() {
 
     var getBus = Math.floor((Math.random() * 3) + 1);
 
+
     if (getBus == bus1.number) {
 
         bus1.Id.addClass('bus-active');
         //setTimeout(function(){bus1.Id.removeClass('bus-active');}, howLongBusStop1 * 1000);
 
         var $ta = $("#bus1");
+        setInterval(move, 2000);
         var howLongBusStop1 = Math.floor((Math.random() * 5) + 5*1000);
         setInterval(function() {
             $ta.toggleClass("bus-active");
@@ -107,7 +141,23 @@ $(document).ready(function() {
 
 
 
-
+//
+//function setBusTime(howLongBusStop) {
+//
+//    var timerBusStop = setInterval(function () {
+//        howLongBusStop--;
+//        var t = howLongBusStop;
+//        var czasPostoju = [];
+//        nowaTabliac = czasPostoju.push[t];
+//        console.log(t);
+//        if (howLongBusStop == 0) {
+//
+//            clearInterval(timerBusStop);
+//        }
+//
+//    }, 1000);
+//
+//}
 
 
 

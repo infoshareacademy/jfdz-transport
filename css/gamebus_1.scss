@@ -47,8 +47,14 @@ h1 {font-size: 18px;}
   padding: 10px;
   margin: 20px;
   text-align: center;
+  position: relative;
+  //animation: drive 10s linear infinite;
 }
 
+//@keyframes drive {
+//  0% {left: -200px;}
+//  100% {left: 100%;}
+//}
 
 
 .bus-no-active {
