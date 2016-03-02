@@ -4,7 +4,7 @@ $(window).scroll(function(){
 
     if (wScroll > 100) {
         $('.wel').css({
-            'transform' : 'translate(0px, 300px)',
+            'transform' : 'translate(0px, 100px)',
             'transition' : 'all 2s ease-out'
         });
     } else {
