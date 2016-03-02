@@ -6,31 +6,133 @@ $(document).ready(function () {
     var bs2 = $('#busstop2');
     var bs3 = $('#busstop3');
 
-    var czas = Math.round(Math.random() * 5);
+    var czas = Math.round(Math.random() * 10);
+
+
+
 
     var pkt = 0;
 
-    var przystanek = {
+    var czasgry = 20;
+
+    setInterval(function() {
+        gameTime()
+    }, 1000);
+
+    function gameTime() {
+        if (czasgry > 0) {
+            czasgry--;
+            console.log(czasgry);
+        } else {
+            clearInterval(gameTime);
+        }
+    }
+
+    var przystanek0 = {
         bus: false,
-        stop: losStop,
+        autobus: [[1,-10],[2,-10],[3,1]],
+        stop: 0,
         stopbus: function() {
+
+        var los = Math.round(Math.random() * 1);
+
+            sb = this.stop;
+            bs = '#busstop'+sb;
+
+            if (czasgry > 0) {
+                if (los == 1) {
+                    console.log('Los2:'+los);
+                    this.bus = true;
+                    $(bs).removeClass('out');
+                    $(bs).addClass('active');
+                    czasgry+2;
+                } else {
+                    console.log('Los2:'+los);
+                    $(bs).removeClass('active');
+                    $(bs).addClass('out');
+                }
+            }
+        }
+        };
+
+    var przystanek1 = {
+        bus: false,
+        autobus: [[1,-10],[2,-10],[3,1]],
+        stop: 1,
+        stopbus: function() {
+
             var los = Math.round(Math.random() * 1);
-            if (los == 1) {
-                this.bus = true;
-                this.stop;
-                console.log(los);
-                console.log(this.stop);
-                var bs = '#busstop'+this.stop;
-                $(bs).addClass('aktywny');
-                $(bs+' h2').html('Przyjechał autobus, kliknij i załaduj pasażerów ;)')
-            } else {
-                console.log(los);
-                $(bs+' h2').html('Czekaj na swój autobus')
+
+            sb = this.stop;
+            bs = '#busstop'+sb;
+
+            if (czasgry > 0) {
+                if (los == 1) {
+                    console.log('Los2:'+los);
+                    this.bus = true;
+                    $(bs).removeClass('out');
+                    $(bs).addClass('active');
+                    czasgry+2;
+                } else {
+                    console.log('Los2:'+los);
+                    $(bs).removeClass('active');
+                    $(bs).addClass('out');
+                }
             }
         }
     };
 
-    przystanek.stopbus();
+
+    var przystanek2 = {
+        bus: false,
+        autobus: [[1,-10],[2,-10],[3,1]],
+        stop: 2,
+        stopbus: function() {
+
+            var los = Math.round(Math.random() * 1);
+
+            sb = this.stop;
+            bs = '#busstop'+sb;
+
+            if (czasgry > 0) {
+                if (los == 1) {
+                    console.log('Los2:'+los);
+                    this.bus = true;
+                    $(bs).removeClass('out');
+                    $(bs).addClass('active');
+                    czasgry+2;
+                } else {
+                    console.log('Los2:'+los);
+                    $(bs).removeClass('active');
+                    $(bs).addClass('out');
+                }
+            }
+        }
+    };
+
+    var czas0 = Math.round(Math.random() * 10);
+    var czas1 = Math.round(Math.random() * 10);
+    var czas2 = Math.round(Math.random() * 10);
+
+    setInterval(function odliczanie() {
+        przystanek0.stopbus();
+    }, czas0*1000);
+
+    setInterval(function odliczanie() {
+        przystanek1.stopbus();
+    }, czas0*1000);
+
+    setInterval(function odliczanie() {
+        przystanek2.stopbus();
+    }, czas2*1000);
+
+
+
+
+
+
+
+
 
     var autobus1 = {
         linia: 1,
