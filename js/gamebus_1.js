@@ -37,6 +37,8 @@ $(document).ready(function() {
 
     gameOver = false;
     var button = $('input');
+    var count = 0;
+
 
     var howLongBusStop1 = Math.floor(((Math.random() * 4) + 1)* 1000);
     var howLongBusStop2 = Math.floor(((Math.random() * 4) + 1)* 1000);
@@ -116,7 +118,7 @@ $(document).ready(function() {
 
     button.on('click', setTime);
 
-    var count = 0;
+
 
 
     function losowanieAutobusow() {
