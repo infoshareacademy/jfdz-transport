@@ -27,10 +27,13 @@ $(document).ready(function() {
         points: ''
     };
 
+    bus1Id = $('#bus1');
+    bus2Id = $('#bus2');
+    bus3Id = $('#bus3');
+
     bus1.Id = $('#bus1');
     bus2.Id = $('#bus2');
     bus3.Id = $('#bus3');
-
 
     buses = [bus1, bus2, bus3];
 
@@ -44,51 +47,103 @@ $(document).ready(function() {
     var a = Math.floor(((Math.random() * 5) + 3)* 1000);
     var y = Math.floor(((Math.random() * 5) + 3)* 1000);
 
-    function move() {
+    //function move() {
+    //
+    //    if (bus4.offsetLeft < 30) {
+    //        $("#bus1").animate({
+    //            left: 300
+    //
+    //        }, a, "linear");
+    //        console.log(bus4.offsetLeft);
+    //
+    //    }else if(bus4.offsetLeft <= 329 && bus4.offsetLeft <= 630){
+    //        $("#bus1").animate({
+    //            left: 600
+    //
+    //        }, a, "linear");
+    //        console.log(bus4.offsetLeft);
+    //
+    //    }else {
+    //        console.log(bus4.offsetLeft);
+    //        $("#bus1").animate({
+    //            left: 0
+    //
+    //        }, y, "linear");
+    //
+    //        //.animate({
+    //        //    left: 300
+    //        //
+    //        //}, a, "linear");
+    //
+    //        //setTimeout(move, 1000)
+    //    }
+    //
+    //    setTimeout(move, 1000)
+    //}
+    //
+    //setInterval(move, 2000);
 
-        if (bus4.offsetLeft < 30 ) {
-            $("#bus1").animate({
-                left: 300
+    //var y = Math.floor(((Math.random() * 5) + 3)* 1000);
 
-            }, a, "linear");
-            console.log(bus4.offsetLeft);
-        }else if(bus1.offsetLeft >= 299 ){
-            ("#bus1").animate({
-                left: 300
+//function goToBusStation() {
+//
+//       bus1Id.animate({
+//           left: 200
+//       }, howLongBusStop1, 'linear', goBack);
+//        setTimeout(goToBusStation, 2000);
+//    }
+//function goBack() {
+//    bus1Id.animate({
+//        left:400
+//    }, howLongBusStop1, 'linear');
+//    bus1Id.animate({
+//        left: 0
+//    }, 2000, 'linear');
+//}
 
-            }, a, "linear");
-            console.log(bus4.offsetLeft);
+    //goToBusStation();
 
-        }else {
-            console.log(bus4.offsetLeft);
-            $("#bus1").animate({
-                left: 0
+    //goToBusStation(bus1Id, howLongBusStop1);
+    var howLongBusStop1 = Math.floor((Math.random() * 5) + 5*1000);
 
-            }, y, "linear");
 
-            setTimeout(move, a)
-        }
+    function goToBusStation(b,c) {
+        b.animate({
+            left: 200
+        }, c, 'linear', goBack);
+        setTimeout(goToBusStation, 2000);
     }
 
-    setInterval(move, 2000);
+    function goBack(d,e) {
+        d.animate({
+            left:400
+        }, e, 'linear');
+        d.animate({
+            left: 0
+        }, 2000, 'linear');
+    }
+
+    goBack(bus1Id, howLongBusStop1);
+    goToBusStation(bus1Id, howLongBusStop1);
 
 
 
 
 
-
+    //var howLongBusStop1 = Math.floor((Math.random() * 5) + 5*1000);
 
     var getBus = Math.floor((Math.random() * 3) + 1);
 
 
     if (getBus == bus1.number) {
 
+        goToBusStation();
         bus1.Id.addClass('bus-active');
         //setTimeout(function(){bus1.Id.removeClass('bus-active');}, howLongBusStop1 * 1000);
 
         var $ta = $("#bus1");
-        setInterval(move, 2000);
-        var howLongBusStop1 = Math.floor((Math.random() * 5) + 5*1000);
+        //setInterval(move, 2000);
+
         setInterval(function() {
             $ta.toggleClass("bus-active");
         }, howLongBusStop1);
@@ -159,6 +214,49 @@ $(document).ready(function() {
 //
 //}
 
+
+//function move() {
+//
+//    if (bus4.offsetLeft < 30 || bus4.offsetLeft <= 700) {
+//        $("#bus1").animate({
+//            left: 700
+//
+//        }, howLongBusStop1 * 1000, "linear");
+//        console.log(bus4.offsetLeft);
+//    } else {
+//        console.log(bus4.offsetLeft);
+//        $("#bus1").animate({
+//            left: 0
+//
+//        }, howLongBusStop1 * 1000, "linear");
+//
+//        //setTimeout(move, a)
+//    }
+//
+//}
+//setInterval(move, 2000);
+
+//$('.bus-active').on('click', function () {
+//    count++;
+//    $('#points').html("Punkty: " + count);
+//});
+//
+//$('.bus-no-active').on('click', function () {
+//    count -= 10;
+//    $('#points').html("Punkty: " + count);
+//});
+
+//setTimeout(jakas, 3000);
+
+//$('.bus-active').on('click', function () {
+//        count++;
+//        $('#points').html("Punkty: " + count);
+//    });
+//
+//    $('.bus-no-active').on('click', function () {
+//        count -= 10;
+//        $('#points').html("Punkty: " + count);
+//    });
 
 
 

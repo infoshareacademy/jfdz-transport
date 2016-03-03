@@ -38,36 +38,61 @@ $(document).ready(function() {
     gameOver = false;
     var button = $('input');
 
-    var howLongBusStop1 = Math.floor((Math.random() * 5) + 1);
-    var howLongBusStop2 = Math.floor((Math.random() * 5) + 1);
-    var howLongBusStop3 = Math.floor((Math.random() * 5) + 1);
+    var howLongBusStop1 = Math.floor(((Math.random() * 4) + 1)* 1000);
+    var howLongBusStop2 = Math.floor(((Math.random() * 4) + 1)* 1000);
+    var howLongBusStop3 = Math.floor(((Math.random() * 4) + 1)* 1000);
 
 
-    var bus4 = document.getElementById("bus1");
-    var a = Math.floor(((Math.random() * 5) + 3)* 1000);
-    var y = Math.floor(((Math.random() * 5) + 3)* 1000);
-
-    function move() {
-
-        if (bus4.offsetLeft < 30 || bus4.offsetLeft <= 700) {
-            $("#bus1").animate({
-                left: 700
-
-            }, howLongBusStop1 * 1000, "linear");
-            console.log(bus4.offsetLeft);
-        } else {
-            console.log(bus4.offsetLeft);
-            $("#bus1").animate({
-                left: 0
-
-            }, howLongBusStop1 * 1000, "linear");
-
-            //setTimeout(move, a)
-        }
-
+    function goToBusStation1() {
+        bus1Id.animate({
+            left: 200
+        }, howLongBusStop1, 'linear', goBack1);
+        setTimeout(goToBusStation1, 2000);
     }
-    setInterval(move, 2000);
+    function goBack1() {
+        bus1Id.animate({
+            left:400
+        }, howLongBusStop1, 'linear');
+        bus1Id.animate({
+            left: 0
+        }, 2000, 'linear');
+    }
 
+
+    function goToBusStation2() {
+        bus2Id.animate({
+            left: 200
+        }, howLongBusStop2, 'linear', goBack2);
+        setTimeout(goToBusStation2, 2000);
+    }
+    function goBack2() {
+        bus2Id.animate({
+            left:400
+        }, howLongBusStop2, 'linear');
+        bus2Id.animate({
+            left: 0
+        }, 2000, 'linear');
+    }
+
+    function goToBusStation3() {
+        bus3Id.animate({
+            left: 200
+        }, howLongBusStop3, 'linear', goBack3);
+        setTimeout(goToBusStation3, 2000);
+    }
+    function goBack3() {
+        bus3Id.animate({
+            left:400
+        }, howLongBusStop3, 'linear');
+        bus3Id.animate({
+            left: 0
+        }, 2000, 'linear');
+    }
+
+
+    goToBusStation1();
+    goToBusStation2();
+    goToBusStation3();
 
 
 
@@ -93,10 +118,8 @@ $(document).ready(function() {
 
     var count = 0;
 
-    //bus1.timer = setBusTime(howLongBusStop1);
 
     function losowanieAutobusow() {
-
 
         var getBus = Math.floor((Math.random() * 5) + 1);
 
@@ -108,21 +131,10 @@ $(document).ready(function() {
             setTimeout(function(){
                 bus1Id.removeClass('bus-active');
                 bus1Id.addClass('bus-no-active');
-            }, howLongBusStop1*1000);
+            }, howLongBusStop1);
 
             bus2Id.addClass('bus-no-active').removeClass('bus-active');
             bus3Id.addClass('bus-no-active').removeClass('bus-active');
-
-
-            //$('.bus-active').on('click', function () {
-            //    count++;
-            //    $('#points').html("Punkty: " + count);
-            //});
-            //
-            //$('.bus-no-active').on('click', function () {
-            //    count -= 10;
-            //    $('#points').html("Punkty: " + count);
-            //});
 
 
         } else if (getBus == bus2.number) {
@@ -133,7 +145,7 @@ $(document).ready(function() {
             setTimeout(function(){
                 bus2Id.removeClass('bus-active');
                 bus2Id.addClass('bus-no-active');
-            }, howLongBusStop2*1000);
+            }, howLongBusStop2);
 
             bus1Id.addClass('bus-no-active').removeClass('bus-active');
             bus3Id.addClass('bus-no-active').removeClass('bus-active');
@@ -145,23 +157,12 @@ $(document).ready(function() {
             setTimeout(function(){
                 bus3Id.removeClass('bus-active');
                 bus3Id.addClass('bus-no-active');
-            }, howLongBusStop3*1000);
+            }, howLongBusStop3);
 
             bus2Id.addClass('bus-no-active').removeClass('bus-active');
             bus1Id.addClass('bus-no-active').removeClass('bus-active');
 
         }
-        //setTimeout(jakas, 3000);
-
-        //$('.bus-active').on('click', function () {
-        //        count++;
-        //        $('#points').html("Punkty: " + count);
-        //    });
-        //
-        //    $('.bus-no-active').on('click', function () {
-        //        count -= 10;
-        //        $('#points').html("Punkty: " + count);
-        //    });
 
     }
 
