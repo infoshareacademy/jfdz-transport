@@ -24,9 +24,17 @@ $(document).ready(function() {
         points: ''
     };
 
+    var bus4 = {
+            number: 4,
+            timer: Math.floor(((Math.random() * 4) + 1)* 1000),
+            passengers: '',
+            points: ''
+        };
+
     bus1Id = $('#bus1');
     bus2Id = $('#bus2');
     bus3Id = $('#bus3');
+    bus4Id = $('#bus4');
 
     var busstop = {
         number: '1',
@@ -39,12 +47,32 @@ $(document).ready(function() {
     var button = $('input');
     var count = 0;
 
+    //function goToBusStation(a,b) {
+    //    a.animate({
+    //        left: 240
+    //    }, b.timer, 'linear', goBack);
+    //    setTimeout(goToBusStation, 2000);
+    //
+    //    function goBack() {
+    //        a.animate({
+    //            left:400
+    //        }, b.timer, 'linear');
+    //        a.fadeOut();
+    //        a.animate({
+    //            left: 0
+    //        }, 200, 'linear');
+    //        b.fadeIn();
+    //        clearTimeout(goBack);
+    //    }
+    //}
+    //
+    //goToBusStation(bus3Id,bus3);
 
 
 
     function goToBusStation1() {
         bus1Id.animate({
-            left: 160
+            left: Math.floor(((Math.random() * 6) + 15)* 10)
         }, bus1.timer, 'linear', goBack1);
         setTimeout(goToBusStation1, 2000);
         // bus1Id.animate({
@@ -58,7 +86,7 @@ $(document).ready(function() {
             bus1Id.animate({
                 left:400
             }, bus1.timer, 'linear');
-            bus1Id.fadeOut()
+            bus1Id.fadeOut();
             bus1Id.animate({
                 left: 0
             }, 200, 'linear');
@@ -70,7 +98,7 @@ $(document).ready(function() {
 
     function goToBusStation2() {
         bus2Id.animate({
-            left: 240
+            left: Math.floor(((Math.random() * 6) + 15)* 10)
         }, bus2.timer, 'linear', goBack2);
         setTimeout(goToBusStation2, 2000);
 
@@ -88,7 +116,6 @@ $(document).ready(function() {
 
     }
 
-
     function losowanieAut() {
         var wylosowanyAutobus = Math.floor(((Math.random() * 2) + 1));
         if(wylosowanyAutobus == bus1.number) {
@@ -100,6 +127,58 @@ $(document).ready(function() {
     }
 
     setInterval(losowanieAut, 5000);
+
+
+    function goToBusStation3() {
+        bus3Id.animate({
+            left: 160
+        }, bus3.timer, 'linear', goBack3);
+        setTimeout(goToBusStation3, 2000);
+
+        function goBack3() {
+            bus3Id.animate({
+                left:400
+            }, bus3.timer, 'linear');
+            bus3Id.fadeOut()
+            bus3Id.animate({
+                left: 0
+            }, 200, 'linear');
+            bus3Id.fadeIn();
+            clearTimeout(goBack3);
+        }
+    }
+
+    function goToBusStation4() {
+        bus4Id.animate({
+            left: 240
+        }, bus4.timer, 'linear', goBack4);
+        setTimeout(goToBusStation4, 2000);
+
+        function goBack4() {
+            bus4Id.animate({
+                left:400
+            }, bus4.timer, 'linear');
+            bus4Id.fadeOut();
+            bus4Id.animate({
+                left: 0
+            }, 200, 'linear');
+            bus4Id.fadeIn();
+            clearTimeout(goBack4);
+        }
+
+    }
+
+    function losowanieAut1() {
+        var wylosowanyAutobus = Math.floor(((Math.random() * 2) + 3));
+        if(wylosowanyAutobus == bus3.number) {
+            goToBusStation3();
+        }else{
+            goToBusStation4();
+        }
+
+    }
+
+    setInterval(losowanieAut1, 5000);
 
 
     function setTime() {
