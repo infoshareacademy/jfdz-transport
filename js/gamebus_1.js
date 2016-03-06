@@ -196,14 +196,27 @@ $(document).ready(function() {
                 left: 0
             });
 
-            $appContainer.append($bus.animate({
-                left:400
-            }, bus1.timer, 'linear', function () {
-                $(this).hide(300);
-            }));
+            $appContainer.append(
+                $bus.animate(
+                    {
+                        left:200
+                    },
+                    4000,
+                    'linear',
+                    function () {
+                        setTimeout(function () {
+                            $bus.animate({
+                                left: 400
+                            }, 4000, 'linear', function () {
+                                $(this).hide(300);
+                            });
+                        }, 1000)
+                    }
+                )
+            );
 
             console.log(prize);
-        }, 1000 * index + Math.random() * 1000)
+        }, 2000 * index + Math.random() * 500)
     });
 
 
