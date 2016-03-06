@@ -166,16 +166,45 @@ $(document).ready(function() {
     setInterval(losowanieAutobusow, 3000);
 
 
-        $('div .bus-active').on('click', function () {
-            count +=1;
+    $('div').on('click', function () {
+        if ($(this).hasClass('bus-no-active')) {
+            count -=10;
             $('#points').html("Punkty: " + count);
-        });
+        }
 
-
-        $('.bus-no-active').on('click', function () {
-            count -= 10;
+        if ($(this).hasClass('bus-active')) {
+            count += 1;
             $('#points').html("Punkty: " + count);
-        });
+        }
+
+    });
+
+    var $appContainer = $('<div id="app">').css({position: 'relative'});
+    $('body').append($appContainer);
+
+    var buses = [1, -10, 1, 1, 1, -10];
+
+    buses.forEach(function (prize, index) {
+        setTimeout(function () {
+            var $bus = $('<div>');
+            $bus.css({
+                background: prize === -10 ? '#c00' : '#00c',
+                width: 100,
+                height: 50,
+                position: 'absolute',
+                top: 0,
+                left: 0
+            });
+
+            $appContainer.append($bus.animate({
+                left:400
+            }, bus1.timer, 'linear', function () {
+                $(this).hide(300);
+            }));
+
+            console.log(prize);
+        }, 1000 * index + Math.random() * 1000)
+    });
 
 
 });
