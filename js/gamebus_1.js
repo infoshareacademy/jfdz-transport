@@ -28,7 +28,7 @@ $(document).ready(function() {
     bus2Id = $('#bus2');
     bus3Id = $('#bus3');
     $clock = $('#clock');
-    $start = $('#startGameButton');
+    $startButton = $('#startGameButton');
 
     var busstop = {
         number: '1',
@@ -61,9 +61,11 @@ function startGame(initialState) {
         //$('table').off('click');
     }, state.time * 1000);
 
+    var startAll = start();
+
 }
 
-    $start.click(function(){
+    $startButton.click(function(){
         startGame(state);
     });
 
@@ -85,13 +87,13 @@ function startGame(initialState) {
 function liczeniePunktow(bus){
     $('div').on('click', function () {
         if ($(this).hasClass('bus-no-active')) {
-            count -=10;
-            $('#points').html("Punkty: " + count);
+            state.score -=10;
+            $('#points').html("Punkty: " + state.score);
         }
 
         if ($(this).hasClass('bus-active')) {
-            count += 1;
-            $('#points').html("Punkty: " + count);
+            state.score += 1;
+            $('#points').html("Punkty: " + state.score);
         }
 
     });
