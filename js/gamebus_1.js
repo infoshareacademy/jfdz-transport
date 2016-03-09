@@ -29,6 +29,7 @@ $(document).ready(function() {
     bus3Id = $('#bus3');
     $clock = $('#clock');
     $startButton = $('#startGameButton');
+    $stopButtom = $('#stopGameButton');
 
     var busstop = {
         number: '1',
@@ -55,21 +56,27 @@ function startGame(initialState) {
         state.time -= 1;
         displayClock($clock, state);
     }, 1000);
-
     setTimeout(function () {
         clearInterval(clockIntervalId);
-        //$('table').off('click');
     }, state.time * 1000);
 
-    var startAll = start();
 
 }
 
     $startButton.click(function(){
+        start(state);
         startGame(state);
+
     });
 
+
     displayClock($clock, state);
+
+
+    $stopButtom.click(function(){
+        start.stop();
+
+    });
 
 
 
@@ -217,31 +224,6 @@ function liczeniePunktow(bus){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
    // function start() {
    // buses.forEach(function (prize, index) {
    //     setTimeout(function () {
@@ -284,7 +266,7 @@ function liczeniePunktow(bus){
    //
    //}
 
-    start();
+    //start();
 
 });
 
