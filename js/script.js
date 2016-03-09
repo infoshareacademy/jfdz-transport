@@ -4,17 +4,18 @@ $(window).scroll(function(){
 
     if (wScroll > 100) {
         $('.wel').css({
-            'transform' : 'translate(0px, 300px)',
-            'transition' : 'all 2s'
+            'transform' : 'translate(0px, 100px)',
+            'transition' : 'all 2s ease-out'
         });
     } else {
         $('.wel').css({
             'transform' : 'translate(0px, 0px)',
-            'transition' : 'all 2s'
+            'transition' : 'all 2s ease-out'
         });
     }
 
 });
+
 
 
 $(document).ready( function() {
@@ -62,8 +63,10 @@ $(document).ready(function(){
     $(window).scroll(function() {
         if($(this).scrollTop()> 50){
             $('header').addClass('naglowek-strony');
+            $('.menu-glowne li').css({'margin-left': '10px', 'transition':'0.3s'});
         } else {
             $('header').removeClass('naglowek-strony');
+            $('.menu-glowne li').css({'margin-left': '50px','transition':'0.3s'});
         }
     })
 
@@ -87,7 +90,7 @@ $(document).ready(function(){
         $target = $(target);
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top+2
-        }, 200, 'swing', function () {
+        }, 600, 'swing', function () {
             window.location.hash = target;
             $(document).on("scroll", onScroll);
         });
@@ -98,7 +101,7 @@ $(document).ready(function(){
         $('nav a').each(function () {
             var currLink = $(this);
             var refElement = $(currLink.attr("href"));
-            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            if (refElement.position().top <= scrollPos-1 && refElement.position().top + refElement.height() > scrollPos) {
                 $('nav a').removeClass("active");
                 currLink.addClass("active");
             }
@@ -108,34 +111,3 @@ $(document).ready(function(){
         });
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
