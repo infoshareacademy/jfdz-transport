@@ -1,64 +1,105 @@
-$(document).ready(function () {
+function randomBetween(min, max){
+    return Math.floor(Math.random() * max) + min;
+}
 
-    var losStop = Math.round(Math.random() * 2);
+$(document).ready(function () {
 
     var bs1 = $('#busstop1');
     var bs2 = $('#busstop2');
     var bs3 = $('#busstop3');
 
-    var czas = Math.round(Math.random() * 5);
-
+    var losStop = Math.round(Math.random() * 2);
+    var czas = Math.round(Math.random() * 10);
     var pkt = 0;
+    var czasgry = 20;
 
-    var przystanek = {
-        bus: false,
-        stop: losStop,
-        stopbus: function() {
-            var los = Math.round(Math.random() * 1);
-            if (los == 1) {
-                this.bus = true;
-                this.stop;
-                console.log(los);
-                console.log(this.stop);
-                var bs = '#busstop'+this.stop;
-                $(bs).addClass('aktywny');
-                $(bs+' h2').html('Przyjechał autobus, kliknij i załaduj pasażerów ;)')
-            } else {
-                console.log(los);
-                $(bs+' h2').html('Czekaj na swój autobus')
+    setInterval(function() {
+        gameTime()
+    }, 1000);
+
+    function gameTime() {
+        if (czasgry > 0) {
+            czasgry--;
+            //console.log(czasgry);
+        } else {
+            clearInterval(gameTime);
+            $('.przystanek').off('click');
+            $('#punkty').html('Koniec! - Zdobyłeś punktów: ' + pkt);
+        }
+    }
+
+
+
+    function createStop(stopNumber) {
+        return {
+            stop: stopNumber,
+            buses: [
+                {line: 1, value: -10, name: 'Gdynia'},
+                {line: 2, value: -10, name: 'Sopot'},
+                {line: 3, value:  1, name: 'OBC'}
+            ],
+
+            inOut: 1,
+            stopbus: function () {
+                var scope = this;
+                sb = this.stop;
+                bs = '#busstop' + sb;
+                this.inOut = Math.round(Math.random() * 1);
+                if (czasgry > 0) {
+                    if (this.inOut == 1) {
+                        console.log('in ' + stopNumber);
+                        $(bs).removeClass('out');
+                        $(bs).addClass('in');
+                        var index = randomBetween(1,3) - 1;
+                        var bus = scope.buses[index];
+
+                        if (index == 2){
+                            $(bs).addClass('obc');
+                        } else {
+                            $(bs).removeClass('obc');
+                        }
+
+
+                        $(bs).click(function() {
+                            // bus.bus1
+                            console.debug('---- value', scope.buses[index].value);
+                            pkt = pkt + scope.buses[index].value;
+                            $('#punkty').html(pkt);
+                        });
+
+                    } else {
+                        console.log('out ' + stopNumber);
+                        $(bs).removeClass('in');
+                        $(bs).addClass('out');
+                    }
+                }
             }
         }
-    };
-
-    przystanek.stopbus();
-
-    var autobus1 = {
-        linia: 1,
-        cel: 'Wały Jagielońskie',
-        dobry: false,
-        drzwi: false,
-        jedzie: true
-    };
-
-    var autobus2 = {
-        linia: 4,
-        cel: 'Olivia Business Center',
-        dobry: true,
-        drzwi: false,
-        jedzie: true
-    };
-
-    var autobus3 = {
-        linia: 10,
-        cel: 'Stare Miasto',
-        dobry: false,
-        drzwi: false,
-        jedzie: true
-    };
-
-    function bus() {
-
     }
+
+    var przystanek0 = createStop(0);
+    var przystanek1 = createStop(1);
+    var przystanek2 = createStop(2);
+
+    var czas0 = Math.floor(Math.random() * 10000);
+    var czas1 = Math.floor(Math.random() * 10000);
+    var czas2 = Math.floor(Math.random() * 10000);
+
+    setInterval(function() {
+        przystanek0.stopbus();
+    }, czas0);
+
+    setInterval(function() {
+        przystanek1.stopbus();
+    }, czas1);
+
+    setInterval(function() {
+        przystanek2.stopbus();
+    }, czas2);
+
+
+
+
 
 
 
