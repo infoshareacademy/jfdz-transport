@@ -103,7 +103,7 @@ $(document).ready(function () {
     }, czas2);
     });
 
-    $('#klikanie').on('click', function () {
+    $('.feature-image-3').on('click', function () {
         $('#easterEgg').removeClass('hidden');
         $('#koniec').removeClass('hidden');
         $('#ekranStart').removeClass('hidden');
