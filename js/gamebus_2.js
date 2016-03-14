@@ -104,6 +104,11 @@ $(document).ready(function() {
     }
 
 
+    function openDoors(doorLeft, doorRight) {
+        doorLeft.animate({left: 30 }, 500, 'linear');
+        doorRight.animate({left: 100}, 500, 'linear');
+    }
+
     function closeDoors (doorLeft, doorRight) {
         doorLeft.animate({ left: 60}, 500, 'linear');
         doorRight.animate({ left: 80 }, 500, 'linear');
@@ -115,12 +120,25 @@ $(document).ready(function() {
         });
     }
 
+    //var closedDoor = setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 1000);
+    //var openedDoor = setTimeout(function () {gofromBusstop($bus)}, 2000);
+    //
+    //function animateBus(bus) {
+    //    bus.animate({left:400}, 5000, 'linear', function (openDoor)
+    //    {
+    //        openDoors($doorLeft,$doorRight);
+    //        setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 1000);
+    //        setTimeout(function () {gofromBusstop($bus)}, 2000)
+    //    })
+    //}
+
+
     function start() {
         buses.forEach(function (prize, index) {
 
             setTimeout(function () {
-                var $bus = $('<div>').addClass('bus');
 
+                var $bus = $('<div>').addClass('bus');
                 $bus.css({
                     //background: prize === bus1Id ? $bus.addClass('bus-active') : $bus.addClass('bus-no-active'),
                     position: 'absolute',
@@ -145,14 +163,10 @@ $(document).ready(function() {
                 });
 
 
-
-
-
                 $appContainer.append(
-                    $bus.animate({left:400}, 5000, 'linear', function (){
-                        $doorLeft.animate({left: 30 }, 500, 'linear');
-                        $doorRight.animate({left: 100}, 500, 'linear');
-
+                    $bus.animate({left:400}, 5000, 'linear', function ()
+                    {
+                        openDoors($doorLeft,$doorRight);
                         setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 1000);
                         setTimeout(function () {gofromBusstop($bus)}, 2000)
                         }
