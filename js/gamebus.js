@@ -20,7 +20,7 @@ $(document).ready(function () {
     function gameTime() {
         if (czasgry > 0) {
             czasgry--;
-            //console.log(czasgry);
+            $('#czas').html(czasgry)
         } else {
             clearInterval(gameTime);
             $('.przystanek').off('click');
@@ -28,15 +28,13 @@ $(document).ready(function () {
         }
     }
 
-
-
     function createStop(stopNumber) {
         return {
             stop: stopNumber,
             buses: [
-                {line: 1, value: -10, name: 'Gdynia'},
-                {line: 2, value: -10, name: 'Sopot'},
-                {line: 3, value:  1, name: 'OBC'}
+                {line: 1, value: -10, name: 'GDYNIA'},
+                {line: 2, value: -10, name: 'SOPOT'},
+                {line: 3, value:  1, name: 'OBC4'}
             ],
 
             inOut: 1,
@@ -81,9 +79,9 @@ $(document).ready(function () {
     var przystanek1 = createStop(1);
     var przystanek2 = createStop(2);
 
-    var czas0 = Math.floor(Math.random() * 10000);
-    var czas1 = Math.floor(Math.random() * 10000);
-    var czas2 = Math.floor(Math.random() * 10000);
+    var czas0 = randomBetween(2,7) * 1000;
+    var czas1 = randomBetween(2,7) * 1000;
+    var czas2 = randomBetween(2,7) * 1000;
 
     setInterval(function() {
         przystanek0.stopbus();
@@ -98,90 +96,6 @@ $(document).ready(function () {
     }, czas2);
 
 
-
-
-
-
-
-    //setInterval(function odliczanie() {
-    //
-    //    if (czas > 0) {
-    //        czas--;
-    //        console.log(czas);
-    //    } else {
-    //        $('.przystanek').off('click');
-    //        $('#punkty').html('Koniec! - Zdobyłeś punktów: ' + pkt);
-    //    }
-    //    return;
-    //}, 1000);
-    //
-    //var runda = 1;
-    //for (; runda <4; i++ ) {
-    //
-    //
-    //$('#runda').html('Runda: '+runda);
-    //
-    //
-    //if (losPrzystanku == 0) {
-    //    bs1.addClass('aktywny');
-    //    $('#busstop1 h2').html('Przyjechał autobus, kliknij i załaduj pasażerów ;)')
-    //    $('.aktywny').click(function () {
-    //        pkt++;
-    //        $('#busstop1 h2').html('Pasażerowie: ' + pkt);
-    //        return;
-    //    });
-    //
-    //    bs2.click(function () {
-    //        $(this).html('Auu! nie ten autobus - straciłeś -10 pkt!');
-    //        pkt = pkt - 10;
-    //    });
-    //    bs3.click(function () {
-    //        $(this).html('Auu! nie ten autobus - straciłeś -10 pkt!');
-    //        pkt = pkt - 10;
-    //    });
-    //
-    //
-    //} else if (losPrzystanku == 1) {
-    //
-    //    bs2.addClass('aktywny');
-    //    $('#busstop2 h2').html('Przyjechał autobus, kliknij i załaduj pasażerów ;)')
-    //    $('.aktywny').click(function () {
-    //        pkt++;
-    //        $('#busstop2 h2').html('Pasażerowie: ' + pkt);
-    //        return;
-    //    });
-    //
-    //    bs1.click(function () {
-    //        $(this).html('Auu! nie ten autobus - straciłeś -10 pkt!');
-    //        pkt = pkt - 10;
-    //    });
-    //    bs3.click(function () {
-    //        $(this).html('Auu! nie ten autobus - straciłeś -10 pkt!');
-    //        pkt = pkt - 10;
-    //    });
-    //
-    //} else {
-    //
-    //    bs3.addClass('aktywny');
-    //    $('#busstop3 h2').html('Przyjechał autobus, kliknij i załaduj pasażerów ;)')
-    //    $('.aktywny').click(function () {
-    //        pkt++;
-    //        $('#busstop3 h2').html('Pasażerowie: ' + pkt);
-    //        return;
-    //    });
-    //
-    //    bs1.click(function () {
-    //        $(this).html('Auu! nie ten autobus - straciłeś -10 pkt!');
-    //        pkt = pkt - 10;
-    //    });
-    //    bs2.click(function () {
-    //        $(this).html('Auu! nie ten autobus - straciłeś -10 pkt!');
-    //        pkt = pkt - 10;
-    //    });
-    //
-    //}
-
-    //}
 
 });
 
