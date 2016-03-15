@@ -2,17 +2,17 @@ $(document).ready(function() {
 
     var bus1 = {
         number: 1,
-        timer: Math.floor(((Math.random() * 4) + 1)* 1000)
+        //timer: Math.floor(((Math.random() * 4) + 1)* 1000)
     };
 
     var bus2 = {
         number: 2,
-        timer: Math.floor(((Math.random() * 4) + 1)* 1000)
+        //timer: Math.floor(((Math.random() * 4) + 1)* 1000)
     };
 
     var bus3 = {
         number: 3,
-        timer: Math.floor(((Math.random() * 4) + 1)* 1000)
+        //timer: Math.floor(((Math.random() * 4) + 1)* 1000)
     };
 
     bus1Id = $('#bus1');
@@ -73,21 +73,6 @@ $(document).ready(function() {
 
     var buses = [bus1Id, bus2Id, bus3Id, bus3Id, bus1Id, bus1Id];
 
-//function liczeniePunktow(bus){
-//    $('div').on('click', function () {
-//        if ($(this).hasClass('bus-no-active') ) {
-//            state.score -=10;
-//            $('#points').html("Punkty: " + state.score);
-//        }
-//
-//        if ($(this).hasClass('bus-active')) {
-//            state.score += 1;
-//            $('#points').html("Punkty: " + state.score);
-//        }
-//
-//    });
-//}
-
     function liczeniePunktow(bus){
         $('div').on('click', function () {
             if ($(this).hasClass('doorClose') ) {
@@ -99,10 +84,8 @@ $(document).ready(function() {
                 state.score += 1;
                 $('#points').html("Punkty: " + state.score);
             }
-
         });
     }
-
 
     function openDoors(doorLeft, doorRight) {
         doorLeft.animate({left: 30 }, 500, 'linear');
@@ -120,81 +103,72 @@ $(document).ready(function() {
         });
     }
 
-    //var closedDoor = setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 1000);
-    //var openedDoor = setTimeout(function () {gofromBusstop($bus)}, 2000);
-    //
-    //function animateBus(bus) {
-    //    bus.animate({left:400}, 5000, 'linear', function (openDoor)
-    //    {
-    //        openDoors($doorLeft,$doorRight);
-    //        setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 1000);
-    //        setTimeout(function () {gofromBusstop($bus)}, 2000)
-    //    })
-    //}
+    function addPlaceUnderDoor(door, prize){
+        door.css ({
+            background: prize === bus1Id ? door.addClass('doorOpen') : door.addClass('doorClose')
+        });
+    }
 
+
+    var $afterOpeningDoor;
 
     function start() {
         buses.forEach(function (prize, index) {
 
             setTimeout(function () {
+                var $bus1 = $('<div>').addClass('bus1');
+                var $bus2 = $('<div>').addClass('bus3');
+                var $bus3 = $('<div>').addClass('bus2');
+                bus1.timer = Math.floor(((Math.random() * 3) + 1)* 1000);
 
-                var $bus = $('<div>').addClass('bus');
-                $bus.css({
-                    //background: prize === bus1Id ? $bus.addClass('bus-active') : $bus.addClass('bus-no-active'),
-                    position: 'absolute',
-                    top: 40,
-                    left: 0
-                });
                 var $doorLeft = $('<div>').addClass('doorLeft');
                 var $doorRight = $('<div>').addClass('doorRight');
                 var $afterOpeningDoor = $('<div>');
-                $afterOpeningDoor.css ({
-                    background: prize === bus1Id ? $afterOpeningDoor.addClass('doorOpen') : $afterOpeningDoor.addClass('doorClose')
-                });
-                $bus.append($doorLeft).append($doorRight).append($afterOpeningDoor);
 
-
-                var $bus1 = $('<div>').addClass('bus');
-                $bus1.css({
-                    //background: prize === bus1Id ? $bus1.addClass('bus-active') : $bus1.addClass('bus-no-active'),
-                    position: 'absolute',
-                    top: 180,
-                    left: 0
-                });
-
-
-                $appContainer.append(
-                    $bus.animate({left:400}, 5000, 'linear', function ()
-                    {
-                        openDoors($doorLeft,$doorRight);
-                        setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 1000);
-                        setTimeout(function () {gofromBusstop($bus)}, 2000)
-                        }
-                    )
-                );
-
-
-                $appContainer.append(
-                    $bus1.animate(
-                        {left:400}, 5000, 'linear', function () {
-                            setTimeout(function () {
-                                $bus1.animate({left: 800}, 5000, 'linear', function () {
-                                    $(this).hide(100);
-                                });
-                            }, 2000)
-                        }
-                    )
-                );
-
-                //liczeniePunktow($('.bus'));
+                addPlaceUnderDoor($afterOpeningDoor, prize);
+                $bus1.append($doorLeft).append($doorRight).append($afterOpeningDoor);
+                $bus2.append($doorLeft).append($doorRight).append($afterOpeningDoor);
+                $bus3.append($doorLeft).append($doorRight).append($afterOpeningDoor);
                 liczeniePunktow($afterOpeningDoor);
 
+                $appContainer.append(
+                    $bus1.animate({left:400}, bus1.timer, 'linear', function ()
+                        {
+                            openDoors($doorLeft,$doorRight);
+                            setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 1000);
+                            setTimeout(function () {gofromBusstop($bus1)}, bus1.timer)
+
+                        }
+                    ),
+                    $bus2.animate({left:400}, 5000, 'linear', function ()
+                        {
+                            openDoors($doorLeft,$doorRight);
+                            setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 1000);
+                            setTimeout(function () {gofromBusstop($bus2)}, 2000)
+                        }
+                    ),
+                    $bus3.animate({left:400}, 5000, 'linear', function ()
+                        {
+                            openDoors($doorLeft,$doorRight);
+                            setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 1000);
+                            setTimeout(function () {gofromBusstop($bus3)}, 2000)
+                        }
+                    )
+                );
+                console.log($afterOpeningDoor);
                 console.log(prize);
             }, 5000 * index + Math.random() * 500);
 
         });
 
     }
+
+    list = [2,3,5];
+    get_random = function (list) {
+        return list[Math.floor((Math.random()*list.length))];
+    };
+
+    get_random([2,3,5]);
 
 
 
