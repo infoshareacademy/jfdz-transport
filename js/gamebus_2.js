@@ -73,6 +73,12 @@ $(document).ready(function() {
 
     var buses = [bus1Id, bus2Id, bus3Id, bus3Id, bus1Id, bus1Id];
 
+    function getBuses(list) {
+        return list[Math.floor((Math.random()*list.length))];
+    }
+
+    console.log(getBuses(buses));
+
     function liczeniePunktow(bus){
         $('div').on('click', function () {
             if ($(this).hasClass('doorClose') ) {
@@ -163,10 +169,17 @@ $(document).ready(function() {
 
     }
 
+    //function getBuses(list) {
+    //    return buses[Math.floor((Math.random()*list.length))];
+    //}
+    //
+    //console.log(getBuses(buses));
+
+
     list = [2,3,5];
-    get_random = function (list) {
+   function get_random(list) {
         return list[Math.floor((Math.random()*list.length))];
-    };
+    }
 
     get_random([2,3,5]);
 
