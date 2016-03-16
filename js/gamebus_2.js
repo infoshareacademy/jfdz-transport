@@ -44,8 +44,30 @@ $(document).ready(function() {
         }, state.time * 1000);
     }
 
+    var buses = [1, 2, 2, 1, 2, 1, 1, 2];
+
+    var buses1 =[];
+
+    function getBuses(list) {
+
+        var index1 =  list[Math.floor((Math.random()*list.length))];
+        var index2 =  list[Math.floor((Math.random()*list.length))];
+        var index3 =  list[Math.floor((Math.random()*list.length))];
+        var index4 =  list[Math.floor((Math.random()*list.length))];
+        var index5 =  list[Math.floor((Math.random()*list.length))];
+        var index6 =  list[Math.floor((Math.random()*list.length))];
+        var index7 =  list[Math.floor((Math.random()*list.length))];
+        var index8 =  list[Math.floor((Math.random()*list.length))];
+        buses1.unshift(index1, index2, index3, index4, index5, index6, index7, index8);
+
+        console.log(buses1);
+    }
+
+    console.log(buses1);
 
     $startButton.click(function(){
+        buses1.length = 0;
+        getBuses(buses);
         state.score = 0;
         $('#points').html("Punkty: " + state.score);
         state.time = 26;
@@ -70,14 +92,6 @@ $(document).ready(function() {
 
     $('body').append($appContainer);
     $appContainer.append($busstop1).append($busstop2).append($busstop3);
-
-    var buses = [bus1Id, bus2Id, bus3Id, bus3Id, bus1Id, bus1Id];
-
-    function getBuses(list) {
-        return list[Math.floor((Math.random()*list.length))];
-    }
-
-    console.log(getBuses(buses));
 
     function liczeniePunktow(bus){
         $('div').on('click', function () {
@@ -109,9 +123,10 @@ $(document).ready(function() {
         });
     }
 
+
     function addPlaceUnderDoor(door, prize){
         door.css ({
-            background: prize === bus1Id ? door.addClass('doorOpen') : door.addClass('doorClose')
+            background: prize === 1 ? door.addClass('doorOpen') : door.addClass('doorClose')
         });
     }
 
@@ -119,7 +134,7 @@ $(document).ready(function() {
     var $afterOpeningDoor;
 
     function start() {
-        buses.forEach(function (prize, index) {
+        buses1.forEach(function (prize, index) {
 
             setTimeout(function () {
                 var $bus1 = $('<div>').addClass('bus1');
@@ -138,7 +153,7 @@ $(document).ready(function() {
                 liczeniePunktow($afterOpeningDoor);
 
                 $appContainer.append(
-                    $bus1.animate({left:400}, bus1.timer, 'linear', function ()
+                    $bus1.animate({left:400}, 5000, 'linear', function ()
                         {
                             openDoors($doorLeft,$doorRight);
                             setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 1000);
@@ -176,13 +191,12 @@ $(document).ready(function() {
     //console.log(getBuses(buses));
 
 
-    list = [2,3,5];
-   function get_random(list) {
-        return list[Math.floor((Math.random()*list.length))];
-    }
-
-    get_random([2,3,5]);
-
+   // list = [2,3,5];
+   //function get_random(list) {
+   //     return list[Math.floor((Math.random()*list.length))];
+   // }
+   //
+   // get_random([2,3,5]);
 
 
     // function start() {
