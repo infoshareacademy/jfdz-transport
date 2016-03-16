@@ -140,6 +140,9 @@ h4 {
 .naglowek-strony .menu-glowne li a:hover {
   color: #f02541; }
 
+#menu-active .menu-glowne .active {
+  color: #222222; }
+
 .naglowek-strony .menu-glowne li a {
   color: #A20700;
   font-size: 26px;
@@ -240,6 +243,16 @@ h4 {
 .feature-image-3 {
   background-image: url("../images/feature-woman-600.jpg"); }
 
+.feature .feature-image-1 {
+  transform: translate(-400px, 0px); }
+
+.feature-image-2 {
+  position: relative;
+  z-index: 3; }
+
+.feature .feature-image-3 {
+  transform: translate(400px, 0px); }
+
 .feature p {
   padding-left: 10px;
   padding-right: 10px; }
@@ -257,13 +270,17 @@ h4 {
   margin-right: 10px;
   text-align: center;
   padding: 10px;
-  font-size: 60px;
-  height: 70px;
-  width: 70px;
+  font-size: 80px;
+  height: 90px;
+  width: 90px;
   background-color: #B30800;
   border-radius: 50%;
   color: white;
   transition: 1s; }
+
+.small-icons {
+  transform: rotate(360deg), translate -300px, 0px;
+  background-color: #9a0700; }
 
 .small-icons:hover {
   transition: 1s;

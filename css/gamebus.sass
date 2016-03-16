@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here&subset=latin,latin-ext)
+
+body
+  font-family: 'Just Me Again Down Here', cursive
+  font-size: 15px
+  margin: 0
+  padding: 0
+  background:
+    color: #fefefe
+    image: url(../images/plansza.png)
+    position: center center
+    size: cover
+    repeat: no-repeat
+    attachment: fixed
+
+
+h1
+  font-size: 20px
+h2
+  font-size: 18px
+
+div
+  border: 1px solid red
+
+.punkty
+  padding: 30px
+  position: absolute
+  right: 0
+  top: 0
+  font-size: 5em
+
+.czas
+  padding: 30px
+  position: absolute
+  left: 0
+  top: 0
+  font-size: 5em
+
+.plansza
+  position: relative
+  width: 99vw
+  height: 95vh
+
+.przystanki
+  position: absolute
+  bottom: 0
+  width: 100%
+  height: 33%
+  display: flex
+  justify-content: space-around
+  align-content: center
+  align-items: center
+
+.przystanek
+  flex-basis: auto
+  width: 30vw
+  height: 150px
+
+.autobus
+  width: 300px
+  height: 100px
+  background:
+    image: url(../images/autobus2.png)
+    repeat: no-repeat
+    position: center center
+
+  .aktywny
+    transition: all 2s
+
+.in
+  background:
+    image: url(../images/autobus2.png)
+    repeat: no-repeat
+    size: contain
+    position: center center
+  opacity: 1
+  transition: all 3s
+
+.out
+  background:
+    image: url(../images/autobus2.png)
+    repeat: no-repeat
+    size: contain
+    position: center center
+  opacity: 0
+  transition: all 2s
+
+.obc
+  background:
+    color: #9a0700
