@@ -90,8 +90,12 @@ $(document).ready(function() {
     var $busstop3 = $('<div id="busstop">').addClass('przystanek').addClass('przystanek3');
 
 
+
+
     $('body').append($appContainer);
     $appContainer.append($busstop1).append($busstop2).append($busstop3);
+    var distance = $appContainer.width()/ 2 - 150;
+    console.log(distance);
 
     function liczeniePunktow(bus){
         $('div').on('click', function () {
@@ -130,7 +134,6 @@ $(document).ready(function() {
         });
     }
 
-
     var $afterOpeningDoor;
 
     function start() {
@@ -153,7 +156,7 @@ $(document).ready(function() {
                 liczeniePunktow($afterOpeningDoor);
 
                 $appContainer.append(
-                    $bus1.animate({left:400}, 5000, 'linear', function ()
+                    $bus1.animate({left:distance}, 5000, 'linear', function ()
                         {
                             openDoors($doorLeft,$doorRight);
                             setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 1000);
@@ -161,14 +164,14 @@ $(document).ready(function() {
 
                         }
                     ),
-                    $bus2.animate({left:400}, 5000, 'linear', function ()
+                    $bus2.animate({left:distance}, 5000, 'linear', function ()
                         {
                             openDoors($doorLeft,$doorRight);
                             setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 1000);
                             setTimeout(function () {gofromBusstop($bus2)}, 2000)
                         }
                     ),
-                    $bus3.animate({left:400}, 5000, 'linear', function ()
+                    $bus3.animate({left:distance}, 5000, 'linear', function ()
                         {
                             openDoors($doorLeft,$doorRight);
                             setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 1000);
