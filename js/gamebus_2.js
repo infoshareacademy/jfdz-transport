@@ -42,6 +42,12 @@ $(document).ready(function() {
         setTimeout(function () {
             clearInterval(clockIntervalId);
         }, state.time * 1000);
+
+        $stopButtom.click(function(){
+            clearInterval(clockIntervalId);
+        });
+
+
     }
 
     var buses = [1, 2, 2, 1, 2, 1, 1, 2];
@@ -65,12 +71,26 @@ $(document).ready(function() {
 
     console.log(buses1);
 
+    function setClock (clock){
+        if(clock === 0) {
+            clock = 26;
+        }
+    }
+
+    //function setGame (game){
+    //    if (game == true){
+    //        game
+    //    }
+    //
+    //}
+
+
     $startButton.click(function(){
         buses1.length = 0;
         getBuses(buses);
         state.score = 0;
         $('#points').html("Punkty: " + state.score);
-        state.time = 26;
+        setClock(state.time);
         start(state);
         startGame(state);
         gameOver = true;
@@ -79,10 +99,10 @@ $(document).ready(function() {
 
     displayClock($clock, state);
 
-    $stopButtom.click(function(){
-        start.stop();
-
-    });
+    //$stopButtom.click(function(){
+    //    start.stop();
+    //
+    //});
 
     var $appContainer = $('<div id="app">').css({position: 'relative'}).addClass('plansza');
     var $busstop1 = $('<div id="busstop">').addClass('przystanek').addClass('przystanek1');
@@ -94,8 +114,8 @@ $(document).ready(function() {
 
     $('body').append($appContainer);
     $appContainer.append($busstop1).append($busstop2).append($busstop3);
-    var distance = $appContainer.width()/ 2 - 150;
-    console.log(distance);
+    var distance = $appContainer.width()/ 2 - 140;
+    var allDistance = $appContainer.width() - 300;
 
     function liczeniePunktow(bus){
         $('div').on('click', function () {
@@ -112,17 +132,17 @@ $(document).ready(function() {
     }
 
     function openDoors(doorLeft, doorRight) {
-        doorLeft.animate({left: 30 }, 500, 'linear');
-        doorRight.animate({left: 100}, 500, 'linear');
+        doorLeft.animate({left: 80 }, 500, 'linear');
+        doorRight.animate({left: 140}, 500, 'linear');
     }
 
     function closeDoors (doorLeft, doorRight) {
-        doorLeft.animate({ left: 60}, 500, 'linear');
-        doorRight.animate({ left: 80 }, 500, 'linear');
+        doorLeft.animate({ left: 100}, 500, 'linear');
+        doorRight.animate({ left: 120 }, 500, 'linear');
     }
 
     function gofromBusstop(bus) {
-        bus.animate({ left: 800 }, 5000, 'linear', function () {
+        bus.animate({ left: allDistance }, 5000, 'linear', function () {
             $(this).hide(100);
         });
     }
@@ -138,8 +158,8 @@ $(document).ready(function() {
 
     function start() {
         buses1.forEach(function (prize, index) {
-
-            setTimeout(function () {
+            gameOver = false;
+            var time = setTimeout(function () {
                 var $bus1 = $('<div>').addClass('bus1');
                 var $bus2 = $('<div>').addClass('bus3');
                 var $bus3 = $('<div>').addClass('bus2');
@@ -156,7 +176,7 @@ $(document).ready(function() {
                 liczeniePunktow($afterOpeningDoor);
 
                 $appContainer.append(
-                    $bus1.animate({left:distance}, 5000, 'linear', function ()
+                    $bus1.animate({left:distance}, 5000, 'swing', function ()
                         {
                             openDoors($doorLeft,$doorRight);
                             setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 1000);
@@ -182,7 +202,7 @@ $(document).ready(function() {
                 console.log($afterOpeningDoor);
                 console.log(prize);
             }, 5000 * index + Math.random() * 500);
-
+            gameOver = true;
         });
 
     }
