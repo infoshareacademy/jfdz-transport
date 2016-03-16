@@ -184,19 +184,6 @@ $(document).ready(function() {
 
     }
 
-    //function getBuses(list) {
-    //    return buses[Math.floor((Math.random()*list.length))];
-    //}
-    //
-    //console.log(getBuses(buses));
-
-
-   // list = [2,3,5];
-   //function get_random(list) {
-   //     return list[Math.floor((Math.random()*list.length))];
-   // }
-   //
-   // get_random([2,3,5]);
 
 
     // function start() {
