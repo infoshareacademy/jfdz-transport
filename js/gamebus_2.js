@@ -1,17 +1,17 @@
 $(document).ready(function() {
 
     var bus1 = {
-        number: 1,
+        number: 1
         //timer: Math.floor(((Math.random() * 4) + 1)* 1000)
     };
 
     var bus2 = {
-        number: 2,
+        number: 2
         //timer: Math.floor(((Math.random() * 4) + 1)* 1000)
     };
 
     var bus3 = {
-        number: 3,
+        number: 3
         //timer: Math.floor(((Math.random() * 4) + 1)* 1000)
     };
 

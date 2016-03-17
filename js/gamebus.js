@@ -13,13 +13,29 @@ $(document).ready(function () {
     var pkt = 0;
     var czasgry = 20;
 
-
+    var $doorLeft = $('<div>').addClass('doorLeft');
+    var $doorRight = $('<div>').addClass('doorRight');
+    var $afterOpeningDoor = $('<div>');
 
 
 
     setInterval(function() {
         gameTime()
     }, 1000);
+
+    function liczeniePunktow(bus){
+        $('div').on('click', function () {
+            if ($(this).hasClass('in') ) {
+                pkt -=10;
+                $('#punkty').html("Punkty: " + pkt);
+            }
+
+            if ($(this).hasClass('out')) {
+                pkt += 1;
+                $('#punkty').html("Punkty: " + pkt);
+            }
+        });
+    }
 
     function gameTime() {
         if (czasgry > 0) {
@@ -51,7 +67,10 @@ $(document).ready(function () {
                     if (this.inOut == 1) {
                         console.log('in ' + stopNumber);
                         $(bs).removeClass('out');
+
                         $(bs).addClass('in');
+                        $(bs).append($doorLeft).append($doorRight);
+
                         var index = randomBetween(1,3) - 1;
                         var bus = scope.buses[index];
 
@@ -61,6 +80,7 @@ $(document).ready(function () {
                             $(bs).removeClass('obc');
                         }
 
+                        //liczeniePunktow(bs);
 
                         $(bs).click(function() {
                             // bus.bus1
@@ -71,6 +91,7 @@ $(document).ready(function () {
 
                     } else {
                         console.log('out ' + stopNumber);
+                        $(bs).append($doorLeft).append($doorRight);
                         $(bs).removeClass('in');
                         $(bs).addClass('out');
                     }
