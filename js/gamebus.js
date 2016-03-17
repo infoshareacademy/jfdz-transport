@@ -16,6 +16,9 @@ $(document).ready(function () {
     var $doorLeft = $('<div>').addClass('doorLeft');
     var $doorRight = $('<div>').addClass('doorRight');
     var $afterOpeningDoor = $('<div>');
+    var left1 = 20%
+
+
 
 
 
@@ -67,9 +70,21 @@ $(document).ready(function () {
                     if (this.inOut == 1) {
                         console.log('in ' + stopNumber);
                         $(bs).removeClass('out');
-
                         $(bs).addClass('in');
                         $(bs).append($doorLeft).append($doorRight);
+
+                        function openDoors(doorLeft, doorRight) {
+                            doorLeft.animate({left: 80}, 500, 'linear');
+                            doorRight.animate({left: 140}, 500, 'linear');
+                        }
+
+                        function closeDoors (doorLeft, doorRight) {
+                            doorLeft.animate({ left: 100}, 500, 'linear');
+                            setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 1000);
+                        }
+                        openDoors($doorLeft,$doorRight);
+                        closeDoors($doorLeft, $doorRight);
+
 
                         var index = randomBetween(1,3) - 1;
                         var bus = scope.buses[index];
@@ -91,9 +106,12 @@ $(document).ready(function () {
 
                     } else {
                         console.log('out ' + stopNumber);
-                        $(bs).append($doorLeft).append($doorRight);
                         $(bs).removeClass('in');
+                        $(bs).append($doorLeft).append($doorRight);
+                        openDoors($doorLeft,$doorRight);
+                        closeDoors($doorLeft, $doorRight);
                         $(bs).addClass('out');
+
                     }
                 }
             }
