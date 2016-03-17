@@ -43,12 +43,15 @@ $(document).ready(function() {
             clearInterval(clockIntervalId);
         }, state.time * 1000);
 
+        $startButton.click(function(){
+            state.time = 26;
+        });
         $stopButtom.click(function(){
             clearInterval(clockIntervalId);
         });
-
-
     }
+
+
 
     var buses = [1, 2, 2, 1, 2, 1, 1, 2];
 
@@ -71,45 +74,23 @@ $(document).ready(function() {
 
     console.log(buses1);
 
-    function setClock (clock){
-        if(clock === 0) {
-            clock = 26;
-        }
-    }
-
-    //function setGame (game){
-    //    if (game == true){
-    //        game
-    //    }
-    //
-    //}
-
 
     $startButton.click(function(){
         buses1.length = 0;
         getBuses(buses);
         state.score = 0;
         $('#points').html("Punkty: " + state.score);
-        setClock(state.time);
         start(state);
         startGame(state);
-        gameOver = true;
-
     });
 
     displayClock($clock, state);
 
-    //$stopButtom.click(function(){
-    //    start.stop();
-    //
-    //});
 
     var $appContainer = $('<div id="app">').css({position: 'relative'}).addClass('plansza');
     var $busstop1 = $('<div id="busstop">').addClass('przystanek').addClass('przystanek1');
     var $busstop2 = $('<div id="busstop">').addClass('przystanek').addClass('przystanek2');
     var $busstop3 = $('<div id="busstop">').addClass('przystanek').addClass('przystanek3');
-
-
 
 
     $('body').append($appContainer);
@@ -156,9 +137,12 @@ $(document).ready(function() {
 
     var $afterOpeningDoor;
 
-    function start() {
+    function start(state, bool) {
+
+        gameOver = false;
+        console.log(gameOver);
         buses1.forEach(function (prize, index) {
-            gameOver = false;
+
             var time = setTimeout(function () {
                 var $bus1 = $('<div>').addClass('bus1');
                 var $bus2 = $('<div>').addClass('bus3');
@@ -199,16 +183,23 @@ $(document).ready(function() {
                         }
                     )
                 );
+
                 console.log($afterOpeningDoor);
                 console.log(prize);
             }, 5000 * index + Math.random() * 500);
-            gameOver = true;
+
+            $stopButtom.click(function(){
+                clearTimeout(time);
+            });
+
         });
+
+
 
     }
 
 
-
+console.log(gameOver);
     // function start() {
     // buses.forEach(function (prize, index) {
     //     setTimeout(function () {
