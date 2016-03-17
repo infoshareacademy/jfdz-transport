@@ -13,6 +13,10 @@ $(document).ready(function () {
     var pkt = 0;
     var czasgry = 20;
 
+
+
+
+
     setInterval(function() {
         gameTime()
     }, 1000);

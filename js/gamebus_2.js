@@ -33,7 +33,6 @@ $(document).ready(function() {
         $(node).text('Czas: ' + state.time);
     }
 
-
     function startGame(initialState) {
         var clockIntervalId = setInterval(function () {
             state.time -= 1;
@@ -50,8 +49,6 @@ $(document).ready(function() {
             clearInterval(clockIntervalId);
         });
     }
-
-
 
     var buses = [1, 2, 2, 1, 2, 1, 1, 2];
 
@@ -74,7 +71,6 @@ $(document).ready(function() {
 
     console.log(buses1);
 
-
     $startButton.click(function(){
         buses1.length = 0;
         getBuses(buses);
@@ -86,12 +82,10 @@ $(document).ready(function() {
 
     displayClock($clock, state);
 
-
     var $appContainer = $('<div id="app">').css({position: 'relative'}).addClass('plansza');
     var $busstop1 = $('<div id="busstop">').addClass('przystanek').addClass('przystanek1');
     var $busstop2 = $('<div id="busstop">').addClass('przystanek').addClass('przystanek2');
     var $busstop3 = $('<div id="busstop">').addClass('przystanek').addClass('przystanek3');
-
 
     $('body').append($appContainer);
     $appContainer.append($busstop1).append($busstop2).append($busstop3);
@@ -191,13 +185,8 @@ $(document).ready(function() {
             $stopButtom.click(function(){
                 clearTimeout(time);
             });
-
         });
-
-
-
     }
-
 
 console.log(gameOver);
     // function start() {
