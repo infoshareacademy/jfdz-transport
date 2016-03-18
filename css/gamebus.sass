@@ -2,8 +2,10 @@
   box-sizing: border-box
 
 @import url(https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here&subset=latin,latin-ext)
+@import url(https://fonts.googleapis.com/css?family=Orbitron)
 
 $font-header: 'Just Me Again Down Here', cursive
+$font-digital: 'Orbitron', sans-serif
 $shadow: 3px 3px 3px rgba(0, 0, 0, 0.3)
 
 body
@@ -53,6 +55,9 @@ h2
     top: 0
     font-size: 5em
     padding: 30px
+
+    span
+      font-family: $font-digital
 
   //Ekran Start
 
@@ -110,7 +115,6 @@ h2
       height: 150px
       margin-left: auto
       margin-right: auto
-      border: 1px solid #99CDD0
       text-align: center
       font-size: 20px
       padding: 10px
@@ -184,36 +188,57 @@ h2
   .aktywny
     transition: all 2s
 
-.in
+.in, .out
+  position: relative
   background:
     image: url(../images/autobus2.png)
     repeat: no-repeat
     size: contain
-    position: center center
+  transition: all 1s
 
-#busstop0
-  //position: fixed
-  left: 10px
+  .liner
+    display: inline-block
+    font-size: 1.8em
+    font-family: $font-digital
+    position: absolute
+    padding: 2px 10px
+    border-radius: 2px
+    background: #ff0
+    left: 5vw
+
+  .namer
+    display: inline-block
+    position: absolute
+    right: 5vw
+    padding: 2px 10px
+    border-radius: 2px
+    background: #000000
+    font-family: $font-digital
+    font-size: 0.7em
+    color: #fff
 
 .in
-  width: 250px
-  height: 50px
-  background:
-    image: url(../images/autobus2.png)
-    repeat: no-repeat
-  background-size: contain
   opacity: 1
-  transition: all 1s
-
 .out
-  width: 250px
-  height: 50px
-  background:
-    image: url(../images/autobus2.png)
-    repeat: no-repeat
-    size: contain
   opacity: 0
-  transition: all 1s
 
 .hidden
   display: none
+
+
+.odjazd
+  background:
+    image: url(../images/autobus2.png)
+    repeat: no-repeat
+    size: contain
+  animation: goBus 2s infinite
+
+@keyframes goBus
+  0%
+    transform: rotate(30deg)
+  10%
+    transform: translate(3em,0)
+  20%
+    transform: rotate(-30deg)
+  100%
+    transform: translate(5em,0)

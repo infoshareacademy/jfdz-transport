@@ -32,7 +32,7 @@ $(document).ready(function () {
         } else {
             clearInterval(gameTime);
             $('.przystanek').off('click');
-            $('#punkty').html('Koniec! - Zdobyłeś punktów: ' + pkt);
+            $('#punkty').html('Koniec! Punktów: ' + pkt);
         }
     }
 
@@ -44,19 +44,15 @@ $(document).ready(function () {
                 {line: '20', value: -10, name: 'SOPOT'},
                 {line: '15', value: -10, name: 'SLUPSK'},
                 {line: '05', value: -10, name: 'KOSCIERZYNA'},
-                {line: '04', value:  1, name: 'OBC4'},
+                {line: '04', value:  1, name: 'OBC4'}
             ],
 
             inOut: 1,
             stopbus: function () {
                 var scope = this;
-                sb = this.stop;
-                bs = '#busstop' + sb;
-                line = '.line';
-                name = '.name';
-
-                // losuje czy bus jest na przystanku 1 IN jest 0 OUT nie ma
-                //this.inOut = Math.round(Math.random() * 1);
+                bs = '#busstop' + this.stop;
+                liner = '.liner';
+                namer = '.namer';
 
                 if (czasgry > 0) {
                     if (this.inOut == 1) {
@@ -67,17 +63,18 @@ $(document).ready(function () {
                         $(bs).removeClass('out');
                         $(bs).addClass('in');
                         var index = randomBetween(1, 5) - 1;
-                        var bus = scope.buses[index]; // losowanie przystanku 0,1,2
+                        var bus = scope.buses[index]; // losowanie autobusus
 
-                        $(bs).html('IN '+scope.buses[index].line+' '+scope.buses[index].name);
+                        $(bs+' '+namer).html(scope.buses[index].name);
+                        $(bs+' '+liner).html(scope.buses[index].line);
 
                         $(bs).on('click', function () {
-                            // bus.bus1
                             console.debug('---- value', scope.buses[index].value);
                             console.debug('---- in', scope.inOut);
                             pkt = pkt + scope.buses[index].value;
                             $('#punkty').html(pkt);
                         });
+
                         scope.inOut = 0;
 
                     } else {
@@ -91,9 +88,6 @@ $(document).ready(function () {
                         scope.inOut = 1;
                     }
                 }
-            },
-            reset: function() {
-
             }
         }
     }
@@ -106,9 +100,9 @@ $(document).ready(function () {
 
     // losowanie czasu działania funkcji
 
-    var czas0 = randomBetween(1,4) * 1000;
-    var czas1 = randomBetween(1,4) * 1000;
-    var czas2 = randomBetween(1,4) * 1000;
+    var czas0 = randomBetween(1,3) * 1000;
+    var czas1 = randomBetween(1,3) * 1000;
+    var czas2 = randomBetween(1,3) * 1000;
 
     setInterval(function () {
         przystanek0.stopbus();
