@@ -16,9 +16,7 @@ $(document).ready(function () {
     var bs2 = $('#busstop2');
     var bs3 = $('#busstop3');
 
-    var $doorLeft = $('<div>').addClass('doorLeft');
-    var $doorRight = $('<div>').addClass('doorRight');
-    var $afterOpeningDoor = $('<div>').addClass('doorOpen')
+
 
     var losStop = Math.round(Math.random() * 2);
     var czas = Math.round(Math.random() * 10);
@@ -60,7 +58,7 @@ $(document).ready(function () {
                 {line: '20', value: -10, name: 'SOPOT'},
                 {line: '15', value: -10, name: 'SLUPSK'},
                 {line: '05', value: -10, name: 'KOSCIERZYNA'},
-                {line: '04', value:  1, name: 'OBC4'},
+                {line: '04', value:  1, name: 'OBC4'}
             ],
 
             inOut: 1,
@@ -70,6 +68,9 @@ $(document).ready(function () {
                 bs = '#busstop' + sb;
                 line = '.line';
                 name = '.name';
+                var $doorLeft = $('<div>').addClass('doorLeft');
+                var $doorRight = $('<div>').addClass('doorRight');
+                var $afterOpeningDoor = $('<div>').addClass('doorOpen');
 
                 // losuje czy bus jest na przystanku 1 IN jest 0 OUT nie ma
                 //this.inOut = Math.round(Math.random() * 1);
@@ -84,16 +85,15 @@ $(document).ready(function () {
                         $(bs).children('div').remove();
                         $(bs).addClass('in');
 
+
                         var index = randomBetween(1, 5) - 1;
                         var bus = scope.buses[index]; // losowanie przystanku 0,1,2
 
                         $(bs).html('IN '+scope.buses[index].line+' '+scope.buses[index].name);
-                        $(bs).append($doorLeft).append($doorRight).append($afterOpeningDoor);
 
+                        $(bs).append($doorLeft).append($doorRight).append($afterOpeningDoor);
                         openDoors($doorLeft,$doorRight);
                         setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 500);
-                        console.log( $(bs).children().eq(2));
-
 
                         //$afterOpeningDoor.on('click', function () {
                         $(bs).children().eq(2).on('click', function () {
@@ -106,6 +106,7 @@ $(document).ready(function () {
                             //}
                         });
                         scope.inOut = 0;
+
 
                     } else {
 
