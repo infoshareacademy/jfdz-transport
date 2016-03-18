@@ -382,19 +382,18 @@ h4 {
       position: relative;
       z-index: 1;
     }
+  }
 
 
-.onas-container {
+.onas .cf {
   background-color: white;
   color: $kolor;
-  //ToDo
-  //object-position: ;
   letter-spacing: normal;
   text-align: center;
   margin: 25px auto;
   padding: 75px 0; }
 
-figure.onas {
+.onas {
   font-family: 'Raleway','Poiret One', sans-serif, sans-serif;
   text-align: justify;
   position: relative;
@@ -403,25 +402,27 @@ figure.onas {
   margin: 10px 1%;
   min-width: 220px;
   max-width: 310px;
-  width: 100%;
   background: #ffffff;
   color: #000000;
+  width: 32%;
+  font-size:20px;
+  padding-bottom: 15px;
 }
 
-figure.onas * {
+.onas * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
-
-figure.onas img {
+  .onas img {
   max-width: 90%;
   position: relative;
-  //ToDo
-  //display: compact;
   border-radius: 50%;
-  border: 5px groove #B30800;  }
+  border: 5px groove #B30800;
+  width:277px;
+  height:297px;
+}
 
 
 figure.onas:before {
@@ -483,7 +484,6 @@ figure.onas figcaption p {
 figure.onas figcaption .icons {
   width: 100%;
   padding: 8px 0;
-  border-radius: 10px;
 }
 
 figure.onas figcaption .icons i {
@@ -504,14 +504,14 @@ figure.onas figcaption a {
   opacity: 0.7;
 }
 
-figure.onas7 figcaption a:hover {
+figure.onas figcaption a:hover {
   opacity: 1;
 }
 
 figure.onas .position {
   position: absolute;
   bottom: 0;
-  width: 89.5%;
+  width: 69.5%;
   text-align: right;
   padding: 15px 30px;
   font-size: 0.9em;
@@ -519,12 +519,13 @@ figure.onas .position {
   font-weight: 500;
   color: #ffffff;
   background: #000000;
-  border-radius: 50px;
+  border: 50px;
 }
 
 
 figure.onas.red .icons i {
   background: #6d2018;
+
 }
 
 figure.onas.red .position {
@@ -532,7 +533,7 @@ figure.onas.red .position {
 }
 
 figure.onas:hover figcaption,
-figure.sonas.hover figcaption,
+figure.onas.hover figcaption,
 figure.onas:hover .icons i,
 figure.onas.hover .icons i {
   opacity: 1;
@@ -596,4 +597,5 @@ figure.onas.hover:before {
   padding: 15px;
   text-align: center;
   font-size: 0.8em;
+}
 }
