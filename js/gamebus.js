@@ -42,10 +42,12 @@ $(document).ready(function () {
             buses: [
                 {line: '10', value: -10, name: 'GDYNIA'},
                 {line: '20', value: -10, name: 'SOPOT'},
-                {line: '04', value:  1, name: 'OBC4'}
+                {line: '15', value: -10, name: 'SLUPSK'},
+                {line: '05', value: -10, name: 'KOSCIERZYNA'},
+                {line: '04', value:  1, name: 'OBC4'},
             ],
 
-            inOut: 0,
+            inOut: 1,
             stopbus: function () {
                 var scope = this;
                 sb = this.stop;
@@ -54,7 +56,7 @@ $(document).ready(function () {
                 name = '.name';
 
                 // losuje czy bus jest na przystanku 1 IN jest 0 OUT nie ma
-                this.inOut = Math.round(Math.random() * 1);
+                //this.inOut = Math.round(Math.random() * 1);
 
                 if (czasgry > 0) {
                     if (this.inOut == 1) {
@@ -64,7 +66,7 @@ $(document).ready(function () {
                         console.log('in ' + stopNumber);
                         $(bs).removeClass('out');
                         $(bs).addClass('in');
-                        var index = randomBetween(1, 3) - 1;
+                        var index = randomBetween(1, 5) - 1;
                         var bus = scope.buses[index]; // losowanie przystanku 0,1,2
 
                         $(bs).html('IN '+scope.buses[index].line+' '+scope.buses[index].name);
@@ -86,10 +88,11 @@ $(document).ready(function () {
                         $(bs).off('click');
                         $(bs).removeClass('in');
                         $(bs).addClass('out');
-                        $(bs).html('OUT '+scope.buses[index].line+' '+scope.buses[index].name);
-                        scope.inOut = 0;
+                        scope.inOut = 1;
                     }
                 }
+            },
+            reset: function() {
 
             }
         }
