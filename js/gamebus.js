@@ -16,10 +16,25 @@ $(document).ready(function () {
     var bs2 = $('#busstop2');
     var bs3 = $('#busstop3');
 
+    var $doorLeft = $('<div>').addClass('doorLeft');
+    var $doorRight = $('<div>').addClass('doorRight');
+
     var losStop = Math.round(Math.random() * 2);
     var czas = Math.round(Math.random() * 10);
     var pkt = 0;
     var czasgry = 30;
+
+
+        function openDoors(doorLeft, doorRight) {
+            doorLeft.animate({left: 80 }, 500, 'linear');
+            doorRight.animate({left: 140}, 500, 'linear');
+        }
+
+        function closeDoors (doorLeft, doorRight) {
+            doorLeft.animate({ left: 100}, 500, 'linear');
+            doorRight.animate({ left: 120 }, 500, 'linear');
+        }
+
 
     setInterval(function () {
         gameTime()
@@ -70,6 +85,11 @@ $(document).ready(function () {
                         var bus = scope.buses[index]; // losowanie przystanku 0,1,2
 
                         $(bs).html('IN '+scope.buses[index].line+' '+scope.buses[index].name);
+                        $(bs).append($doorLeft).append($doorRight);
+                        openDoors($doorLeft,$doorRight);
+                        setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 500);
+
+
 
                         $(bs).on('click', function () {
                             // bus.bus1
