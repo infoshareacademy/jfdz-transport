@@ -7,6 +7,7 @@ $(document).ready(function () {
     $('#startGra').on('click', function () {
         // $('.plansza').removeClass('hidden');
         $('#ekranStart').addClass('hidden');
+        $('#easterEgg').removeClass('bgStart');
         $('#easterEgg').removeClass('hidden');
         $('#licznikGra').removeClass('hidden');
         $('#przystanki').removeClass('hidden');
