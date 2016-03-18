@@ -5,7 +5,7 @@ function randomBetween(min, max){
 $(document).ready(function () {
 
     $('#startGra').on('click', function () {
-        $('.plansza').removeClass('hidden');
+        // $('.plansza').removeClass('hidden');
         $('#ekranStart').addClass('hidden');
         $('#easterEgg').removeClass('hidden');
         $('#licznikGra').removeClass('hidden');
