@@ -7,17 +7,51 @@
 </head>
 <body>
 
+<!-- Główny ekran -->
+<div id="easterEgg" class="easterEgg bgStart">
 
-<div id="plansza" class="plansza">
+    <div id="koniec">x</div>
 
-    <div id="czas" class="czas"></div>
+    <!--Ekran startowy-->
 
-    <div id="punkty" class="punkty"></div>
+    <div id="ekranStart" class="ekranStart">
+        <h1> A oto nasza niespodzianka:) Zagraj z nami!</h1>
+        <div>
+            Poznaj zasady gry:
+            <ol>
+                <li>Naciśnij start żeby zacząć</li>
+                <li>Na przystanek w mieście przyjądą autobusy</li>
+                <li>Twoje zadanie to klikając załadować pasażerów do odpowiedniego autobusu</li>
+                <li>Za autobus linii 04 do ODBC dostaniesz +1 punkt</li>
+                <li>Za błędny autobus odbierzemy -10pkt</li>
+            </ol>
 
-    <div class="przystanki">
-        <div id="busstop0" class="przystanek"> </div>
-        <div id="busstop1" class="przystanek"> </div>
-        <div  id="busstop2" class="przystanek"> </div>
+        </div>
+        <button type="button" id="startGra" class="przyciskGra">Gram!</button>
+    </div>
+
+    <!--Plansza Koniec Gry-->
+
+    <div id="koniecGry" class="hidden">
+        Koniec Gry! </br> Twój wynik: <span></span>
+        <button type="button" id="przyciskOk" class="przyciskGra">OK</button>
+    </div>
+
+    <!--Wyświetlanie Przystanków-->
+
+    <div id="przystanki" class="hidden">
+        <div class="przystanki">
+            <div id="busstop0" class="przystanek"><span class="line"></span> <span class="name"></span></div>
+            <div id="busstop1" class="przystanek"><span class="line"></span> <span class="name"></span></div>
+            <div id="busstop2" class="przystanek"><span class="line"></span> <span class="name"></span></div>
+        </div>
+    </div>
+
+    <!--Wyświetlanie Licznika-->
+
+    <div id="licznikGra" class="licznik hidden">
+        <div>Czas: <span id="czas">30</span></div>
+        <div>Punkty: <span id="punkty">0</span></div>
     </div>
 
 </div>

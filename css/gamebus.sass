@@ -1,10 +1,20 @@
+*
+  box-sizing: border-box
+
 @import url(https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here&subset=latin,latin-ext)
 
+$font-header: 'Just Me Again Down Here', cursive
+$shadow: 3px 3px 3px rgba(0, 0, 0, 0.3)
+
 body
-  font-family: 'Just Me Again Down Here', cursive
+  font-family: "Trebuchet MS", sans-serif
   font-size: 15px
+  width: 100vw
+  height: 100vh
+  border: 1px solid lightsalmon
   margin: 0
   padding: 0
+  position: relative
   background:
     color: #fefefe
     image: url(../images/plansza.png)
@@ -13,14 +23,97 @@ body
     repeat: no-repeat
     attachment: fixed
 
-
 h1
   font-size: 20px
+  font-family: $font-header
+
 h2
   font-size: 18px
 
-div
+//div
   border: 1px solid red
+
+.bgStart
+  background:
+    color: rgba(0, 0, 0, 0.8)
+  z-index: 100
+
+.easterEgg
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  margin: 0 auto
+  width: 100%
+  height: 100%
+
+  .licznik
+    position: absolute
+    left: 0
+    top: 0
+    font-size: 5em
+    padding: 30px
+
+  //Ekran Start
+
+  .ekranStart
+    position: relative
+    text-align: center
+    width: 50%
+    height: 50%
+    margin: 0 auto
+    background-color: #3095d3
+    border: solid 5px #3557a2
+    border-radius: 20px
+    padding: 50px
+    z-index: 1000
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2)
+
+    h1
+      text-align: center
+      font-size: 3em
+
+    .przyciskGra
+      height: 50px
+      width: 80%
+      background-color: lightgray
+      border-radius: 90px
+      border: 3px solid #282828
+      display: inline-block
+      cursor: pointer
+      color: #282828
+      font-size: 20px
+      font-weight: bold
+      padding: 12px 16px
+      margin: 20px
+      text-decoration: none
+      text-align: center
+      box-shadow: $shadow
+      &:hover
+        background-color: lightgray
+
+  // Przystanki
+
+  .przystanki
+    position: absolute
+    left: 0
+    bottom: 50px
+    width: 100%
+    height: 30%
+    display: flex
+    justify-content: space-around
+    align-content: flex-end
+    align-items: center
+
+    .przystanek
+      width: 30vw
+      height: 150px
+      margin-left: auto
+      margin-right: auto
+      border: 1px solid #99CDD0
+      text-align: center
+      font-size: 20px
+      padding: 10px
 
 .punkty
   padding: 30px
@@ -29,33 +122,56 @@ div
   top: 0
   font-size: 5em
 
-.czas
-  padding: 30px
+  .endButton
+    width: 50px
+    height: 50px
+    line-height: 50px
+    color: black
+    text-align: center
+    background-color: darkgrey
+    font-size: 5em
+    font-weight: bold
+    border-radius: 10px
+    cursor: pointer
+    margin-right: 10%
+
+#koniec
   position: absolute
-  left: 0
-  top: 0
-  font-size: 5em
+  right: 10px
+  top: 10px
+  width: 50px
+  height: 50px
+  font-size: 4em
+  line-height: 0.5em
+  color: black
+  text-align: center
+  background-color: yellow
+  border-radius: 10px
+  font-family: $font-header
+  font-weight: bold
+  cursor: pointer
+  margin-right: 10%
 
-.plansza
-  position: relative
-  width: 99vw
-  height: 95vh
-
-.przystanki
+#przyciskOk
   position: absolute
-  bottom: 0
-  width: 100%
-  height: 33%
-  display: flex
-  justify-content: space-around
-  align-content: center
-  align-items: center
+  top: 130px
+  left: 50%
+  margin-left: -70px
+  height: 50px
+  width: 135px
+  padding: 10px
+  cursor: pointer
+  border: 3px solid white
+  color: white
+  background-color: lightgray
+  border-radius: 90px
+  display: inline-block
+  font-size: 20px
+  font-weight: bold
+  text-decoration: none
 
-.przystanek
-  flex-basis: auto
-  width: 30vw
-  height: 150px
-  position: relative
+#okButton:hover
+  background-color: darkgray
 
 .autobus
   width: 300px
@@ -74,100 +190,30 @@ div
     repeat: no-repeat
     size: contain
     position: center center
+
+#busstop0
+  //position: fixed
+  left: 10px
+
+.in
+  width: 250px
+  height: 50px
+  background:
+    image: url(../images/autobus2.png)
+    repeat: no-repeat
+  background-size: contain
   opacity: 1
-  transition: all 3s
+  transition: all 1s
 
 .out
+  width: 250px
+  height: 50px
   background:
     image: url(../images/autobus2.png)
     repeat: no-repeat
     size: contain
-    position: center center
   opacity: 0
-  transition: all 2s
+  transition: all 1s
 
-.obc
-  background:
-    color: #9a0700
-
-.doorLeft
-  flex-basis: auto
-  width: 20px
-  height: 60px
-  position: absolute
-  top: 37%
-  //left: 47%
-  left: 90px
-  background:
-    image: url(../images/drzwi-do-autobusu.png)
-  z-index: 2
-  //background:
-  //  repeat: no-repeat
-  //  size: contain
-  //  position: center center
-  //opacity: 1
-  //transition: all 3s
-  //animation-name: moja_animacja
-  //animation-duration: 4s
-  //animation-direction: alternate
-
-
-.doorRight
-  flex-basis: auto
-  width: 20px
-  height: 60px
-  position: absolute
-  left: 54%
-  top: 37%
-  background:
-    image: url(../images/drzwi-do-autobusu.png)
-  z-index: 2
-  //opacity: 1
-  //transition: all 3s
-
-
-.doorOpen
-  width: 40px
-  height: 50px
-  position: absolute
-  top: 10px
-  left: 100px
-  background:
-    image: url(../images/drzwi-do-autobusu.png)
-  z-index: 1
-  opacity: 1
-  transition: all 3s
-
-
-
-.doorClose
-  width: 40px
-  height: 50px
-  position: absolute
-  top: 10px
-  left: 100px
-  background-color: green
-  z-index: 1
-
-//@keyframes moja_animacja
-//  0% transform: translateX(0)
-//  100% transform: translateX(300%)
-
-//
-//@mixin animation-keyframes
-//  $animation-name: unique-id()
-//  animation-name: $animacja
-//
-//  @keyframes #{animacja}
-//  @content
-//
-//
-//
-//.some-element
-//  animation: 10s linear infinite
-//
-//  @include animation-keyframes
-//    from
-//      background-position: 0 0
-//    to
-//      background-position: 114.2857% 0
+.hidden
+  display: none

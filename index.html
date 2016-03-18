@@ -7,6 +7,7 @@
     <meta name="keywords" content="komunikacja, gdańsk, ztm, autobusy">
     <link rel="stylesheet" href="css/resetcss.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gamebus.css">
     <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext' rel='stylesheet'
           type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
@@ -74,6 +75,45 @@
             <p>Wystarczy telefon a każdy rozkład masz w zasięgu ręki - spróbuj jakie to proste!</p>
 
         </div>
+
+        <div id="easterEgg" class="plansza hidden">
+
+            <div id="koniecGry" class="hidden">
+                Koniec Gry! </br> Twój wynik: <span></span>
+                <button type="button" id="przyciskOk" class="przyciskGra">OK</button>
+            </div>
+            <div id="koniec">x</div>
+
+            <div id="przystanki" class="hidden">
+                <div id="busstop0" class="przystanek"> <h1>Przystanek 0</h1>
+                </div>
+                <div id="busstop1" class="przystanek"> <h1>Przystanek 1</h1>
+                </div>
+                <div id="busstop2" class="przystanek"> <h1>Przystanek 2</h1>
+                </div>
+            </div>
+
+            <div id="ekranStart" style="color: black">
+                <div id="koniec2">x</div>
+                <h1> A oto nasza niespodzianka:)<br><br>
+                    Zagraj z nami!</h1> <br> <br>
+                <p>
+                    Poznaj zasady gry:.....
+                    <br>.....
+                    <br>.....
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </p>
+                <button type="button" id="startGra" class="przyciskGra">Gram!</button>
+            </div>
+            <div id="licznikGra" class="hidden">
+                Czas: <span>20</span>
+            </div>
+
+        </div>
+
     </article>
 
     <div class="clear"></div>
@@ -173,9 +213,12 @@
         <div class="sm-ico tw"><a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></div>
         <div class="clear"></div>
     </article>
+
 </main>
 <div class="scrollup"></div>
 <footer class="footer">
+
+
     &copy; infoshare academy 2016 / design celofyz
 </footer>
 
@@ -184,6 +227,7 @@
 <script src="js/scroll_okna.js"></script>
 <script src="js/menu_podswietlane.js"></script>
 <script src="js/menu_narrow.js"></script>
-
+<script src="http://code.jquery.com/jquery-2.2.0.js"></script>
+<script src="js/gamebus.js"></script>
 </body>
 </html>
