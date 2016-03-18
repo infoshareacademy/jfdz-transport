@@ -84,8 +84,8 @@ $(document).ready(function () {
                         $(bs).html('OUT '+scope.buses[index].line+' '+scope.buses[index].name);
                     }
                 }
-
                 this.inOut = 0;
+                $(bs).off('click');
             }
         }
     }
