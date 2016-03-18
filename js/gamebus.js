@@ -90,8 +90,8 @@ $(document).ready(function () {
                         var index = randomBetween(1, 5) - 1;
                         var bus = scope.buses[index]; // losowanie autobusus
 
-                        $(bs+' '+namer).html(scope.buses[index].name);
-                        $(bs+' '+liner).html(scope.buses[index].line);
+                        //$(bs+' '+namer).html(scope.buses[index].name);
+                        //$(bs+' '+liner).html(scope.buses[index].line);
 
                         $(bs).append($doorLeft).append($doorRight).append($afterOpeningDoor);
                         openDoors($doorLeft,$doorRight);
