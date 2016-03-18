@@ -45,7 +45,7 @@ $(document).ready(function () {
                 {line: '04', value:  1, name: 'OBC4'}
             ],
 
-            inOut: 1,
+            inOut: 0,
             stopbus: function () {
                 var scope = this;
                 sb = this.stop;
@@ -53,11 +53,13 @@ $(document).ready(function () {
                 line = '.line';
                 name = '.name';
 
-                // losuje czy autobus jest na przystanku 1 IN 0 OUT
-
+                // losuje czy bus jest na przystanku 1 IN jest 0 OUT nie ma
                 this.inOut = Math.round(Math.random() * 1);
+
                 if (czasgry > 0) {
                     if (this.inOut == 1) {
+
+                        // bus jest na przystanku
 
                         console.log('in ' + stopNumber);
                         $(bs).removeClass('out');
@@ -73,30 +75,36 @@ $(document).ready(function () {
                             pkt = pkt + scope.buses[index].value;
                             $('#punkty').html(pkt);
                         });
-
-
+                        this.inOut = 0;
 
                     } else {
+
+                        // inOut == 0 / busa nie ma na przystanku
+
                         console.log('out ' + stopNumber);
                         $(bs).off('click');
                         $(bs).removeClass('in');
                         $(bs).addClass('out');
                         $(bs).html('OUT '+scope.buses[index].line+' '+scope.buses[index].name);
+                        this.inOut = 0;
                     }
                 }
-                this.inOut = 0;
-                $(bs).off('click');
+
             }
         }
     }
+
+    // budowanie przystanku
 
     var przystanek0 = createStop(0);
     var przystanek1 = createStop(1);
     var przystanek2 = createStop(2);
 
-    var czas0 = randomBetween(2,5) * 1000;
-    var czas1 = randomBetween(2,5) * 1000;
-    var czas2 = randomBetween(2,5) * 1000;
+    // losowanie czasu działania funkcji
+
+    var czas0 = randomBetween(1,4) * 1000;
+    var czas1 = randomBetween(1,4) * 1000;
+    var czas2 = randomBetween(1,4) * 1000;
 
     setInterval(function () {
         przystanek0.stopbus();
