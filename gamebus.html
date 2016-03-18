@@ -15,7 +15,7 @@
     <!--Ekran startowy-->
 
     <div id="ekranStart" class="ekranStart">
-        <h1> A oto nasza niespodzianka:) Zagraj z nami!</h1>
+        <h1> A oto nasza niespodzianka :) Zagraj z nami!</h1>
         <div>
             Poznaj zasady gry:
             <ol>
@@ -32,8 +32,11 @@
 
     <!--Plansza Koniec Gry-->
 
-    <div id="koniecGry" class="hidden">
-        Koniec Gry! </br> Twój wynik: <span></span>
+    <div id="koniecGry" class="ekranStart hidden">
+        <h1>Koniec Gry!</h1>
+        <div class="endScore">
+            Twój wynik: <span id="pkt"></span>
+        </div>
         <button type="button" id="przyciskOk" class="przyciskGra">OK</button>
     </div>
 
@@ -41,10 +44,18 @@
 
     <div id="przystanki" class="hidden">
         <div class="przystanki">
-            <div id="busstop0" class="przystanek"><span class="line"></span> <span class="name"></span></div>
-            <div id="busstop1" class="przystanek"><span class="line"></span> <span class="name"></span></div>
-            <div id="busstop2" class="przystanek"><span class="line"></span> <span class="name"></span></div>
-        </div>
+            <div id="busstop0" class="przystanek">
+                <div class="liner"></div>
+                <div class="namer"></div>
+            </div>
+            <div id="busstop1" class="przystanek">
+                <div class="liner"></div>
+                <div class="namer"></div>
+            </div>
+            <div id="busstop2" class="przystanek">
+                <div class="liner"></div>
+                <div class="namer"></div>
+            </div>
     </div>
 
     <!--Wyświetlanie Licznika-->

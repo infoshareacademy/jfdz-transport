@@ -16,8 +16,6 @@ $(document).ready(function () {
     var bs2 = $('#busstop2');
     var bs3 = $('#busstop3');
 
-
-
     var losStop = Math.round(Math.random() * 2);
     var czas = Math.round(Math.random() * 10);
     var pkt = 0;
@@ -46,7 +44,11 @@ $(document).ready(function () {
         } else {
             clearInterval(gameTime);
             $('.przystanek').off('click');
-            $('#punkty').html('Koniec! - Zdobyłeś punktów: ' + pkt);
+            $('#punkty').html(pkt);
+            $('#koniecGry').removeClass('hidden');
+            $('#easterEgg').addClass('bgStart');
+            $('#pkt').html(pkt);
+            $('#przystanki').addClass('out');
         }
     }
 
@@ -56,7 +58,7 @@ $(document).ready(function () {
             buses: [
                 {line: '10', value: -10, name: 'GDYNIA'},
                 {line: '20', value: -10, name: 'SOPOT'},
-                {line: '15', value: -10, name: 'SLUPSK'},
+                {line: '15', value: -5, name: 'SLUPSK'},
                 {line: '05', value: -10, name: 'KOSCIERZYNA'},
                 {line: '04', value:  1, name: 'OBC4'}
             ],
@@ -64,8 +66,7 @@ $(document).ready(function () {
             inOut: 1,
             stopbus: function () {
                 var scope = this;
-                sb = this.stop;
-                bs = '#busstop' + sb;
+                bs = '#busstop' + this.stop;
                 line = '.line';
                 name = '.name';
                 var $doorLeft = $('<div>').addClass('doorLeft');
@@ -87,9 +88,10 @@ $(document).ready(function () {
 
 
                         var index = randomBetween(1, 5) - 1;
-                        var bus = scope.buses[index]; // losowanie przystanku 0,1,2
+                        var bus = scope.buses[index]; // losowanie autobusus
 
-                        $(bs).html('IN '+scope.buses[index].line+' '+scope.buses[index].name);
+                        $(bs+' '+namer).html(scope.buses[index].name);
+                        $(bs+' '+liner).html(scope.buses[index].line);
 
                         $(bs).append($doorLeft).append($doorRight).append($afterOpeningDoor);
                         openDoors($doorLeft,$doorRight);
@@ -105,8 +107,8 @@ $(document).ready(function () {
                                 $('#punkty').html(pkt);
                             //}
                         });
-                        scope.inOut = 0;
 
+                        scope.inOut = 0;
 
                     } else {
 
@@ -121,9 +123,6 @@ $(document).ready(function () {
                         scope.inOut = 1;
                     }
                 }
-            },
-            reset: function() {
-
             }
         }
     }
@@ -136,9 +135,9 @@ $(document).ready(function () {
 
     // losowanie czasu działania funkcji
 
-    var czas0 = randomBetween(1,4) * 1000;
-    var czas1 = randomBetween(1,4) * 1000;
-    var czas2 = randomBetween(1,4) * 1000;
+    var czas0 = randomBetween(1,3) * 1000;
+    var czas1 = randomBetween(1,3) * 1000;
+    var czas2 = randomBetween(1,3) * 1000;
 
     setInterval(function () {
         przystanek0.stopbus();
