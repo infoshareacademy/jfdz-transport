@@ -18,6 +18,7 @@ $(document).ready(function () {
 
     var $doorLeft = $('<div>').addClass('doorLeft');
     var $doorRight = $('<div>').addClass('doorRight');
+    var $afterOpeningDoor = $('<div>').addClass('doorOpen')
 
     var losStop = Math.round(Math.random() * 2);
     var czas = Math.round(Math.random() * 10);
@@ -80,23 +81,29 @@ $(document).ready(function () {
 
                         console.log('in ' + stopNumber);
                         $(bs).removeClass('out');
+                        $(bs).children('div').remove();
                         $(bs).addClass('in');
+
                         var index = randomBetween(1, 5) - 1;
                         var bus = scope.buses[index]; // losowanie przystanku 0,1,2
 
                         $(bs).html('IN '+scope.buses[index].line+' '+scope.buses[index].name);
-                        $(bs).append($doorLeft).append($doorRight);
+                        $(bs).append($doorLeft).append($doorRight).append($afterOpeningDoor);
+
                         openDoors($doorLeft,$doorRight);
                         setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 500);
+                        console.log( $(bs).children().eq(2));
 
 
-
-                        $(bs).on('click', function () {
+                        //$afterOpeningDoor.on('click', function () {
+                        $(bs).children().eq(2).on('click', function () {
                             // bus.bus1
                             console.debug('---- value', scope.buses[index].value);
                             console.debug('---- in', scope.inOut);
-                            pkt = pkt + scope.buses[index].value;
-                            $('#punkty').html(pkt);
+
+                                pkt = pkt + scope.buses[index].value;
+                                $('#punkty').html(pkt);
+                            //}
                         });
                         scope.inOut = 0;
 
@@ -105,7 +112,9 @@ $(document).ready(function () {
                         // inOut == 0 / busa nie ma na przystanku
 
                         console.log('out ' + stopNumber);
-                        $(bs).off('click');
+                        $(bs).children('div').remove();
+                        $(bs).children().eq(2).off('click');
+
                         $(bs).removeClass('in');
                         $(bs).addClass('out');
                         scope.inOut = 1;
