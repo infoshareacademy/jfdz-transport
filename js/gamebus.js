@@ -32,7 +32,11 @@ $(document).ready(function () {
         } else {
             clearInterval(gameTime);
             $('.przystanek').off('click');
-            $('#punkty').html('Koniec! Punktów: ' + pkt);
+            $('#punkty').html(pkt);
+            $('#koniecGry').removeClass('hidden');
+            $('#easterEgg').addClass('bgStart');
+            $('#pkt').html(pkt);
+            $('#przystanki').addClass('out');
         }
     }
 
@@ -42,7 +46,7 @@ $(document).ready(function () {
             buses: [
                 {line: '10', value: -10, name: 'GDYNIA'},
                 {line: '20', value: -10, name: 'SOPOT'},
-                {line: '15', value: -10, name: 'SLUPSK'},
+                {line: '15', value: -5, name: 'SLUPSK'},
                 {line: '05', value: -10, name: 'KOSCIERZYNA'},
                 {line: '04', value:  1, name: 'OBC4'}
             ],

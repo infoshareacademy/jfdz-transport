@@ -1,12 +1,23 @@
 *
   box-sizing: border-box
 
-@import url(https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here&subset=latin,latin-ext)
+@import url(https://fonts.googleapis.com/css?family=Caveat:400,700&subset=latin,latin-ext)
 @import url(https://fonts.googleapis.com/css?family=Orbitron)
 
-$font-header: 'Just Me Again Down Here', cursive
+$font-header: 'Caveat', cursive
 $font-digital: 'Orbitron', sans-serif
 $shadow: 3px 3px 3px rgba(0, 0, 0, 0.3)
+
+@mixin linearGradient($top, $bottom)
+  background: $top /* Old browsers */
+  background: -moz-linear-gradient(top,  $top 0%, $bottom 100%) /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)) /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%) /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $top 0%,$bottom 100%) /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $top 0%,$bottom 100%) /* IE10+ */
+  background: linear-gradient(to bottom,  $top 0%,$bottom 100%) /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ) /* IE6-9 */
+
 
 body
   font-family: "Trebuchet MS", sans-serif
@@ -73,29 +84,38 @@ h2
     padding: 50px
     z-index: 1000
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2)
+    @include linearGradient(#3095d3,darken(#3095d3,30%))
 
     h1
       text-align: center
-      font-size: 3em
+      font-size: 5em
+      margin: 10px
+      line-height: 1em
 
     .przyciskGra
-      height: 50px
-      width: 80%
+      font-family: $font-digital
+      font-size: 2em
+      width: 60%
       background-color: lightgray
+      @include linearGradient(#D3D3D3,darken(#D3D3D3,30%))
       border-radius: 90px
       border: 3px solid #282828
       display: inline-block
       cursor: pointer
       color: #282828
-      font-size: 20px
       font-weight: bold
-      padding: 12px 16px
+      padding: 10px
       margin: 20px
       text-decoration: none
       text-align: center
       box-shadow: $shadow
       &:hover
-        background-color: lightgray
+        background-color: #ff0
+        @include linearGradient(#ff0,darken(#ff0,30%))
+
+    .endScore
+      font-size: 2em
+      padding: 10px
 
   // Przystanki
 
@@ -156,23 +176,7 @@ h2
   cursor: pointer
   margin-right: 10%
 
-#przyciskOk
-  position: absolute
-  top: 130px
-  left: 50%
-  margin-left: -70px
-  height: 50px
-  width: 135px
-  padding: 10px
-  cursor: pointer
-  border: 3px solid white
-  color: white
-  background-color: lightgray
-  border-radius: 90px
-  display: inline-block
-  font-size: 20px
-  font-weight: bold
-  text-decoration: none
+
 
 #okButton:hover
   background-color: darkgray
