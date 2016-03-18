@@ -32,13 +32,10 @@ h2
 div
   border: 1px solid red
 
-.hidden
-  display: none
-
 .bgStart
   background:
     color: rgba(0,0,0,0.8)
-  z-index: 5
+  z-index: 100
 
 .easterEgg
   display: flex
@@ -48,6 +45,15 @@ div
   margin: 0 auto
   width: 100%
   height: 100%
+
+  .licznik
+    position: absolute
+    left: 0
+    top: 0
+    font-size: 5em
+    padding: 30px
+
+  //Ekran Start
 
   .ekranStart
     position: relative
@@ -85,6 +91,27 @@ div
       &:hover
         background-color: lightgray
 
+  // Przystanki
+
+  .przystanki
+    position: relative
+    bottom: 0
+    width: 100%
+    height: 33%
+    display: flex
+    justify-content: space-around
+    align-content: center
+    align-items: center
+
+    .przystanek
+      width: 30vw
+      height: 150px
+      margin-left: auto
+      margin-right: auto
+      border: 1px solid #99CDD0
+      text-align: center
+      position: fixed
+
 .punkty
   padding: 30px
   position: absolute
@@ -92,12 +119,7 @@ div
   top: 0
   font-size: 5em
 
-.czas
-  padding: 30px
-  position: absolute
-  left: 0
-  top: 0
-  font-size: 5em
+
 
   .endButton
     width: 50px
@@ -158,28 +180,6 @@ div
 
 
 
-.przystanki
-  position: absolute
-  bottom: 0
-  width: 100%
-  height: 33%
-  display: flex
-  justify-content: space-around
-  align-content: center
-  align-items: center
-
-.przystanek
-  flex-basis: auto
-  width: 30vw
-  height: 150px
-  margin-left: auto
-  margin-right: auto
-  border: 1px solid #99CDD0
-  text-align: center
-  background-color: #99CDD0
-  height: 100%
-  position: fixed
-
 .autobus
   width: 300px
   height: 100px
@@ -209,7 +209,6 @@ div
     image: url(../images/autobus2.png)
     repeat: no-repeat
   background-size: contain
-  transform: translateX(-5em)
   opacity: 1
   transition: all 1s
 
@@ -219,11 +218,7 @@ div
   background:
     image: url(../images/autobus2.png)
     repeat: no-repeat
-
-  background-size: contain
-  transform: translateX(5em)
     size: contain
-    position: center center
   opacity: 0
   transition: all 1s
 
@@ -231,3 +226,7 @@ div
   background:
     color: #9a0700
     opacity: .6
+
+
+.hidden
+  display: none

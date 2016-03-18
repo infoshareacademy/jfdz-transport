@@ -12,6 +12,8 @@
 
     <div id="koniec">x</div>
 
+    <!--Ekran startowy-->
+
     <div id="ekranStart" class="ekranStart">
         <h1> A oto nasza niespodzianka:) Zagraj z nami!</h1>
         <div>
@@ -25,30 +27,32 @@
         <button type="button" id="startGra" class="przyciskGra">Gram!</button>
     </div>
 
+    <!--Plansza Koniec Gry-->
+
     <div id="koniecGry" class="hidden">
         Koniec Gry! </br> Twój wynik: <span></span>
         <button type="button" id="przyciskOk" class="przyciskGra">OK</button>
     </div>
 
-
+    <!--Wyświetlanie Przystanków-->
 
     <div id="przystanki" class="hidden">
-        <div id="busstop0" class="przystanek"> <h1>Przystanek 0</h1>
-        </div>
-        <div id="busstop1" class="przystanek"> <h1>Przystanek 1</h1>
-        </div>
-        <div id="busstop2" class="przystanek"> <h1>Przystanek 2</h1>
+        <div class="przystanki">
+            <div id="busstop0" class="przystanek"></div>
+            <div id="busstop1" class="przystanek"></div>
+            <div id="busstop2" class="przystanek"></div>
         </div>
     </div>
 
+    <!--Wyświetlanie Licznika-->
 
-    <div id="licznikGra" class="hidden">
+    <div id="licznikGra" class="licznik hidden">
         Czas: <span>20</span>
     </div>
 
 </div>
 
-    <script src="http://code.jquery.com/jquery-2.2.0.js"></script>
-    <script src="js/gamebus.js"></script>
+<script src="http://code.jquery.com/jquery-2.2.0.js"></script>
+<script src="js/gamebus.js"></script>
 </body>
 </html>

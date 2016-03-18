@@ -36,8 +36,6 @@ $(document).ready(function () {
         }
     }
 
-
-
     function createStop(stopNumber) {
         return {
             stop: stopNumber,
