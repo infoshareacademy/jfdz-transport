@@ -72,10 +72,11 @@ $(document).ready(function () {
                         $(bs).on('click', function () {
                             // bus.bus1
                             console.debug('---- value', scope.buses[index].value);
+                            console.debug('---- in', scope.inOut);
                             pkt = pkt + scope.buses[index].value;
                             $('#punkty').html(pkt);
                         });
-                        this.inOut = 0;
+                        scope.inOut = 0;
 
                     } else {
 
@@ -86,7 +87,7 @@ $(document).ready(function () {
                         $(bs).removeClass('in');
                         $(bs).addClass('out');
                         $(bs).html('OUT '+scope.buses[index].line+' '+scope.buses[index].name);
-                        this.inOut = 0;
+                        scope.inOut = 0;
                     }
                 }
 
