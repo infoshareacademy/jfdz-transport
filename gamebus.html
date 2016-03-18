@@ -6,23 +6,45 @@
     <link rel="stylesheet" href="css/gamebus.css">
 </head>
 <body>
+<div class="feature1">KILKANIE</div>
+<div id="easterEgg" class="plansza hidden">
 
+    <div id="koniecGry" class="hidden">
+        Koniec Gry! </br> Twój wynik: <span></span>
+        <button type="button" id="przyciskOk" class="przyciskGra">OK</button>
+    </div>
+    <div id="koniec">x</div>
 
-<div id="plansza" class="plansza">
+    <div id="przystanki" class="hidden">
+        <div id="busstop0" class="przystanek"> <h1>Przystanek 0</h1>
+        </div>
+        <div id="busstop1" class="przystanek"> <h1>Przystanek 1</h1>
+        </div>
+        <div id="busstop2" class="przystanek"> <h1>Przystanek 2</h1>
+        </div>
+    </div>
 
-    <div id="czas" class="czas"></div>
-
-    <div id="punkty" class="punkty"></div>
-
-    <div class="przystanki">
-        <div id="busstop0" class="przystanek"> </div>
-        <div id="busstop1" class="przystanek"> </div>
-        <div  id="busstop2" class="przystanek"> </div>
+    <div id="ekranStart">
+        <div id="koniec2">x</div>
+        <h1> A oto nasz niespodzianka:)<br><br>
+            Zagraj z nami!</h1> <br> <br>
+        <p>
+            Poznaj zasady gry:bla bl abl abla bla bla
+            Bla bla bla bla <br>
+            Bla bla bla bla <br>
+            Bla bla bla bla <br>
+            Bla bla bla bla <br>
+            Bla bla bla bla <br>
+        </p>
+        <button type="button" id="startGra" class="przyciskGra">Gram!</button>
+    </div>
+    <div id="licznikGra" class="hidden">
+        Czas: <span>20</span>
     </div>
 
 </div>
 
-<script src="http://code.jquery.com/jquery-2.2.0.js"></script>
-<script src="js/gamebus.js"></script>
+    <script src="http://code.jquery.com/jquery-2.2.0.js"></script>
+    <script src="js/gamebus.js"></script>
 </body>
 </html>

@@ -72,7 +72,7 @@ h4 {
 
 .naglowek-strony-bez-tla {
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   top: 0;
   width: 100%;
   height: 80px;
@@ -83,7 +83,7 @@ h4 {
 .naglowek-strony {
   /*display: none;*/
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   top: 0;
   width: 100%;
   height: 80px;
@@ -244,14 +244,14 @@ h4 {
   background-image: url("../images/feature-woman-600.jpg"); }
 
 .feature .feature-image-1 {
-  transform: translate(-400px, 0px); }
+  transform: translate(-600px, 0px); }
 
 .feature-image-2 {
   position: relative;
   z-index: 3; }
 
 .feature .feature-image-3 {
-  transform: translate(400px, 0px); }
+  transform: translate(0px, 0px); }
 
 .feature p {
   padding-left: 10px;

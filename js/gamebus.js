@@ -4,6 +4,13 @@ function randomBetween(min, max){
 
 $(document).ready(function () {
 
+    $('#startGra').on('click', function () {
+        $('.plansza').removeClass('hidden');
+        $('#ekranStart').addClass('hidden');
+        $('#easterEgg').removeClass('hidden');
+        $('#licznikGra').removeClass('hidden');
+        $('#przystanki').removeClass('hidden');
+
     var bs1 = $('#busstop1');
     var bs2 = $('#busstop2');
     var bs3 = $('#busstop3');
@@ -13,7 +20,7 @@ $(document).ready(function () {
     var pkt = 0;
     var czasgry = 20;
 
-    setInterval(function() {
+    setInterval(function () {
         gameTime()
     }, 1000);
 
@@ -27,6 +34,8 @@ $(document).ready(function () {
             $('#punkty').html('Koniec! - Zdobyłeś punktów: ' + pkt);
         }
     }
+
+
 
     function createStop(stopNumber) {
         return {
@@ -48,17 +57,17 @@ $(document).ready(function () {
                         console.log('in ' + stopNumber);
                         $(bs).removeClass('out');
                         $(bs).addClass('in');
-                        var index = randomBetween(1,3) - 1;
+                        var index = randomBetween(1, 3) - 1;
                         var bus = scope.buses[index];
 
-                        if (index == 2){
+                        if (index == 2) {
                             $(bs).addClass('obc');
                         } else {
                             $(bs).removeClass('obc');
                         }
 
 
-                        $(bs).click(function() {
+                        $(bs).click(function () {
                             // bus.bus1
                             console.debug('---- value', scope.buses[index].value);
                             pkt = pkt + scope.buses[index].value;
@@ -83,19 +92,118 @@ $(document).ready(function () {
     var czas1 = randomBetween(2,7) * 1000;
     var czas2 = randomBetween(2,7) * 1000;
 
-    setInterval(function() {
+    setInterval(function () {
         przystanek0.stopbus();
     }, czas0);
 
-    setInterval(function() {
+    setInterval(function () {
         przystanek1.stopbus();
     }, czas1);
 
-    setInterval(function() {
+    setInterval(function () {
         przystanek2.stopbus();
     }, czas2);
+    });
 
+    $('.feature-image-3').on('click', function () {
+        $('#easterEgg').removeClass('hidden');
+        $('#koniec').removeClass('hidden');
+        $('#ekranStart').removeClass('hidden');
+    });
 
+    $('#startGra').on('click', function () {
+        $('.plansza').removeClass('hidden');
+        $('#ekranStart').addClass('hidden');
+        $('#easterEgg').removeClass('hidden');
+        $('#licznikGra').removeClass('hidden');
+        $('#przystanki').removeClass('hidden');
+       });
+
+    $('#koniec, #koniec2, #przyciskOk').on('click', function () {
+        $('#easterEgg').addClass('hidden');
+        $('#przyciskOk').addClass('hidden');
+        $('#koniecGry').addClass('hidden');
+    });
+
+    //setInterval(function odliczanie() {
+    //
+    //    if (czas > 0) {
+    //        czas--;
+    //        console.log(czas);
+    //    } else {
+    //        $('.przystanek').off('click');
+    //        $('#punkty').html('Koniec! - Zdobyłeś punktów: ' + pkt);
+    //    }
+    //    return;
+    //}, 1000);
+    //
+    //var runda = 1;
+    //for (; runda <4; i++ ) {
+    //
+    //
+    //$('#runda').html('Runda: '+runda);
+    //
+    //
+    //if (losPrzystanku == 0) {
+    //    bs1.addClass('aktywny');
+    //    $('#busstop1 h2').html('Przyjechał autobus, kliknij i załaduj pasażerów ;)')
+    //    $('.aktywny').click(function () {
+    //        pkt++;
+    //        $('#busstop1 h2').html('Pasażerowie: ' + pkt);
+    //        return;
+    //    });
+    //
+    //    bs2.click(function () {
+    //        $(this).html('Auu! nie ten autobus - straciłeś -10 pkt!');
+    //        pkt = pkt - 10;
+    //    });
+    //    bs3.click(function () {
+    //        $(this).html('Auu! nie ten autobus - straciłeś -10 pkt!');
+    //        pkt = pkt - 10;
+    //    });
+    //
+    //
+    //} else if (losPrzystanku == 1) {
+    //
+    //    bs2.addClass('aktywny');
+    //    $('#busstop2 h2').html('Przyjechał autobus, kliknij i załaduj pasażerów ;)')
+    //    $('.aktywny').click(function () {
+    //        pkt++;
+    //        $('#busstop2 h2').html('Pasażerowie: ' + pkt);
+    //        return;
+    //    });
+    //
+    //    bs1.click(function () {
+    //        $(this).html('Auu! nie ten autobus - straciłeś -10 pkt!');
+    //        pkt = pkt - 10;
+    //    });
+    //    bs3.click(function () {
+    //        $(this).html('Auu! nie ten autobus - straciłeś -10 pkt!');
+    //        pkt = pkt - 10;
+    //    });
+    //
+    //} else {
+    //
+    //    bs3.addClass('aktywny');
+    //    $('#busstop3 h2').html('Przyjechał autobus, kliknij i załaduj pasażerów ;)')
+    //    $('.aktywny').click(function () {
+    //        pkt++;
+    //        $('#busstop3 h2').html('Pasażerowie: ' + pkt);
+    //        return;
+    //    });
+    //
+    //    bs1.click(function () {
+    //        $(this).html('Auu! nie ten autobus - straciłeś -10 pkt!');
+    //        pkt = pkt - 10;
+    //    });
+    //    bs2.click(function () {
+    //        $(this).html('Auu! nie ten autobus - straciłeś -10 pkt!');
+    //        pkt = pkt - 10;
+    //    });
+    //
+    //}
+
+    //}
 
 });
 
