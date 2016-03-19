@@ -26,7 +26,7 @@
   *zoom: 1; }
 
 body {
-  color: #B30800;
+  color: #b30800;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 20px;
@@ -140,6 +140,9 @@ h4 {
 .naglowek-strony .menu-glowne li a:hover {
   color: #f02541; }
 
+#menu-active .menu-glowne .active {
+  color: #222222; }
+
 .naglowek-strony .menu-glowne li a {
   color: #A20700;
   font-size: 26px;
@@ -155,8 +158,8 @@ h4 {
   background-attachment: fixed;
   background-size: cover;
   background-attachment: fixed;
-  border-bottom: 10px solid #B30800;
-  background-color: #B30800;
+  border-bottom: 10px solid #b30800;
+  background-color: #b30800;
   margin-top: 0;
   animation-name: slides;
   animation-duration: 10s;
@@ -165,12 +168,16 @@ h4 {
 @keyframes slides {
   25% {
     background-image: url("../images/public-transport-1920-03r.jpg"); }
+
   50% {
     background-image: url("../images/public-transport-1920-01r.jpg"); }
+
   75% {
     background-image: url("../images/public-transport-1920-02r.jpg"); }
+
   0% {
     background-image: url("../images/public-transport-1920-04r.jpg"); } }
+
 .welcome img {
   height: 250px;
   width: 250px;
@@ -195,7 +202,7 @@ h4 {
 /*style features*/
 .features-container {
   background-color: white;
-  color: #B30800;
+  color: #b30800;
   letter-spacing: normal;
   text-align: center;
   margin: 25px auto;
@@ -209,14 +216,14 @@ h4 {
 .feature a {
   display: block;
   text-decoration: none;
-  color: #B30800; }
+  color: #b30800; }
 
 .feature .feature-image {
   height: 250px;
   width: 250px;
   margin: 5px auto;
-  border: 5px solid #B30800;
-  background-color: #B30800;
+  border: 5px solid #b30800;
+  background-color: #b30800;
   border-radius: 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -240,6 +247,16 @@ h4 {
 .feature-image-3 {
   background-image: url("../images/feature-woman-600.jpg"); }
 
+.feature .feature-image-1 {
+  transform: translate(-600px, 0px); }
+
+.feature-image-2 {
+  position: relative;
+  z-index: 3; }
+
+.feature .feature-image-3 {
+  transform: translate(600px, 0px); }
+
 .feature p {
   padding-left: 10px;
   padding-right: 10px; }
@@ -257,13 +274,17 @@ h4 {
   margin-right: 10px;
   text-align: center;
   padding: 10px;
-  font-size: 60px;
-  height: 70px;
-  width: 70px;
-  background-color: #B30800;
+  font-size: 80px;
+  height: 90px;
+  width: 90px;
+  background-color: #b30800;
   border-radius: 50%;
   color: white;
   transition: 1s; }
+
+.small-icons {
+  transform: rotate(360deg), translate -300px, 0px;
+  background-color: #9a0700; }
 
 .small-icons:hover {
   transition: 1s;
@@ -271,7 +292,7 @@ h4 {
   background-color: #9a0700; }
 
 .formularz {
-  background-color: #B30800;
+  background-color: #b30800;
   background-image: url("../images/public-transport-1920-02r.jpg");
   background-attachment: fixed;
   background-position: center center;
@@ -290,12 +311,12 @@ h4 {
     padding: 10px;
     border-radius: 5px;
     font-size: 1em;
-    color: #B30800;
+    color: #b30800;
     margin: 10px;
     background-color: white;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
   .formularz button:hover {
-    background-color: #B30800;
+    background-color: #b30800;
     color: #fff;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
     transition: 1s; }
@@ -322,7 +343,7 @@ h4 {
 
 .onas-container {
   background-color: white;
-  color: #B30800;
+  color: #b30800;
   letter-spacing: normal;
   text-align: center;
   margin: 25px auto;
@@ -476,8 +497,8 @@ figure.onas.hover:before {
   margin: auto;
   text-align: center;
   padding: 20px;
-  background-color: #B30800;
-  background: linear-gradient(180deg, #B30800, #800600);
+  background-color: #b30800;
+  background: linear-gradient(180deg, #b30800, #800600);
   color: floralwhite;
   border-top: 2px solid floralwhite; }
 
@@ -521,5 +542,3 @@ figure.onas.hover:before {
   padding: 15px;
   text-align: center;
   font-size: 0.8em; }
-
-/*# sourceMappingURL=styles.css.map */

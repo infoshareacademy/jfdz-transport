@@ -4,16 +4,15 @@ $(window).scroll(function(){
 
     if (wScroll > 100) {
         $('.wel').css({
-            'transform' : 'translate(0px, 300px)',
-            'transition' : 'all 2s'
+            'transform' : 'translate(0px, 100px)',
+            'transition' : 'all 2s ease-out'
         });
     } else {
         $('.wel').css({
             'transform' : 'translate(0px, 0px)',
-            'transition' : 'all 2s'
+            'transition' : 'all 2s ease-out'
         });
     }
-
 
 });
 
@@ -64,8 +63,10 @@ $(document).ready(function(){
     $(window).scroll(function() {
         if($(this).scrollTop()> 50){
             $('header').addClass('naglowek-strony');
+            $('.menu-glowne li').css({'margin-left': '10px', 'transition':'0.3s'});
         } else {
             $('header').removeClass('naglowek-strony');
+            $('.menu-glowne li').css({'margin-left': '50px','transition':'0.3s'});
         }
     })
 
