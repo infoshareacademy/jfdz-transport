@@ -77,6 +77,7 @@ $(document).ready(function () {
                 timedoors = 'czas'+ this.stop;
                 liner = '.liner';
                 namer = '.namer';
+
                 var $doorLeft = $('<div>').addClass('doorLeft');
                 var $doorRight = $('<div>').addClass('doorRight');
                 var $afterOpeningDoor = $('<div>').addClass('doorOpen');
