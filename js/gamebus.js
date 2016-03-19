@@ -12,9 +12,9 @@ $(document).ready(function () {
         $('#licznikGra').removeClass('hidden');
         $('#przystanki').removeClass('hidden');
 
-    var bs1 = $('#busstop1');
-    var bs2 = $('#busstop2');
-    var bs3 = $('#busstop3');
+    //var bs1 = $('#busstop1');
+    //var bs2 = $('#busstop2');
+    //var bs3 = $('#busstop3');
 
     var losStop = Math.round(Math.random() * 2);
     var czas = Math.round(Math.random() * 10);
@@ -52,6 +52,12 @@ $(document).ready(function () {
         }
     }
 
+        // losowanie czasu działania funkcji
+
+        var czas0 = randomBetween(2,4) * 1000;
+        var czas1 = randomBetween(2,4) * 1000;
+        var czas2 = randomBetween(2,4) * 1000;
+
     function createStop(stopNumber) {
         return {
             stop: stopNumber,
@@ -65,8 +71,10 @@ $(document).ready(function () {
 
             inOut: 1,
             stopbus: function () {
+
                 var scope = this;
                 bs = '#busstop' + this.stop;
+                timedoors = 'czas'+ this.stop;
                 liner = '.liner';
                 namer = '.namer';
                 var $doorLeft = $('<div>').addClass('doorLeft');
@@ -80,6 +88,8 @@ $(document).ready(function () {
                     if (this.inOut == 1) {
 
                         // bus jest na przystanku
+
+
 
                         console.log('in ' + stopNumber);
                         $(bs).removeClass('out');
@@ -95,7 +105,7 @@ $(document).ready(function () {
 
                         $(bs).append($doorLeft).append($doorRight).append($afterOpeningDoor);
                         openDoors($doorLeft,$doorRight);
-                        setTimeout(function(){closeDoors($doorLeft, $doorRight)}, 500);
+                        setTimeout(function(){closeDoors($doorLeft, $doorRight)},3000);
 
                         //$afterOpeningDoor.on('click', function () {
                         $(bs).children().eq(2).on('click', function () {
@@ -133,11 +143,7 @@ $(document).ready(function () {
     var przystanek1 = createStop(1);
     var przystanek2 = createStop(2);
 
-    // losowanie czasu działania funkcji
 
-    var czas0 = randomBetween(1,3) * 1000;
-    var czas1 = randomBetween(1,3) * 1000;
-    var czas2 = randomBetween(1,3) * 1000;
 
     setInterval(function () {
         przystanek0.stopbus();
