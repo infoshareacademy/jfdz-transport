@@ -23,13 +23,13 @@ $(document).ready(function () {
 
 
         function openDoors(doorLeft, doorRight) {
-            doorLeft.animate({left: 80 }, 500, 'linear');
-            doorRight.animate({left: 140}, 500, 'linear');
+            doorLeft.animate({left: -40 }, 500, 'linear');
+            doorRight.animate({left: 80}, 500, 'linear');
         }
 
         function closeDoors (doorLeft, doorRight) {
-            doorLeft.animate({ left: 100}, 500, 'linear');
-            doorRight.animate({ left: 120 }, 500, 'linear');
+            doorLeft.animate({ left: 0}, 500, 'linear');
+            doorRight.animate({ left: 40 }, 500, 'linear');
         }
 
 
@@ -78,9 +78,9 @@ $(document).ready(function () {
                 liner = '.liner';
                 namer = '.namer';
 
+                var $afterOpeningDoor = $('<div>').addClass('doorOpen');
                 var $doorLeft = $('<div>').addClass('doorLeft');
                 var $doorRight = $('<div>').addClass('doorRight');
-                var $afterOpeningDoor = $('<div>').addClass('doorOpen');
 
                 // losuje czy bus jest na przystanku 1 IN jest 0 OUT nie ma
                 //this.inOut = Math.round(Math.random() * 1);
@@ -94,22 +94,26 @@ $(document).ready(function () {
 
                         console.log('in ' + stopNumber);
                         $(bs).removeClass('out');
-                        $(bs).children('div').remove();
+                        $(bs).children('div .doorLeft').remove();
+                        $(bs).children('div .doorRight').remove();
+                        $(bs).children('div .doorOpen').remove();
                         $(bs).addClass('in');
 
 
                         var index = randomBetween(1, 5) - 1;
                         var bus = scope.buses[index]; // losowanie autobusus
 
-                        $(bs+' '+namer).html(scope.buses[index].name);
-                        $(bs+' '+liner).html(scope.buses[index].line);
-
-                        $(bs).append($doorLeft).append($doorRight).append($afterOpeningDoor);
+                        $afterOpeningDoor.append($doorLeft).append($doorRight);
+                        $(bs).append($afterOpeningDoor);
                         openDoors($doorLeft,$doorRight);
                         setTimeout(function(){closeDoors($doorLeft, $doorRight)},3000);
 
-                        //$afterOpeningDoor.on('click', function () {
-                        $(bs).children().eq(2).on('click', function () {
+                        $(bs+' '+namer).html(scope.buses[index].name);
+                        $(bs+' '+liner).html(scope.buses[index].line);
+
+
+
+                        $afterOpeningDoor.on('click', function () {
                             // bus.bus1
                             console.debug('---- value', scope.buses[index].value);
                             console.debug('---- in', scope.inOut);
@@ -126,7 +130,9 @@ $(document).ready(function () {
                         // inOut == 0 / busa nie ma na przystanku
 
                         console.log('out ' + stopNumber);
-                        $(bs).children('div').remove();
+                        $(bs).children('div .doorLeft').remove();
+                        $(bs).children('div .doorRight').remove();
+                        $(bs).children('div .doorOpen').remove();
                         $(bs).children().eq(2).off('click');
 
                         $(bs).removeClass('in');
