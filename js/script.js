@@ -90,7 +90,7 @@ $(document).ready(function(){
         $target = $(target);
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top+2
-        }, 600, 'swing', function () {
+        }, 400, 'swing', function () {
             window.location.hash = target;
             $(document).on("scroll", onScroll);
         });
@@ -111,3 +111,34 @@ $(document).ready(function(){
         });
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
