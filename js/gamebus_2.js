@@ -34,20 +34,27 @@ $(document).ready(function() {
     }
 
     function startGame(initialState) {
+        displayClock($clock, state);
+
+
         var clockIntervalId = setInterval(function () {
             state.time -= 1;
+            if (state.time === 0) {
+                $('.bus1, .bus2, .bus3').remove();
+            }
             displayClock($clock, state);
         }, 1000);
         setTimeout(function () {
             clearInterval(clockIntervalId);
         }, state.time * 1000);
 
-        $startButton.click(function(){
-            state.time = 26;
-        });
+
         $stopButtom.click(function(){
             clearInterval(clockIntervalId);
+            state.time = 25;
+            $('.bus1, .bus2, .bus3').remove();
         });
+
     }
 
     var buses = [1, 2, 2, 1, 2, 1, 1, 2];
@@ -71,13 +78,20 @@ $(document).ready(function() {
 
     console.log(buses1);
 
-    $startButton.click(function(){
+    var clickHandler = function(){
         buses1.length = 0;
         getBuses(buses);
         state.score = 0;
         $('#points').html("Punkty: " + state.score);
         start(state);
+        state.time = 25;
         startGame(state);
+        $startButton.off();
+    };
+    $startButton.click(clickHandler);
+
+    $stopButtom.click(function(){
+        $startButton.click(clickHandler);
     });
 
     displayClock($clock, state);
