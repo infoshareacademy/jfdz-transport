@@ -1,74 +1,290 @@
-body
-  font-family: "Trebuchet MS", Arial, Serif, sans-serif
-  font-size: 15px
+*
+  box-sizing: border-box
 
+@import url(https://fonts.googleapis.com/css?family=Caveat:400,700&subset=latin,latin-ext)
+@import url(https://fonts.googleapis.com/css?family=Orbitron)
+
+$font-header: 'Caveat', cursive
+$font-digital: 'Orbitron', sans-serif
+$shadow: 3px 3px 3px rgba(0, 0, 0, 0.3)
+
+@mixin linearGradient($top, $bottom)
+  background: $top /* Old browsers */
+  background: -moz-linear-gradient(top,  $top 0%, $bottom 100%) /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)) /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%) /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $top 0%,$bottom 100%) /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $top 0%,$bottom 100%) /* IE10+ */
+  background: linear-gradient(to bottom,  $top 0%,$bottom 100%) /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ) /* IE6-9 */
+
+body
+  font-family: "Trebuchet MS", sans-serif
+  font-size: 15px
+  width: 100vw
+  height: 100vh
+  border: 1px solid lightsalmon
+  margin: 0
+  padding: 0
+  position: relative
+  background:
+    color: #fefefe
+    image: url(../images/plansza.png)
+    position: center center
+    size: cover
+    repeat: no-repeat
+    attachment: fixed
 
 h1
   font-size: 20px
+  font-family: $font-header
+
 h2
   font-size: 18px
 
+a, a:hover
+  text-decoration: none
+//div
+  border: 1px solid red
 
+.bgStart
+  background:
+    color: rgba(0, 0, 0, 0.8)
+  z-index: 100
 
-.plansza
-  width: 90%
-  border: 1px solid greenyellow
+.easterEgg
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  margin: 0 auto
+  width: 100%
+  height: 100%
+
+  .licznik
+    position: absolute
+    left: 0
+    top: 0
+    font-size: 5em
+    padding: 30px
+
+    span
+      font-family: $font-digital
+
+  //Ekran Start
+
+  .ekranStart
+    position: relative
+    text-align: center
+    width: 50%
+    //height: 50%
+    margin: 0 auto
+    background-color: #3095d3
+    border: solid 5px #3557a2
+    border-radius: 20px
+    padding: 50px
+    z-index: 1000
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2)
+    @include linearGradient(#3095d3,darken(#3095d3,30%))
+
+    h1
+      text-align: center
+      font-size: 5em
+      margin: 10px
+      line-height: 1em
+    h2
+      font-size: 2em
+
+    ol
+      font-size: 1.5em
+      text-align: left
+      //list-style-type: none
+
+    .przyciskGra
+      font-family: $font-digital
+      font-size: 2em
+      width: 60%
+      background-color: lightgray
+      @include linearGradient(#D3D3D3,darken(#D3D3D3,30%))
+      border-radius: 90px
+      border: 3px solid #282828
+      display: inline-block
+      cursor: pointer
+      color: #282828
+      font-weight: bold
+      padding: 10px
+      margin: 20px
+      text-decoration: none
+      text-align: center
+      box-shadow: $shadow
+      &:hover
+        background-color: #ff0
+        @include linearGradient(#ff0,darken(#ff0,30%))
+
+    .endScore
+      font-size: 2em
+      padding: 10px
+
+  // Przystanki
+
+  .przystanki
+    position: absolute
+    left: 0
+    bottom: 50px
+    width: 100%
+    height: 30%
+    display: flex
+    justify-content: space-around
+    align-content: flex-end
+    align-items: center
+
+    .przystanek
+      width: 30vw
+      height: 150px
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+      font-size: 20px
+      padding: 10px
+
+.punkty
+  padding: 30px
+  position: absolute
+  right: 0
+  top: 0
+  font-size: 5em
+
+  .endButton
+    width: 50px
+    height: 50px
+    line-height: 50px
+    color: black
+    text-align: center
+    background-color: darkgrey
+    font-size: 5em
+    font-weight: bold
+    border-radius: 10px
+    cursor: pointer
+    margin-right: 10%
+
+#koniec
+  position: absolute
+  right: 10px
+  top: 10px
+  width: 50px
+  height: 50px
+  font-size: 4em
+  line-height: 0.5em
+  color: black
   text-align: center
-  background-color: #fefefe
+  background-color: yellow
+  border-radius: 10px
+  font-family: $font-header
+  font-weight: bold
+  cursor: pointer
+  margin-right: 10%
+
+
+
+#okButton:hover
+  background-color: darkgray
 
 .autobus
   width: 300px
   height: 100px
-  border: 1px solid greenyellow
   background:
     image: url(../images/autobus2.png)
     repeat: no-repeat
-    size: 300px 100px
-    position: center center
-
-.przystanek
-  position: relative
-  width: 80%
-  height: 120px
-  display: inline-block
-  padding: 10px
-  margin: 20px
-  text-align: center
-  border-bottom: 3px solid grey
-
-.autobus
-  position: absolute
-  background:
-    image: url(../images/autobus2.png)
-    repeat: no-repeat
-    size: auto 120px
     position: center center
 
   .aktywny
-    transform: translate(5em,0)
-    transition: all 5s
+    transition: all 2s
+
+.in, .out
+  position: relative
+  background:
+    image: url(../images/autobus2.png)
+    repeat: no-repeat
+    size: contain
+  transition: all 1s
+
+  .liner
+    display: inline-block
+    font-size: 1.8em
+    font-family: $font-digital
+    position: absolute
+    padding: 2px 10px
+    border-radius: 2px
+    background: #ff0
+    left: 5vw
+
+  .namer
+    display: inline-block
+    position: absolute
+    right: 5vw
+    padding: 2px 10px
+    border-radius: 2px
+    background: #000000
+    font-family: $font-digital
+    font-size: 0.7em
+    color: #fff
+
 
 .in
-  background:
-    image: url(../images/autobus2.png)
-    repeat: no-repeat
-    size: auto 120px
-    position: center center
-  transform: translateX(-5em)
   opacity: 1
-  transition: all 3s
-
 .out
+  opacity: 0
+
+.hidden
+  display: none
+
+
+.odjazd
   background:
     image: url(../images/autobus2.png)
     repeat: no-repeat
-    size: auto 120px
-    position: center center
-  transform: translateX(5em)
-  opacity: 0
-  transition: all 2s
+    size: contain
+  animation: goBus 2s infinite
 
-.obc
-  background:
-    color: #9a0700
-    opacity: .6
+.hidden
+  display: none
+
+.doors
+  position: relative
+
+  .doorOpen
+    width: 80px
+    height: 120px
+    position: relative
+    top: 0px
+    left: 200px
+    background-color: lighten(black,20%)
+    z-index: 1
+
+    .doorLeft
+      width: 40px
+      height: 120px
+      position: absolute
+      top: 0px
+      left: 0px
+      background:
+        size: contain
+        repeat: no-repeat
+        image: url(../images/drzwi-do-autobusu.png)
+      z-index: 2
+
+    .doorRight
+      width: 40px
+      height: 120px
+      position: absolute
+      top: 0px
+      left: 40px
+      background:
+        size: contain
+        repeat: no-repeat
+        image: url(../images/drzwi-do-autobusu.png)
+      z-index: 2
+
+
+
+

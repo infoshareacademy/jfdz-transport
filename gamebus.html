@@ -7,23 +7,65 @@
 </head>
 <body>
 
-<div id="plansza" class="plansza">
+<!-- Główny ekran -->
+<div id="easterEgg" class="easterEgg bgStart">
 
-    <h1>Przystanek 0</h1>
-    <div id="busstop0" class="przystanek">
+    <div id="koniec"><a href="index.html">x</a></div>
+
+    <!--Ekran startowy-->
+
+    <div id="ekranStart" class="ekranStart">
+        <h1> A oto nasza niespodzianka :) Zagraj z nami!</h1>
+        <div>
+            <h2>Poznaj zasady gry:</h2>
+            <ol>
+                <li>Naciśnij start żeby zacząć</li>
+                <li>Na przystanek w mieście przyjądą autobusy</li>
+                <li>Twoje zadanie to klikając załadować pasażerów do odpowiedniego autobusu</li>
+                <li>Za autobus linii 04 do ODBC dostaniesz +1 punkt</li>
+                <li>Za błędny autobus odbierzemy -10pkt</li>
+            </ol>
+
+        </div>
+        <button type="button" id="startGra" class="przyciskGra">Gram!</button>
     </div>
 
-    <h1>Przystanek 1</h1>
-    <div id="busstop1" class="przystanek">
+    <!--Plansza Koniec Gry-->
+
+    <div id="koniecGry" class="ekranStart hidden">
+        <h1>Koniec Gry!</h1>
+        <div class="endScore">
+            Twój wynik: <span id="pkt"></span>
+        </div>
+        <button type="button" id="przyciskOk" class="przyciskGra">OK</button>
     </div>
 
-    <h1>Przystanek 2</h1>
-    <div id="busstop2" class="przystanek">
+    <!--Wyświetlanie Przystanków-->
+
+    <div id="przystanki" class="hidden">
+        <div class="przystanki">
+            <div id="busstop0" class="przystanek doors">
+                <div class="liner"></div>
+                <div class="namer"></div>
+            </div>
+            <div id="busstop1" class="przystanek doors">
+                <div class="liner"></div>
+                <div class="namer"></div>
+            </div>
+            <div id="busstop2" class="przystanek doors">
+                <div class="liner"></div>
+                <div class="namer"></div>
+            </div>
+    </div>
+
+    <!--Wyświetlanie Licznika-->
+
+    <div id="licznikGra" class="licznik hidden">
+        <div>Czas: <span id="czas">30</span></div>
+        <div>Punkty: <span id="punkty">0</span></div>
     </div>
 
 </div>
-
-<div id="punkty"></div>
 
 <script src="http://code.jquery.com/jquery-2.2.0.js"></script>
 <script src="js/gamebus.js"></script>
