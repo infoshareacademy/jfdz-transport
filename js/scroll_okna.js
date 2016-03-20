@@ -7,10 +7,10 @@ $(window).scroll(function () {
     var wScroll = $(this).scrollTop();
     console.log(wScroll);
     $('.welcome img').css({
-        'transform': 'translate(0px, ' + wScroll / 10 + '%)'
+        'transform': 'translate(0px, ' + wScroll / 20 + '%)'
     });
     $('.slogan').css({
-        'transform': 'translate(0px, ' + wScroll / 6 + '%)'
+        'transform': 'translate(0px, ' + wScroll / 20 + '%)'
     });
     //$('.slogan p').css({
     //    'transform': 'translate(0px, '+ wScroll/4+ '%)'
