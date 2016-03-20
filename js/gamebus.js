@@ -114,10 +114,6 @@ $(document).ready(function () {
 
 
                         $afterOpeningDoor.on('click', function () {
-                            // bus.bus1
-                            console.debug('---- value', scope.buses[index].value);
-                            console.debug('---- in', scope.inOut);
-
                                 pkt = pkt + scope.buses[index].value;
                                 $('#punkty').html(pkt);
                             //}
