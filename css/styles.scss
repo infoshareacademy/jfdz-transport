@@ -454,7 +454,7 @@ figure.onas figcaption p {
   width: 80%; }
 
 figure.onas figcaption h2 {
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 300;
   text-transform: uppercase;}
 
@@ -463,12 +463,15 @@ figure.onas figcaption h2 span {
 
 figure.onas figcaption p {
   font-weight: 500;
-  font-size: 0.9em;
+  font-size: 0.8em;
   opacity: 0.8; }
 
 figure.onas figcaption .icons {
   width: 100%;
-  padding: 8px 0;}
+  padding: 8px 0;
+  bottom:35px;
+
+}
 
 figure.onas figcaption .icons i {
   display: inline-block;
@@ -484,7 +487,9 @@ figure.onas figcaption .icons i {
   border-radius: 50%; }
 
 figure.onas figcaption a {
-  opacity: 0.7;}
+  opacity: 0.7;
+  text-decoration: none;
+}
 
 figure.onas7 figcaption a:hover {
   opacity: 1; }
