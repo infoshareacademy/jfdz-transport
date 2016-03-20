@@ -67,6 +67,7 @@ $(document).ready(function () {
                 {line: '20', value: -10, name: 'WEJHEROWO'},
                 {line: '15', value: -5, name: 'SLUPSK'},
                 {line: '05', value: -10, name: 'STRASZYN'},
+                {line: '04', value:  1, name: 'OBC4'},
                 {line: '04', value:  1, name: 'OBC4'}
             ],
 
@@ -101,7 +102,7 @@ $(document).ready(function () {
                         $(bs).addClass('in');
 
 
-                        var index = randomBetween(1, 5) - 1;
+                        var index = randomBetween(1, 6) - 1;
                         var bus = scope.buses[index]; // losowanie autobusus
 
                         $afterOpeningDoor.append($doorLeft).append($doorRight);
