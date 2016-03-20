@@ -23,13 +23,13 @@ $(document).ready(function () {
 
 
         function openDoors(doorLeft, doorRight) {
-            doorLeft.animate({left: -40 }, 500, 'linear');
-            doorRight.animate({left: 80}, 500, 'linear');
+            doorLeft.animate({left: -25 }, 500, 'linear');
+            doorRight.animate({left: 55}, 500, 'linear');
         }
 
         function closeDoors (doorLeft, doorRight) {
             doorLeft.animate({ left: 0}, 500, 'linear');
-            doorRight.animate({ left: 40 }, 500, 'linear');
+            doorRight.animate({ left: 30 }, 500, 'linear');
         }
 
 
