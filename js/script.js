@@ -48,7 +48,7 @@ $(document).ready(function() {
             $('.scrollup').fadeOut();
         }
 
-    })
+    });
 
     $('.scrollup').click(function(){
         $('html,body').animate({
@@ -82,7 +82,7 @@ $(document).ready(function(){
 
         $('a').each(function () {
             $(this).removeClass('active');
-        })
+        });
         $(this).addClass('active');
 
         var target = this.hash,
