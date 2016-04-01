@@ -178,7 +178,11 @@ h4 {
   height: 250px;
   width: 250px;
   margin-right: 40px;
-  float: left; }
+  float: left;
+  z-index: 15; }
+
+.logo {
+  z-index: 15; }
 
 .slogan {
   margin-left: 20px;
