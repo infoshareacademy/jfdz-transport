@@ -575,3 +575,17 @@ figure.onas.hover:before {
   font-size: 0.8em;
 }
 
+.scrollup {
+  width: 60px;
+  height: 60px;
+  opacity: 0.4;
+  position: fixed;
+  bottom: 30px;
+  right:30px;
+  display: none;
+  background: #000000;
+  border-radius: 25%;
+  font-size: 50px;
+  color: #222222;
+}
+
