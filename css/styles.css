@@ -184,7 +184,8 @@ h4 {
   z-index: 15; }
 
 .slogan {
-  margin-left: 20px;
+  position: relative;
+  margin-left: 216px;
   margin-top: 10px; }
 
 .slogan h1 {
