@@ -157,7 +157,6 @@ h4 {
   background-image: url("../images/public-transport-1920-03r.jpg");
   background-attachment: fixed;
   background-size: cover;
-  background-attachment: fixed;
   border-bottom: 10px solid #B30800;
   background-color: #B30800;
   margin-top: 0;
@@ -268,25 +267,30 @@ h4 {
 
 .small-icons {
   display: inline-block;
-  margin: 20px;
-  margin-right: 10px;
   text-align: center;
-  padding: 10px;
-  font-size: 80px;
+  margin: 20px;
+  padding: 15px;
+  font-size: 60px;
   height: 90px;
   width: 90px;
   background-color: #B30800;
   border-radius: 50%;
   color: white;
-  transition: 1s; }
+  position: relative;
+  line-height: 90px;
+  vertical-align: middle; }
+
+.small-icons .fa .fa-map {
+  font-size: 50px; }
 
 .small-icons {
-  transform: rotate(360deg), translate -300px, 0px;
-  background-color: #9a0700; }
+  background-color: #9a0700;
+  transform: scale(1);
+  transition: all 1s ease-out; }
 
 .small-icons:hover {
   transition: 1s;
-  transform: rotate(360deg);
+  transform: scale(1.3);
   background-color: #9a0700; }
 
 .formularz {
