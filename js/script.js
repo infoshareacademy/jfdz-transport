@@ -23,8 +23,6 @@ $(document).ready( function() {
     var z = 100;
 
     $('#moveM').mousemove( function() {
-        console.log('DZIALA');
-
 
         if (z == 0) {
             $('#pole').html('<h4>Formularz odblokowany</h4>');
@@ -111,6 +109,35 @@ $(document).ready(function(){
         });
     }
 });
+
+
+function getGETParameter(key)
+{
+    key = key.replace(/[[]/, "[").replace(/[]]/, "]");
+    var regexS = "[?&]" + key + "=([^&#]*)";
+    var regex = new RegExp(regexS);
+    var results = regex.exec(window.location.search);
+    if(results == null){
+        return "";
+    }
+    else{
+        return decodeURIComponent(results[1].replace('/+/g', " "));
+    }
+}
+
+var status = getGETParameter("mailerResult");
+
+if (status == 'sent') {
+    $('#status').html('Wysłano email. Dziękujemy za kontakt.');
+}
+
+
+//sent - prawidłowo wysłano e-mail
+//calledFromInvalidAddress - próba wywołania skryptu wysyłającego z niedozwolonego adresu
+//missingReceiver - nie podano adresu do wysyłki
+//unknownError - inny błąd
+
+
 
 
 
