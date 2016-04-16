@@ -92,10 +92,11 @@
 
     </figure>
     <article id="form" class="formularz">
-        <h2>Zapytaj nas o nasz produkt</h2>
-        <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST">
+
+        <form id="forms" action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST">
+            <h2>Zapytaj nas o nasz produkt</h2>
             <div>
-                <input type="text" name="email" required pattern="^\S+@\S+\.\S+$" title="Podaj prawidłowy email" placeholder="podaj email">
+                <input type="email" name="email" required pattern="^\S+@\S+\.\S+$" title="Podaj prawidłowy email" placeholder="podaj email">
             </div>
             <div class="zgoda">
                 <input type="checkbox" required title="Musisz wyrazić zgodę">Wyrażam zgodę na działania marketingowe
@@ -109,9 +110,15 @@
 
             <input type="hidden" name="receiver" value="amkwirkus@gmail.com">
             <button type="submit" value="Send" disabled id="przycisk">Wyślij Zapytanie</button>
-
-
         </form>
+
+        <div id="status" style="display: none;">
+
+            <h2>Dziękujemy za wysłanie emaila!</h2>
+            <div class="mousemove">Będziemy w kontakcie!<br>
+            Poinformujemy Ciebie o naszym produkcie!
+            </div>
+        </div>
     </article>
 
     <!--Lila o nas-->
