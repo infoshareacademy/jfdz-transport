@@ -143,11 +143,11 @@ $(document).ready(function () {
     }
 
     function endGameMedal() {
-            if (pkt > 40) {
+            if (pkt > 39) {
                 $('#koniecGry .medal').addClass('gold');
-            } else if (pkt > 30 && pkt < 40) {
+            } else if (pkt > 29 && pkt < 40) {
                 $('#koniecGry .medal').addClass('silver');
-            } else if (pkt > 20 && pkt < 30){
+            } else if (pkt > 19 && pkt < 30){
                 $('#koniecGry .medal').addClass('bronze');
             } else {
                 $('#koniecGry .medal').html('<h2>Słabo ;( spróbuj jeszcze raz</h2>');

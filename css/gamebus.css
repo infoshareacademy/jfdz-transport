@@ -29,6 +29,15 @@ h2 {
 a, a:hover {
   text-decoration: none; }
 
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.clear {
+  clear: both; }
+
 .bgStart {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 100; }
@@ -85,8 +94,8 @@ a, a:hover {
       text-align: left; }
     .easterEgg .ekranStart .przyciskGra {
       font-family: "Orbitron", sans-serif;
-      font-size: 2em;
-      width: 60%;
+      font-size: 1.8em;
+      width: 50%;
       background-color: lightgray;
       background: #D3D3D3;
       background: -moz-linear-gradient(top, #D3D3D3 0%, #878787 100%);
