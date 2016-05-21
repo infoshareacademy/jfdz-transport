@@ -1,0 +1,304 @@
+@import url(https://fonts.googleapis.com/css?family=Caveat:400,700&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid lightsalmon;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: #fefefe;
+  background-image: url(../images/plansza.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+h1 {
+  font-size: 20px;
+  font-family: "Caveat", cursive; }
+
+h2 {
+  font-size: 18px; }
+
+a, a:hover {
+  text-decoration: none; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.clear {
+  clear: both; }
+
+.bgStart {
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100; }
+
+.easterEgg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%; }
+  .easterEgg .licznik {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 2em;
+    padding: 30px; }
+    .easterEgg .licznik span {
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.6em;
+      position: relative;
+      top: 7px; }
+  .easterEgg .ekranStart {
+    position: relative;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #3095d3;
+    border: solid 5px #3557a2;
+    border-radius: 20px;
+    padding: 50px;
+    z-index: 1000;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    background: #3095d3;
+    background: -moz-linear-gradient(top, #3095d3 0%, #133d57 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3095d3), color-stop(100%, #133d57));
+    background: -webkit-linear-gradient(top, #3095d3 0%, #133d57 100%);
+    background: -o-linear-gradient(top, #3095d3 0%, #133d57 100%);
+    background: -ms-linear-gradient(top, #3095d3 0%, #133d57 100%);
+    background: linear-gradient(to bottom, #3095d3 0%, #133d57 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); }
+    .easterEgg .ekranStart h1 {
+      text-align: center;
+      font-size: 3em;
+      margin: 10px;
+      line-height: 1em;
+      color: #fff;
+      text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3); }
+    .easterEgg .ekranStart h2 {
+      font-size: 2em; }
+    .easterEgg .ekranStart ol {
+      font-size: 1.2em;
+      text-align: left; }
+    .easterEgg .ekranStart .przyciskGra {
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.8em;
+      width: 50%;
+      background-color: lightgray;
+      background: #D3D3D3;
+      background: -moz-linear-gradient(top, #D3D3D3 0%, #878787 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #D3D3D3), color-stop(100%, #878787));
+      background: -webkit-linear-gradient(top, #D3D3D3 0%, #878787 100%);
+      background: -o-linear-gradient(top, #D3D3D3 0%, #878787 100%);
+      background: -ms-linear-gradient(top, #D3D3D3 0%, #878787 100%);
+      background: linear-gradient(to bottom, #D3D3D3 0%, #878787 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+      border-radius: 90px;
+      border: 3px solid #282828;
+      display: inline-block;
+      cursor: pointer;
+      color: #282828;
+      font-weight: bold;
+      padding: 15px 10px 10px 10px;
+      margin: 20px;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3); }
+      .easterEgg .ekranStart .przyciskGra:hover {
+        background-color: #ff0;
+        background: #ff0;
+        background: -moz-linear-gradient(top, #ff0 0%, #666600 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff0), color-stop(100%, #666600));
+        background: -webkit-linear-gradient(top, #ff0 0%, #666600 100%);
+        background: -o-linear-gradient(top, #ff0 0%, #666600 100%);
+        background: -ms-linear-gradient(top, #ff0 0%, #666600 100%);
+        background: linear-gradient(to bottom, #ff0 0%, #666600 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); }
+    .easterEgg .ekranStart .endScore {
+      font-size: 2em;
+      padding: 10px; }
+  .easterEgg .przystanki {
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-end;
+    align-items: center; }
+    .easterEgg .przystanki .przystanek {
+      width: 30vw;
+      height: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-size: 20px;
+      padding: 10px; }
+
+.punkty {
+  padding: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 5em; }
+  .punkty .endButton {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: black;
+    text-align: center;
+    background-color: darkgrey;
+    font-size: 5em;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10%; }
+
+#koniec {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 4em;
+  line-height: 0.5em;
+  color: black;
+  text-align: center;
+  background-color: yellow;
+  border-radius: 10px;
+  font-family: "Caveat", cursive;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10%; }
+
+#okButton:hover {
+  background-color: darkgray; }
+
+.autobus {
+  width: 300px;
+  height: 100px;
+  background-image: url(../images/autobus2.png);
+  background-repeat: no-repeat;
+  background-position: center center; }
+  .autobus .aktywny {
+    transition: all 2s; }
+
+.in, .out {
+  position: relative;
+  background-image: url(../images/autobus2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 1s; }
+  .in .liner, .out .liner {
+    display: inline-block;
+    font-size: 1.9em;
+    font-family: "Orbitron", sans-serif;
+    position: absolute;
+    padding: 8px;
+    border-radius: 2px;
+    background: #ff0;
+    left: 3vw; }
+  .in .namer, .out .namer {
+    display: inline-block;
+    position: absolute;
+    right: 4vw;
+    padding: 2px 10px;
+    border-radius: 2px;
+    background: #000000;
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.7em;
+    color: #fff;
+    z-index: 5; }
+
+.in {
+  opacity: 1; }
+
+.out {
+  opacity: 0; }
+
+.hidden {
+  display: none; }
+
+.odjazd {
+  background-image: url(../images/autobus2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: goBus 2s infinite; }
+
+.hidden {
+  display: none; }
+
+.doors {
+  position: relative; }
+  .doors .doorOpen {
+    width: 58px;
+    height: 80px;
+    position: relative;
+    top: 0px;
+    left: 175px;
+    background-color: #333333;
+    background-position: center center;
+    z-index: 1; }
+    .doors .doorOpen .doorLeft {
+      width: 30px;
+      height: 85px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(../images/drzwi-do-autobusu.png);
+      z-index: 2; }
+    .doors .doorOpen .doorRight {
+      width: 30px;
+      height: 85px;
+      position: absolute;
+      top: 0px;
+      left: 40px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(../images/drzwi-do-autobusu.png);
+      z-index: 2; }
+
+.medal {
+  text-align: center;
+  display: inline-block; }
+  .medal.gold {
+    width: 135px;
+    height: 200px;
+    padding: 10px;
+    background-image: url("../images/medal-gold.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  .medal.silver {
+    width: 135px;
+    height: 200px;
+    padding: 10px;
+    background-image: url("../images/medal-silver.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  .medal.bronze {
+    width: 135px;
+    height: 200px;
+    padding: 10px;
+    background-image: url("../images/medal-gold.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+
+/*# sourceMappingURL=gamebus.css.map */

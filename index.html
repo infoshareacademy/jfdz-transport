@@ -36,23 +36,22 @@
     </div>
 </header>
 <main>
-
     <article id="home" class="welcome">
-        <div class="section">
-            <div class="wel">
-            <div class="logo">
-                <a href="gamebus.html">
-                <img src="images/logo-autobus.png" alt="logo" >
-                </a>
-            </div>
-            <div class="slogan">
-                <h1>Autobusem po Gdańsku</h1>
+        <div class="section wel">
+            <!--<div class="wel">-->
+        <div class="logo">
+                    <a href="gamebus.html">
+                        <img src="images/logo-autobus.png" alt="logo" >
+                    </a>
+        </div>
+        <div class="slogan">
+                    <h1>Autobusem po Gdańsku</h1>
 
-                <p>Dbaj o środowisko! Jedź autobusem!
-                    <br>Mniejsza emisja zanieczyszczeń,do tego większe oszczędności oraz krótszy czas dojazdu bez
-                    nerwowego stania w korkach - to tylko niektóre zalety korzystania z komunikacji miejskiej.</p>
-            </div>
-            </div>
+                    <p>Dbaj o środowisko! Jedź autobusem!
+                        <br>Mniejsza emisja zanieczyszczeń,do tego większe oszczędności oraz krótszy czas dojazdu bez
+                        nerwowego stania w korkach - to tylko niektóre zalety korzystania z komunikacji miejskiej.</p>
+                <!--</div>-->
+        </div>
         </div>
     </article>
     <article id="features" class="features-container cf">
@@ -94,11 +93,11 @@
 
     </figure>
     <article id="form" class="formularz">
-        <h2>Zapytaj nas o nasz produkt</h2>
-        <form action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST">
+
+        <form id="forms" action="http://jfdd.infoshareaca.nazwa.pl/mailer.php" method="POST">
+            <h2>Zapytaj nas o nasz produkt</h2>
             <div>
-                <input type="text" name="telefon" required pattern="^[0-9]*" placeholder="podaj numer telefonu" title="Podaj tylko liczby"><br>
-                <input type="text" name="email" required pattern="^\S+@\S+\.\S+$" title="Podaj prawidłowy email" placeholder="podaj email">
+                <input type="email" name="email" required pattern="^\S+@\S+\.\S+$" title="Podaj prawidłowy email" placeholder="podaj email">
             </div>
             <div class="zgoda">
                 <input type="checkbox" required title="Musisz wyrazić zgodę">Wyrażam zgodę na działania marketingowe
@@ -110,10 +109,17 @@
                 <div class="mmwidth"></div>
             </div>
 
-            <input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com">
+            <input type="hidden" name="receiver" value="amkwirkus@gmail.com">
             <button type="submit" value="Send" disabled id="przycisk">Wyślij Zapytanie</button>
-
         </form>
+
+        <div id="status" style="display: none;">
+
+            <h2>Dziękujemy za wysłanie emaila!</h2>
+            <div class="mousemove">Będziemy w kontakcie!<br>
+            Poinformujemy Ciebie o naszym produkcie!
+            </div>
+        </div>
     </article>
 
     <!--Lila o nas-->
@@ -172,7 +178,7 @@
         <div class="sm-ico fb"><a href="https://www.facebook.com/profile.php?id=100011523936310" target="_blank"><i
                 class="fa fa-facebook fa-2x"></i></a></div>
         <div class="sm-ico gplus"><a href="https://plus.google.com/u/1/117060254480278727488" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a></div>
-        <div class="sm-ico tw"><a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></div>
+        <div class="sm-ico tw"><a href="https://twitter.com/CelofyzJfdz" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></div>
         <div class="clear"></div>
     </article>
 
@@ -186,10 +192,8 @@
 
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/script.js"></script>
-<script src="js/scroll_okna.js"></script>
 <script src="js/menu_podswietlane.js"></script>
 <script src="js/menu_narrow.js"></script>
-<script src="http://code.jquery.com/jquery-2.2.0.js"></script>
 <script src="js/gamebus.js"></script>
 </body>
 </html>

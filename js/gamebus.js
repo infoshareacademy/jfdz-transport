@@ -49,6 +49,7 @@ $(document).ready(function () {
             $('#easterEgg').addClass('bgStart');
             $('#pkt').html(pkt);
             $('#przystanki').addClass('out');
+            endGameMedal();
         }
     }
 
@@ -62,10 +63,11 @@ $(document).ready(function () {
         return {
             stop: stopNumber,
             buses: [
-                {line: '10', value: -10, name: 'GDYNIA'},
-                {line: '20', value: -10, name: 'SOPOT'},
+                {line: '10', value: -10, name: 'LETNICA'},
+                {line: '20', value: -10, name: 'WEJHEROWO'},
                 {line: '15', value: -5, name: 'SLUPSK'},
-                {line: '05', value: -10, name: 'KOSCIERZYNA'},
+                {line: '05', value: -10, name: 'STRASZYN'},
+                {line: '04', value:  1, name: 'OBC4'},
                 {line: '04', value:  1, name: 'OBC4'}
             ],
 
@@ -100,7 +102,7 @@ $(document).ready(function () {
                         $(bs).addClass('in');
 
 
-                        var index = randomBetween(1, 5) - 1;
+                        var index = randomBetween(1, 6) - 1;
                         var bus = scope.buses[index]; // losowanie autobusus
 
                         $afterOpeningDoor.append($doorLeft).append($doorRight);
@@ -139,6 +141,19 @@ $(document).ready(function () {
             }
         }
     }
+
+    function endGameMedal() {
+            if (pkt > 39) {
+                $('#koniecGry .medal').addClass('gold');
+            } else if (pkt > 29 && pkt < 40) {
+                $('#koniecGry .medal').addClass('silver');
+            } else if (pkt > 19 && pkt < 30){
+                $('#koniecGry .medal').addClass('bronze');
+            } else {
+                $('#koniecGry .medal').html('<h2>Słabo ;( spróbuj jeszcze raz</h2>');
+            }
+
+        }
 
     // budowanie przystanku
 

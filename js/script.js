@@ -23,8 +23,6 @@ $(document).ready( function() {
     var z = 100;
 
     $('#moveM').mousemove( function() {
-        console.log('DZIALA');
-
 
         if (z == 0) {
             $('#pole').html('<h4>Formularz odblokowany</h4>');
@@ -37,6 +35,33 @@ $(document).ready( function() {
     });
 
 });
+
+function getGETParameter(key)
+{
+    key = key.replace(/[[]/, "[").replace(/[]]/, "]");
+    var regexS = "[?&]" + key + "=([^&#]*)";
+    var regex = new RegExp(regexS);
+    var results = regex.exec(window.location.search);
+    if(results == null){
+        return "";
+    }
+    else{
+        return decodeURIComponent(results[1].replace('/+/g', " "));
+    }
+}
+
+var status = getGETParameter("mailerResult");
+
+if (status == 'sent') {
+    $('#forms').hide();
+    $('#status').show();
+}
+
+
+//sent - prawidłowo wysłano e-mail
+//calledFromInvalidAddress - próba wywołania skryptu wysyłającego z niedozwolonego adresu
+//missingReceiver - nie podano adresu do wysyłki
+//unknownError - inny błąd
 
 
 
@@ -111,6 +136,43 @@ $(document).ready(function(){
         });
     }
 });
+
+/**
+ * Created by agniecha on 2016-02-16.
+ */
+
+
+$(window).scroll(function () {
+    var wScroll = $(this).scrollTop();
+    $('.welcome img').css({
+        'transform': 'translate(0px, ' + wScroll / 20 + '%)'
+    });
+    $('.slogan').css({
+        'transform': 'translate(0px, ' + wScroll / 20 + '%)'
+    });
+    //$('.slogan p').css({
+    //    'transform': 'translate(0px, '+ wScroll/4+ '%)'
+    //});
+
+    if (wScroll > $('.features-container').offset().top -
+        $(window).height()) {
+        var offset = Math.min(0, wScroll -
+            $('.features-container').offset().top + $(window).height() - 200);
+        $('.feature-image-1').css({
+            'transform': 'translate(-' +
+            Math.abs(offset) + 'px ,' + 0 + 'px)'
+        });
+        $('.feature-image-3').css({
+            'transform': 'translate(' +
+            Math.abs(offset) + 'px ,' + 0 + 'px)'
+        });
+    }
+});
+
+
+
+
+
 
 
 
