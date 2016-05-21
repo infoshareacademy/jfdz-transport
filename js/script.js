@@ -66,7 +66,7 @@ $(document).ready(function(){
             $('.menu-glowne li').css({'margin-left': '10px', 'transition':'0.3s'});
         } else {
             $('header').removeClass('naglowek-strony');
-            $('.menu-glowne li').css({'margin-left': '50px','transition':'0.3s'});
+            $('.menu-glowne li').css({'margin-left': '30px','transition':'0.3s'});
         }
     })
 
